@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="511" localization="OSGI-INF/l10n/bundle" name="de.htwdd.sf.beleg.s74838.tests" project="de.htwdd.sf.beleg.s74838.tests" provider="My Company"/>
+	<bundle bundleID="512" localization="OSGI-INF/l10n/bundle" name="de.htwdd.sf.beleg.s74838.ui" project="de.htwdd.sf.beleg.s74838.ui" provider="My Company"/>
+	<bundle bundleID="510" localization="OSGI-INF/l10n/bundle" name="de.htwdd.sf.beleg.s74838" project="de.htwdd.sf.beleg.s74838" provider="My Company"/>
+</map>
