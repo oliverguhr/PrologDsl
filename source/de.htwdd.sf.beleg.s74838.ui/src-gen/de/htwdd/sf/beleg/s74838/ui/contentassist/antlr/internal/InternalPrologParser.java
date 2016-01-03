@@ -22,16 +22,16 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalPrologParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_VARIABLE", "RULE_IDENT", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Hello'", "'!'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INT", "RULE_ID", "RULE_VARIABLE", "RULE_IDENT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Hello'", "'!'"
     };
-    public static final int RULE_ID=4;
+    public static final int RULE_ID=5;
     public static final int RULE_STRING=8;
-    public static final int RULE_VARIABLE=5;
-    public static final int RULE_IDENT=6;
+    public static final int RULE_VARIABLE=6;
+    public static final int RULE_IDENT=7;
     public static final int T__14=14;
     public static final int T__13=13;
     public static final int RULE_ANY_OTHER=12;
-    public static final int RULE_INT=7;
+    public static final int RULE_INT=4;
     public static final int RULE_WS=11;
     public static final int RULE_SL_COMMENT=10;
     public static final int EOF=-1;
@@ -246,22 +246,89 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleGreeting"
 
 
+    // $ANTLR start "entryRuleNumber"
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:120:1: entryRuleNumber : ruleNumber EOF ;
+    public final void entryRuleNumber() throws RecognitionException {
+        try {
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:121:1: ( ruleNumber EOF )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:122:1: ruleNumber EOF
+            {
+             before(grammarAccess.getNumberRule()); 
+            pushFollow(FOLLOW_ruleNumber_in_entryRuleNumber186);
+            ruleNumber();
+
+            state._fsp--;
+
+             after(grammarAccess.getNumberRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNumber193); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleNumber"
+
+
+    // $ANTLR start "ruleNumber"
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:129:1: ruleNumber : ( RULE_INT ) ;
+    public final void ruleNumber() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:133:2: ( ( RULE_INT ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:134:1: ( RULE_INT )
+            {
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:134:1: ( RULE_INT )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:135:1: RULE_INT
+            {
+             before(grammarAccess.getNumberAccess().getINTTerminalRuleCall()); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleNumber219); 
+             after(grammarAccess.getNumberAccess().getINTTerminalRuleCall()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleNumber"
+
+
     // $ANTLR start "rule__Greeting__Group__0"
-    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:118:1: rule__Greeting__Group__0 : rule__Greeting__Group__0__Impl rule__Greeting__Group__1 ;
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:151:1: rule__Greeting__Group__0 : rule__Greeting__Group__0__Impl rule__Greeting__Group__1 ;
     public final void rule__Greeting__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:122:1: ( rule__Greeting__Group__0__Impl rule__Greeting__Group__1 )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:123:2: rule__Greeting__Group__0__Impl rule__Greeting__Group__1
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:155:1: ( rule__Greeting__Group__0__Impl rule__Greeting__Group__1 )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:156:2: rule__Greeting__Group__0__Impl rule__Greeting__Group__1
             {
-            pushFollow(FOLLOW_rule__Greeting__Group__0__Impl_in_rule__Greeting__Group__0189);
+            pushFollow(FOLLOW_rule__Greeting__Group__0__Impl_in_rule__Greeting__Group__0253);
             rule__Greeting__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Greeting__Group__1_in_rule__Greeting__Group__0192);
+            pushFollow(FOLLOW_rule__Greeting__Group__1_in_rule__Greeting__Group__0256);
             rule__Greeting__Group__1();
 
             state._fsp--;
@@ -285,20 +352,20 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Greeting__Group__0__Impl"
-    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:130:1: rule__Greeting__Group__0__Impl : ( 'Hello' ) ;
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:163:1: rule__Greeting__Group__0__Impl : ( 'Hello' ) ;
     public final void rule__Greeting__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:134:1: ( ( 'Hello' ) )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:135:1: ( 'Hello' )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:167:1: ( ( 'Hello' ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:168:1: ( 'Hello' )
             {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:135:1: ( 'Hello' )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:136:1: 'Hello'
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:168:1: ( 'Hello' )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:169:1: 'Hello'
             {
              before(grammarAccess.getGreetingAccess().getHelloKeyword_0()); 
-            match(input,13,FOLLOW_13_in_rule__Greeting__Group__0__Impl220); 
+            match(input,13,FOLLOW_13_in_rule__Greeting__Group__0__Impl284); 
              after(grammarAccess.getGreetingAccess().getHelloKeyword_0()); 
 
             }
@@ -322,21 +389,21 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Greeting__Group__1"
-    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:149:1: rule__Greeting__Group__1 : rule__Greeting__Group__1__Impl rule__Greeting__Group__2 ;
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:182:1: rule__Greeting__Group__1 : rule__Greeting__Group__1__Impl rule__Greeting__Group__2 ;
     public final void rule__Greeting__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:153:1: ( rule__Greeting__Group__1__Impl rule__Greeting__Group__2 )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:154:2: rule__Greeting__Group__1__Impl rule__Greeting__Group__2
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:186:1: ( rule__Greeting__Group__1__Impl rule__Greeting__Group__2 )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:187:2: rule__Greeting__Group__1__Impl rule__Greeting__Group__2
             {
-            pushFollow(FOLLOW_rule__Greeting__Group__1__Impl_in_rule__Greeting__Group__1251);
+            pushFollow(FOLLOW_rule__Greeting__Group__1__Impl_in_rule__Greeting__Group__1315);
             rule__Greeting__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Greeting__Group__2_in_rule__Greeting__Group__1254);
+            pushFollow(FOLLOW_rule__Greeting__Group__2_in_rule__Greeting__Group__1318);
             rule__Greeting__Group__2();
 
             state._fsp--;
@@ -360,23 +427,23 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Greeting__Group__1__Impl"
-    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:161:1: rule__Greeting__Group__1__Impl : ( ( rule__Greeting__NameAssignment_1 ) ) ;
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:194:1: rule__Greeting__Group__1__Impl : ( ( rule__Greeting__NameAssignment_1 ) ) ;
     public final void rule__Greeting__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:165:1: ( ( ( rule__Greeting__NameAssignment_1 ) ) )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:166:1: ( ( rule__Greeting__NameAssignment_1 ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:198:1: ( ( ( rule__Greeting__NameAssignment_1 ) ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:199:1: ( ( rule__Greeting__NameAssignment_1 ) )
             {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:166:1: ( ( rule__Greeting__NameAssignment_1 ) )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:167:1: ( rule__Greeting__NameAssignment_1 )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:199:1: ( ( rule__Greeting__NameAssignment_1 ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:200:1: ( rule__Greeting__NameAssignment_1 )
             {
              before(grammarAccess.getGreetingAccess().getNameAssignment_1()); 
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:168:1: ( rule__Greeting__NameAssignment_1 )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:168:2: rule__Greeting__NameAssignment_1
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:201:1: ( rule__Greeting__NameAssignment_1 )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:201:2: rule__Greeting__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Greeting__NameAssignment_1_in_rule__Greeting__Group__1__Impl281);
+            pushFollow(FOLLOW_rule__Greeting__NameAssignment_1_in_rule__Greeting__Group__1__Impl345);
             rule__Greeting__NameAssignment_1();
 
             state._fsp--;
@@ -407,16 +474,16 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Greeting__Group__2"
-    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:178:1: rule__Greeting__Group__2 : rule__Greeting__Group__2__Impl ;
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:211:1: rule__Greeting__Group__2 : rule__Greeting__Group__2__Impl ;
     public final void rule__Greeting__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:182:1: ( rule__Greeting__Group__2__Impl )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:183:2: rule__Greeting__Group__2__Impl
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:215:1: ( rule__Greeting__Group__2__Impl )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:216:2: rule__Greeting__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Greeting__Group__2__Impl_in_rule__Greeting__Group__2311);
+            pushFollow(FOLLOW_rule__Greeting__Group__2__Impl_in_rule__Greeting__Group__2375);
             rule__Greeting__Group__2__Impl();
 
             state._fsp--;
@@ -440,20 +507,20 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Greeting__Group__2__Impl"
-    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:189:1: rule__Greeting__Group__2__Impl : ( '!' ) ;
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:222:1: rule__Greeting__Group__2__Impl : ( '!' ) ;
     public final void rule__Greeting__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:193:1: ( ( '!' ) )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:194:1: ( '!' )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:226:1: ( ( '!' ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:227:1: ( '!' )
             {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:194:1: ( '!' )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:195:1: '!'
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:227:1: ( '!' )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:228:1: '!'
             {
              before(grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2()); 
-            match(input,14,FOLLOW_14_in_rule__Greeting__Group__2__Impl339); 
+            match(input,14,FOLLOW_14_in_rule__Greeting__Group__2__Impl403); 
              after(grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2()); 
 
             }
@@ -477,20 +544,20 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Model__GreetingsAssignment"
-    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:215:1: rule__Model__GreetingsAssignment : ( ruleGreeting ) ;
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:248:1: rule__Model__GreetingsAssignment : ( ruleGreeting ) ;
     public final void rule__Model__GreetingsAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:219:1: ( ( ruleGreeting ) )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:220:1: ( ruleGreeting )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:252:1: ( ( ruleGreeting ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:253:1: ( ruleGreeting )
             {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:220:1: ( ruleGreeting )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:221:1: ruleGreeting
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:253:1: ( ruleGreeting )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:254:1: ruleGreeting
             {
              before(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleGreeting_in_rule__Model__GreetingsAssignment381);
+            pushFollow(FOLLOW_ruleGreeting_in_rule__Model__GreetingsAssignment445);
             ruleGreeting();
 
             state._fsp--;
@@ -518,20 +585,20 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Greeting__NameAssignment_1"
-    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:230:1: rule__Greeting__NameAssignment_1 : ( RULE_ID ) ;
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:263:1: rule__Greeting__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Greeting__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:234:1: ( ( RULE_ID ) )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:235:1: ( RULE_ID )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:267:1: ( ( RULE_ID ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:268:1: ( RULE_ID )
             {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:235:1: ( RULE_ID )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:236:1: RULE_ID
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:268:1: ( RULE_ID )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:269:1: RULE_ID
             {
              before(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Greeting__NameAssignment_1412); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Greeting__NameAssignment_1476); 
              after(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -564,15 +631,18 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleGreeting_in_entryRuleGreeting122 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleGreeting129 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Greeting__Group__0_in_ruleGreeting155 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Greeting__Group__0__Impl_in_rule__Greeting__Group__0189 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Greeting__Group__1_in_rule__Greeting__Group__0192 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__Greeting__Group__0__Impl220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Greeting__Group__1__Impl_in_rule__Greeting__Group__1251 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__Greeting__Group__2_in_rule__Greeting__Group__1254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Greeting__NameAssignment_1_in_rule__Greeting__Group__1__Impl281 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Greeting__Group__2__Impl_in_rule__Greeting__Group__2311 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Greeting__Group__2__Impl339 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGreeting_in_rule__Model__GreetingsAssignment381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Greeting__NameAssignment_1412 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumber_in_entryRuleNumber186 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNumber193 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleNumber219 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__0__Impl_in_rule__Greeting__Group__0253 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__1_in_rule__Greeting__Group__0256 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Greeting__Group__0__Impl284 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__1__Impl_in_rule__Greeting__Group__1315 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__2_in_rule__Greeting__Group__1318 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__NameAssignment_1_in_rule__Greeting__Group__1__Impl345 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__2__Impl_in_rule__Greeting__Group__2375 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__Greeting__Group__2__Impl403 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGreeting_in_rule__Model__GreetingsAssignment445 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Greeting__NameAssignment_1476 = new BitSet(new long[]{0x0000000000000002L});
 
 }

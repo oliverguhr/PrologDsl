@@ -16,3 +16,25 @@ Command-line arguments:  -data /home/ogu/source/PrologDsl/source -os linux -ws g
 
 !ENTRY org.eclipse.mylyn.tasks.ui 2 0 2016-01-03 16:36:59.630
 !MESSAGE No search provider was registed. Tasks search is not available.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2016-01-03 17:21:11.331
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2016-01-03 17:21:11.331
+!MESSAGE Conflict for 'org.eclipse.ui.edit.undo':
+HandlerActivation(commandId=org.eclipse.ui.edit.undo,
+	handler=ActionHandler(org.eclipse.egit.ui.internal.dialogs.SpellcheckableMessageArea$TextViewerAction@1291119),
+	expression=ActiveShellExpression(Shell {Java - de.htwdd.sf.beleg.s74838/src/de/htwdd/sf/beleg/s74838/Prolog.xtext - Eclipse Platform}),sourcePriority=17408)
+HandlerActivation(commandId=org.eclipse.ui.edit.undo,
+	handler=ActionHandler(RetargetAction(undo)),
+	expression=ActiveShellExpression(Shell {Java - de.htwdd.sf.beleg.s74838/src/de/htwdd/sf/beleg/s74838/Prolog.xtext - Eclipse Platform}),sourcePriority=17408)
+
+!ENTRY org.eclipse.ui.workbench 2 0 2016-01-03 17:21:11.331
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2016-01-03 17:21:11.331
+!MESSAGE Conflict for 'org.eclipse.ui.edit.redo':
+HandlerActivation(commandId=org.eclipse.ui.edit.redo,
+	handler=ActionHandler(RetargetAction(redo)),
+	expression=ActiveShellExpression(Shell {Java - de.htwdd.sf.beleg.s74838/src/de/htwdd/sf/beleg/s74838/Prolog.xtext - Eclipse Platform}),sourcePriority=17408)
+HandlerActivation(commandId=org.eclipse.ui.edit.redo,
+	handler=ActionHandler(org.eclipse.egit.ui.internal.dialogs.SpellcheckableMessageArea$TextViewerAction@5ebf3a07),
+	expression=ActiveShellExpression(Shell {Java - de.htwdd.sf.beleg.s74838/src/de/htwdd/sf/beleg/s74838/Prolog.xtext - Eclipse Platform}),sourcePriority=17408)

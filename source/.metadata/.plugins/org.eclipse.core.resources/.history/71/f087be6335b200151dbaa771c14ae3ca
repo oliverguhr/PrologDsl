@@ -4,11 +4,8 @@ generate prolog "http://www.htwdd.de/sf/beleg/s74838/Prolog"
 
 
 
-/*PrologDsl: Program Query;
-Program: Clause*;
-Exquery:'?-'Query'.';
-Query: ;*/
-
+PrologDsl: Program Query;
+Program:Clause*;
 
 
 Model:
@@ -17,10 +14,5 @@ Model:
 Greeting:
 	'Hello' name=ID '!';
 	
-	
-Functor:ident;
-Atom: ident| variable | Number;
-Number:INT;
-	 
 terminal variable: 'A'..'Z';
 terminal ident: 'a'..'z'('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

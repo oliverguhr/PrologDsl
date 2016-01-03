@@ -22,7 +22,10 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cGreetingsAssignment = (Assignment)rule.eContents().get(1);
 		private final RuleCall cGreetingsGreetingParserRuleCall_0 = (RuleCall)cGreetingsAssignment.eContents().get(0);
 		
-		//Model:
+		/// *PrologDsl: Program Query;
+		//Program: Clause*;
+		//Exquery:'?-'Query'.';
+		//Query: ;* / Model:
 		//	greetings+=Greeting*;
 		public ParserRule getRule() { return rule; }
 
@@ -60,10 +63,61 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 		//"!"
 		public Keyword getExclamationMarkKeyword_2() { return cExclamationMarkKeyword_2; }
 	}
+
+	public class FunctorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Functor");
+		private final RuleCall cIdentTerminalRuleCall = (RuleCall)rule.eContents().get(1);
+		
+		//Functor:
+		//	ident;
+		public ParserRule getRule() { return rule; }
+
+		//ident
+		public RuleCall getIdentTerminalRuleCall() { return cIdentTerminalRuleCall; }
+	}
+
+	public class AtomElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Atom");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cIdentTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cVariableTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cNumberParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		
+		//Atom:
+		//	ident | variable | Number;
+		public ParserRule getRule() { return rule; }
+
+		//ident | variable | Number
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//ident
+		public RuleCall getIdentTerminalRuleCall_0() { return cIdentTerminalRuleCall_0; }
+
+		//variable
+		public RuleCall getVariableTerminalRuleCall_1() { return cVariableTerminalRuleCall_1; }
+
+		//Number
+		public RuleCall getNumberParserRuleCall_2() { return cNumberParserRuleCall_2; }
+	}
+
+	public class NumberElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Number");
+		private final RuleCall cINTTerminalRuleCall = (RuleCall)rule.eContents().get(1);
+		
+		//Number:
+		//	INT;
+		public ParserRule getRule() { return rule; }
+
+		//INT
+		public RuleCall getINTTerminalRuleCall() { return cINTTerminalRuleCall; }
+	}
 	
 	
 	private ModelElements pModel;
 	private GreetingElements pGreeting;
+	private FunctorElements pFunctor;
+	private AtomElements pAtom;
+	private NumberElements pNumber;
 	private TerminalRule tVariable;
 	private TerminalRule tIdent;
 	
@@ -88,7 +142,10 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//Model:
+	/// *PrologDsl: Program Query;
+	//Program: Clause*;
+	//Exquery:'?-'Query'.';
+	//Query: ;* / Model:
 	//	greetings+=Greeting*;
 	public ModelElements getModelAccess() {
 		return (pModel != null) ? pModel : (pModel = new ModelElements());
@@ -106,6 +163,36 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getGreetingRule() {
 		return getGreetingAccess().getRule();
+	}
+
+	//Functor:
+	//	ident;
+	public FunctorElements getFunctorAccess() {
+		return (pFunctor != null) ? pFunctor : (pFunctor = new FunctorElements());
+	}
+	
+	public ParserRule getFunctorRule() {
+		return getFunctorAccess().getRule();
+	}
+
+	//Atom:
+	//	ident | variable | Number;
+	public AtomElements getAtomAccess() {
+		return (pAtom != null) ? pAtom : (pAtom = new AtomElements());
+	}
+	
+	public ParserRule getAtomRule() {
+		return getAtomAccess().getRule();
+	}
+
+	//Number:
+	//	INT;
+	public NumberElements getNumberAccess() {
+		return (pNumber != null) ? pNumber : (pNumber = new NumberElements());
+	}
+	
+	public ParserRule getNumberRule() {
+		return getNumberAccess().getRule();
 	}
 
 	//terminal variable:

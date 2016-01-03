@@ -19,7 +19,7 @@ Greeting:
 	
 	
 Functor:ident;
-Atom: ident| variable | Number;
+Atom: ident| variable;
 Number:INT;
 	 
 terminal variable: 'A'..'Z';

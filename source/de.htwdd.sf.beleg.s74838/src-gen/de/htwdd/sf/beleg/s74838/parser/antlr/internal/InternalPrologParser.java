@@ -21,16 +21,16 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalPrologParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_VARIABLE", "RULE_IDENT", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Hello'", "'!'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_VARIABLE", "RULE_IDENT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Hello'", "'!'"
     };
     public static final int RULE_ID=4;
     public static final int RULE_STRING=8;
-    public static final int RULE_VARIABLE=5;
-    public static final int RULE_IDENT=6;
+    public static final int RULE_VARIABLE=6;
+    public static final int RULE_IDENT=7;
     public static final int T__14=14;
     public static final int T__13=13;
     public static final int RULE_ANY_OTHER=12;
-    public static final int RULE_INT=7;
+    public static final int RULE_INT=5;
     public static final int RULE_WS=11;
     public static final int RULE_SL_COMMENT=10;
     public static final int EOF=-1;
@@ -297,6 +297,79 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
     }
     // $ANTLR end "ruleGreeting"
 
+
+    // $ANTLR start "entryRuleNumber"
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:157:1: entryRuleNumber returns [String current=null] : iv_ruleNumber= ruleNumber EOF ;
+    public final String entryRuleNumber() throws RecognitionException {
+        String current = null;
+
+        AntlrDatatypeRuleToken iv_ruleNumber = null;
+
+
+        try {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:158:2: (iv_ruleNumber= ruleNumber EOF )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:159:2: iv_ruleNumber= ruleNumber EOF
+            {
+             newCompositeNode(grammarAccess.getNumberRule()); 
+            pushFollow(FOLLOW_ruleNumber_in_entryRuleNumber288);
+            iv_ruleNumber=ruleNumber();
+
+            state._fsp--;
+
+             current =iv_ruleNumber.getText(); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNumber299); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleNumber"
+
+
+    // $ANTLR start "ruleNumber"
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:166:1: ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_INT_0= RULE_INT ;
+    public final AntlrDatatypeRuleToken ruleNumber() throws RecognitionException {
+        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+
+        Token this_INT_0=null;
+
+         enterRule(); 
+            
+        try {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:169:28: (this_INT_0= RULE_INT )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:170:5: this_INT_0= RULE_INT
+            {
+            this_INT_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleNumber338); 
+
+            		current.merge(this_INT_0);
+                
+             
+                newLeafNode(this_INT_0, grammarAccess.getNumberAccess().getINTTerminalRuleCall()); 
+                
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleNumber"
+
     // Delegated rules
 
 
@@ -310,5 +383,8 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_13_in_ruleGreeting213 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleGreeting230 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_14_in_ruleGreeting247 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumber_in_entryRuleNumber288 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNumber299 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleNumber338 = new BitSet(new long[]{0x0000000000000002L});
 
 }
