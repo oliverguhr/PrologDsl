@@ -1,3 +1,0 @@
-member(X,[X|Y]).
-member(X,[Y|Z]):- member(X,Z).
-?- member(b,[a,b,c,d]).
