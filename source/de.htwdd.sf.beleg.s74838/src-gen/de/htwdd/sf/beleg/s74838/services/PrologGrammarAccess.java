@@ -64,6 +64,8 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	
 	private ModelElements pModel;
 	private GreetingElements pGreeting;
+	private TerminalRule tVariable;
+	private TerminalRule tIdent;
 	
 	private final GrammarProvider grammarProvider;
 
@@ -105,6 +107,18 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	public ParserRule getGreetingRule() {
 		return getGreetingAccess().getRule();
 	}
+
+	//terminal variable:
+	//	"A".."Z";
+	public TerminalRule getVariableRule() {
+		return (tVariable != null) ? tVariable : (tVariable = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "variable"));
+	} 
+
+	//terminal ident:
+	//	"a".."z" ("a".."z" | "A".."Z" | "_" | "0".."9")*;
+	public TerminalRule getIdentRule() {
+		return (tIdent != null) ? tIdent : (tIdent = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ident"));
+	} 
 
 	//terminal ID:
 	//	"^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;

@@ -21,18 +21,20 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalPrologParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Hello'", "'!'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_VARIABLE", "RULE_IDENT", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Hello'", "'!'"
     };
     public static final int RULE_ID=4;
-    public static final int RULE_STRING=6;
-    public static final int T__12=12;
-    public static final int T__11=11;
-    public static final int RULE_ANY_OTHER=10;
-    public static final int RULE_INT=5;
-    public static final int RULE_WS=9;
-    public static final int RULE_SL_COMMENT=8;
+    public static final int RULE_STRING=8;
+    public static final int RULE_VARIABLE=5;
+    public static final int RULE_IDENT=6;
+    public static final int T__14=14;
+    public static final int T__13=13;
+    public static final int RULE_ANY_OTHER=12;
+    public static final int RULE_INT=7;
+    public static final int RULE_WS=11;
+    public static final int RULE_SL_COMMENT=10;
     public static final int EOF=-1;
-    public static final int RULE_ML_COMMENT=7;
+    public static final int RULE_ML_COMMENT=9;
 
     // delegates
     // delegators
@@ -128,7 +130,7 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==11) ) {
+                if ( (LA1_0==13) ) {
                     alt1=1;
                 }
 
@@ -242,7 +244,7 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
             // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:119:1: (otherlv_0= 'Hello' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '!' )
             // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:119:3: otherlv_0= 'Hello' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '!'
             {
-            otherlv_0=(Token)match(input,11,FOLLOW_11_in_ruleGreeting213); 
+            otherlv_0=(Token)match(input,13,FOLLOW_13_in_ruleGreeting213); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getGreetingAccess().getHelloKeyword_0());
                 
@@ -272,7 +274,7 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,12,FOLLOW_12_in_ruleGreeting247); 
+            otherlv_2=(Token)match(input,14,FOLLOW_14_in_ruleGreeting247); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2());
                 
@@ -302,11 +304,11 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_ruleModel_in_entryRuleModel75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleModel85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGreeting_in_ruleModel130 = new BitSet(new long[]{0x0000000000000802L});
+    public static final BitSet FOLLOW_ruleGreeting_in_ruleModel130 = new BitSet(new long[]{0x0000000000002002L});
     public static final BitSet FOLLOW_ruleGreeting_in_entryRuleGreeting166 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleGreeting176 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_ruleGreeting213 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleGreeting230 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_12_in_ruleGreeting247 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_ruleGreeting213 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleGreeting230 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleGreeting247 = new BitSet(new long[]{0x0000000000000002L});
 
 }

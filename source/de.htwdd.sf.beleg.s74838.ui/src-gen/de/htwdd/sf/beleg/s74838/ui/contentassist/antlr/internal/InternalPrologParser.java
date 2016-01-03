@@ -22,18 +22,20 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalPrologParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Hello'", "'!'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_VARIABLE", "RULE_IDENT", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Hello'", "'!'"
     };
     public static final int RULE_ID=4;
-    public static final int RULE_STRING=6;
-    public static final int T__12=12;
-    public static final int T__11=11;
-    public static final int RULE_ANY_OTHER=10;
-    public static final int RULE_INT=5;
-    public static final int RULE_WS=9;
-    public static final int RULE_SL_COMMENT=8;
+    public static final int RULE_STRING=8;
+    public static final int RULE_VARIABLE=5;
+    public static final int RULE_IDENT=6;
+    public static final int T__14=14;
+    public static final int T__13=13;
+    public static final int RULE_ANY_OTHER=12;
+    public static final int RULE_INT=7;
+    public static final int RULE_WS=11;
+    public static final int RULE_SL_COMMENT=10;
     public static final int EOF=-1;
-    public static final int RULE_ML_COMMENT=7;
+    public static final int RULE_ML_COMMENT=9;
 
     // delegates
     // delegators
@@ -122,7 +124,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==11) ) {
+                if ( (LA1_0==13) ) {
                     alt1=1;
                 }
 
@@ -296,7 +298,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:136:1: 'Hello'
             {
              before(grammarAccess.getGreetingAccess().getHelloKeyword_0()); 
-            match(input,11,FOLLOW_11_in_rule__Greeting__Group__0__Impl220); 
+            match(input,13,FOLLOW_13_in_rule__Greeting__Group__0__Impl220); 
              after(grammarAccess.getGreetingAccess().getHelloKeyword_0()); 
 
             }
@@ -451,7 +453,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:195:1: '!'
             {
              before(grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2()); 
-            match(input,12,FOLLOW_12_in_rule__Greeting__Group__2__Impl339); 
+            match(input,14,FOLLOW_14_in_rule__Greeting__Group__2__Impl339); 
              after(grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2()); 
 
             }
@@ -558,18 +560,18 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
 
     public static final BitSet FOLLOW_ruleModel_in_entryRuleModel61 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleModel68 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__GreetingsAssignment_in_ruleModel94 = new BitSet(new long[]{0x0000000000000802L});
+    public static final BitSet FOLLOW_rule__Model__GreetingsAssignment_in_ruleModel94 = new BitSet(new long[]{0x0000000000002002L});
     public static final BitSet FOLLOW_ruleGreeting_in_entryRuleGreeting122 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleGreeting129 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Greeting__Group__0_in_ruleGreeting155 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Greeting__Group__0__Impl_in_rule__Greeting__Group__0189 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_rule__Greeting__Group__1_in_rule__Greeting__Group__0192 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__Greeting__Group__0__Impl220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Greeting__Group__1__Impl_in_rule__Greeting__Group__1251 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_13_in_rule__Greeting__Group__0__Impl220 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__1__Impl_in_rule__Greeting__Group__1251 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_rule__Greeting__Group__2_in_rule__Greeting__Group__1254 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Greeting__NameAssignment_1_in_rule__Greeting__Group__1__Impl281 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Greeting__Group__2__Impl_in_rule__Greeting__Group__2311 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__Greeting__Group__2__Impl339 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__Greeting__Group__2__Impl339 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleGreeting_in_rule__Model__GreetingsAssignment381 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__Greeting__NameAssignment_1412 = new BitSet(new long[]{0x0000000000000002L});
 

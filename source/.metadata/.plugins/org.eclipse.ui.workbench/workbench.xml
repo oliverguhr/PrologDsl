@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="14" version="2.0">
+<workbench progressCount="49" version="2.0">
 <workbenchAdvisor/>
 <window height="1168" width="1922" x="1920" y="0">
 <fastViewData fastViewLocation="1024"/>
-<intro standby="true"/>
+<intro standby="false"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
@@ -15,10 +15,11 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="162" y="36"/>
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="46" y="36"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="94" y="36"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="94" y="36"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="122" y="36"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="238" y="36"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.xtext.Xtext" itemType="typeToolBarContribution" x="46" y="36"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -27,10 +28,16 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
 </editorArea>
+<editor activePart="true" focus="true" id="org.eclipse.xtext.Xtext" name="Prolog.xtext" partName="Prolog.xtext" path="/home/ogu/source/PrologDsl/source/de.htwdd.sf.beleg.s74838/src/de/htwdd/sf/beleg/s74838/Prolog.xtext" title="Prolog.xtext" tooltip="de.htwdd.sf.beleg.s74838/src/de/htwdd/sf/beleg/s74838/Prolog.xtext" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/de.htwdd.sf.beleg.s74838/src/de/htwdd/sf/beleg/s74838/Prolog.xtext"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="297" selectionTopPixel="0"/>
+</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
@@ -45,6 +52,9 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
 </view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
 <viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
@@ -77,7 +87,7 @@
 </view>
 <view id="org.eclipse.ui.internal.introview" partName="Welcome">
 <viewState>
-<presentation currentPage="root" restore="true"/>
+<presentation currentPage="http://wiki.eclipse.org/EGit/User_Guide" restore="true"/>
 <standbyPart/>
 </viewState>
 </view>
@@ -99,7 +109,7 @@
 </view>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.ui.internal.introview" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -183,6 +193,8 @@
 <alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
 <show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
 <show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
 <show_view_action id="org.eclipse.jdt.ui.SourceView"/>
@@ -221,6 +233,7 @@
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.ui.internal.introview"/>
 <fastViewBars/>
@@ -239,7 +252,7 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@1890a066" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="left">
-<folder activePageID="org.eclipse.ui.internal.introview" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.internal.introview" appearance="2" expanded="1">
 <page content="org.eclipse.ui.internal.introview" label="Welcome"/>
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
@@ -250,18 +263,19 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="478" ratioRight="1434" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.7495344" ratioLeft="805" ratioRight="269" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
@@ -280,15 +294,19 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.xtext.Xtext" path="/de.htwdd.sf.beleg.s74838/src/de/htwdd/sf/beleg/s74838/Prolog.xtext"/>
+</editors>
+<item active="true" historyLabel="Prolog.xtext" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="128">
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
-</trimArea>
 <trimArea IMemento.internal.id="1024">
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
@@ -296,5 +314,9 @@
 </trimArea>
 </trimLayout>
 </window>
-<mruList/>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.xtext.Xtext" name="Prolog.xtext" tooltip="de.htwdd.sf.beleg.s74838/src/de/htwdd/sf/beleg/s74838/Prolog.xtext">
+<persistable path="/de.htwdd.sf.beleg.s74838/src/de/htwdd/sf/beleg/s74838/Prolog.xtext"/>
+</file>
+</mruList>
 </workbench>

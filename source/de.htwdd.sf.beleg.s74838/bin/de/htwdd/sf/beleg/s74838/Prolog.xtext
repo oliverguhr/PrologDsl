@@ -7,3 +7,7 @@ Model:
 	
 Greeting:
 	'Hello' name=ID '!';
+
+	
+terminal variable: 'A'..'Z';
+terminal ident: 'a'..'z'('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

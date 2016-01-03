@@ -13,15 +13,17 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalPrologLexer extends Lexer {
     public static final int RULE_ID=4;
-    public static final int RULE_STRING=6;
-    public static final int T__12=12;
-    public static final int T__11=11;
-    public static final int RULE_ANY_OTHER=10;
-    public static final int RULE_INT=5;
-    public static final int RULE_WS=9;
-    public static final int RULE_SL_COMMENT=8;
+    public static final int RULE_STRING=8;
+    public static final int RULE_VARIABLE=5;
+    public static final int RULE_IDENT=6;
+    public static final int T__14=14;
+    public static final int T__13=13;
+    public static final int RULE_ANY_OTHER=12;
+    public static final int RULE_INT=7;
+    public static final int RULE_WS=11;
+    public static final int RULE_SL_COMMENT=10;
     public static final int EOF=-1;
-    public static final int RULE_ML_COMMENT=7;
+    public static final int RULE_ML_COMMENT=9;
 
     // delegates
     // delegators
@@ -36,10 +38,10 @@ public class InternalPrologLexer extends Lexer {
     }
     public String getGrammarFileName() { return "../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g"; }
 
-    // $ANTLR start "T__11"
-    public final void mT__11() throws RecognitionException {
+    // $ANTLR start "T__13"
+    public final void mT__13() throws RecognitionException {
         try {
-            int _type = T__11;
+            int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:11:7: ( 'Hello' )
             // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:11:9: 'Hello'
@@ -55,12 +57,12 @@ public class InternalPrologLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__11"
+    // $ANTLR end "T__13"
 
-    // $ANTLR start "T__12"
-    public final void mT__12() throws RecognitionException {
+    // $ANTLR start "T__14"
+    public final void mT__14() throws RecognitionException {
         try {
-            int _type = T__12;
+            int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
             // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:12:7: ( '!' )
             // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:12:9: '!'
@@ -75,55 +77,49 @@ public class InternalPrologLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "T__12"
+    // $ANTLR end "T__14"
 
-    // $ANTLR start "RULE_ID"
-    public final void mRULE_ID() throws RecognitionException {
+    // $ANTLR start "RULE_VARIABLE"
+    public final void mRULE_VARIABLE() throws RecognitionException {
         try {
-            int _type = RULE_ID;
+            int _type = RULE_VARIABLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:152:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:152:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:152:15: ( 'A' .. 'Z' )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:152:17: 'A' .. 'Z'
             {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:152:11: ( '^' )?
-            int alt1=2;
-            int LA1_0 = input.LA(1);
-
-            if ( (LA1_0=='^') ) {
-                alt1=1;
-            }
-            switch (alt1) {
-                case 1 :
-                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:152:11: '^'
-                    {
-                    match('^'); 
-
-                    }
-                    break;
+            matchRange('A','Z'); 
 
             }
 
-            if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
-                input.consume();
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_VARIABLE"
 
-            }
-            else {
-                MismatchedSetException mse = new MismatchedSetException(null,input);
-                recover(mse);
-                throw mse;}
-
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:152:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
-            loop2:
+    // $ANTLR start "RULE_IDENT"
+    public final void mRULE_IDENT() throws RecognitionException {
+        try {
+            int _type = RULE_IDENT;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:154:12: ( 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:154:14: 'a' .. 'z' ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            {
+            matchRange('a','z'); 
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:154:23: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            loop1:
             do {
-                int alt2=2;
-                int LA2_0 = input.LA(1);
+                int alt1=2;
+                int LA1_0 = input.LA(1);
 
-                if ( ((LA2_0>='0' && LA2_0<='9')||(LA2_0>='A' && LA2_0<='Z')||LA2_0=='_'||(LA2_0>='a' && LA2_0<='z')) ) {
-                    alt2=1;
+                if ( ((LA1_0>='0' && LA1_0<='9')||(LA1_0>='A' && LA1_0<='Z')||LA1_0=='_'||(LA1_0>='a' && LA1_0<='z')) ) {
+                    alt1=1;
                 }
 
 
-                switch (alt2) {
+                switch (alt1) {
             	case 1 :
             	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:
             	    {
@@ -141,7 +137,86 @@ public class InternalPrologLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop2;
+            	    break loop1;
+                }
+            } while (true);
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_IDENT"
+
+    // $ANTLR start "RULE_ID"
+    public final void mRULE_ID() throws RecognitionException {
+        try {
+            int _type = RULE_ID;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:156:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:156:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:156:11: ( '^' )?
+            int alt2=2;
+            int LA2_0 = input.LA(1);
+
+            if ( (LA2_0=='^') ) {
+                alt2=1;
+            }
+            switch (alt2) {
+                case 1 :
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:156:11: '^'
+                    {
+                    match('^'); 
+
+                    }
+                    break;
+
+            }
+
+            if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
+                input.consume();
+
+            }
+            else {
+                MismatchedSetException mse = new MismatchedSetException(null,input);
+                recover(mse);
+                throw mse;}
+
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:156:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            loop3:
+            do {
+                int alt3=2;
+                int LA3_0 = input.LA(1);
+
+                if ( ((LA3_0>='0' && LA3_0<='9')||(LA3_0>='A' && LA3_0<='Z')||LA3_0=='_'||(LA3_0>='a' && LA3_0<='z')) ) {
+                    alt3=1;
+                }
+
+
+                switch (alt3) {
+            	case 1 :
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:
+            	    {
+            	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
+            	        input.consume();
+
+            	    }
+            	    else {
+            	        MismatchedSetException mse = new MismatchedSetException(null,input);
+            	        recover(mse);
+            	        throw mse;}
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop3;
                 }
             } while (true);
 
@@ -161,24 +236,24 @@ public class InternalPrologLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:154:10: ( ( '0' .. '9' )+ )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:154:12: ( '0' .. '9' )+
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:158:10: ( ( '0' .. '9' )+ )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:158:12: ( '0' .. '9' )+
             {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:154:12: ( '0' .. '9' )+
-            int cnt3=0;
-            loop3:
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:158:12: ( '0' .. '9' )+
+            int cnt4=0;
+            loop4:
             do {
-                int alt3=2;
-                int LA3_0 = input.LA(1);
+                int alt4=2;
+                int LA4_0 = input.LA(1);
 
-                if ( ((LA3_0>='0' && LA3_0<='9')) ) {
-                    alt3=1;
+                if ( ((LA4_0>='0' && LA4_0<='9')) ) {
+                    alt4=1;
                 }
 
 
-                switch (alt3) {
+                switch (alt4) {
             	case 1 :
-            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:154:13: '0' .. '9'
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:158:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -186,12 +261,12 @@ public class InternalPrologLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt3 >= 1 ) break loop3;
+            	    if ( cnt4 >= 1 ) break loop4;
                         EarlyExitException eee =
-                            new EarlyExitException(3, input);
+                            new EarlyExitException(4, input);
                         throw eee;
                 }
-                cnt3++;
+                cnt4++;
             } while (true);
 
 
@@ -210,47 +285,47 @@ public class InternalPrologLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:156:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:156:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:160:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:160:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:156:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:160:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            if ( (LA6_0=='\"') ) {
-                alt6=1;
+            if ( (LA7_0=='\"') ) {
+                alt7=1;
             }
-            else if ( (LA6_0=='\'') ) {
-                alt6=2;
+            else if ( (LA7_0=='\'') ) {
+                alt7=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
+                    new NoViableAltException("", 7, 0, input);
 
                 throw nvae;
             }
-            switch (alt6) {
+            switch (alt7) {
                 case 1 :
-                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:156:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:160:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:156:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
-                    loop4:
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:160:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    loop5:
                     do {
-                        int alt4=3;
-                        int LA4_0 = input.LA(1);
+                        int alt5=3;
+                        int LA5_0 = input.LA(1);
 
-                        if ( (LA4_0=='\\') ) {
-                            alt4=1;
+                        if ( (LA5_0=='\\') ) {
+                            alt5=1;
                         }
-                        else if ( ((LA4_0>='\u0000' && LA4_0<='!')||(LA4_0>='#' && LA4_0<='[')||(LA4_0>=']' && LA4_0<='\uFFFF')) ) {
-                            alt4=2;
+                        else if ( ((LA5_0>='\u0000' && LA5_0<='!')||(LA5_0>='#' && LA5_0<='[')||(LA5_0>=']' && LA5_0<='\uFFFF')) ) {
+                            alt5=2;
                         }
 
 
-                        switch (alt4) {
+                        switch (alt5) {
                     	case 1 :
-                    	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:156:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:160:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -266,7 +341,7 @@ public class InternalPrologLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:156:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:160:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -282,7 +357,7 @@ public class InternalPrologLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop4;
+                    	    break loop5;
                         }
                     } while (true);
 
@@ -291,26 +366,26 @@ public class InternalPrologLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:156:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:160:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:156:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
-                    loop5:
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:160:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    loop6:
                     do {
-                        int alt5=3;
-                        int LA5_0 = input.LA(1);
+                        int alt6=3;
+                        int LA6_0 = input.LA(1);
 
-                        if ( (LA5_0=='\\') ) {
-                            alt5=1;
+                        if ( (LA6_0=='\\') ) {
+                            alt6=1;
                         }
-                        else if ( ((LA5_0>='\u0000' && LA5_0<='&')||(LA5_0>='(' && LA5_0<='[')||(LA5_0>=']' && LA5_0<='\uFFFF')) ) {
-                            alt5=2;
+                        else if ( ((LA6_0>='\u0000' && LA6_0<='&')||(LA6_0>='(' && LA6_0<='[')||(LA6_0>=']' && LA6_0<='\uFFFF')) ) {
+                            alt6=2;
                         }
 
 
-                        switch (alt5) {
+                        switch (alt6) {
                     	case 1 :
-                    	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:156:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:160:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -326,7 +401,7 @@ public class InternalPrologLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:156:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:160:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -342,7 +417,7 @@ public class InternalPrologLexer extends Lexer {
                     	    break;
 
                     	default :
-                    	    break loop5;
+                    	    break loop6;
                         }
                     } while (true);
 
@@ -369,37 +444,37 @@ public class InternalPrologLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:158:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:158:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:162:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:162:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:158:24: ( options {greedy=false; } : . )*
-            loop7:
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:162:24: ( options {greedy=false; } : . )*
+            loop8:
             do {
-                int alt7=2;
-                int LA7_0 = input.LA(1);
+                int alt8=2;
+                int LA8_0 = input.LA(1);
 
-                if ( (LA7_0=='*') ) {
-                    int LA7_1 = input.LA(2);
+                if ( (LA8_0=='*') ) {
+                    int LA8_1 = input.LA(2);
 
-                    if ( (LA7_1=='/') ) {
-                        alt7=2;
+                    if ( (LA8_1=='/') ) {
+                        alt8=2;
                     }
-                    else if ( ((LA7_1>='\u0000' && LA7_1<='.')||(LA7_1>='0' && LA7_1<='\uFFFF')) ) {
-                        alt7=1;
+                    else if ( ((LA8_1>='\u0000' && LA8_1<='.')||(LA8_1>='0' && LA8_1<='\uFFFF')) ) {
+                        alt8=1;
                     }
 
 
                 }
-                else if ( ((LA7_0>='\u0000' && LA7_0<=')')||(LA7_0>='+' && LA7_0<='\uFFFF')) ) {
-                    alt7=1;
+                else if ( ((LA8_0>='\u0000' && LA8_0<=')')||(LA8_0>='+' && LA8_0<='\uFFFF')) ) {
+                    alt8=1;
                 }
 
 
-                switch (alt7) {
+                switch (alt8) {
             	case 1 :
-            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:158:52: .
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:162:52: .
             	    {
             	    matchAny(); 
 
@@ -407,7 +482,7 @@ public class InternalPrologLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop7;
+            	    break loop8;
                 }
             } while (true);
 
@@ -429,25 +504,25 @@ public class InternalPrologLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:160:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:160:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:164:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:164:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:160:24: (~ ( ( '\\n' | '\\r' ) ) )*
-            loop8:
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:164:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            loop9:
             do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
+                int alt9=2;
+                int LA9_0 = input.LA(1);
 
-                if ( ((LA8_0>='\u0000' && LA8_0<='\t')||(LA8_0>='\u000B' && LA8_0<='\f')||(LA8_0>='\u000E' && LA8_0<='\uFFFF')) ) {
-                    alt8=1;
+                if ( ((LA9_0>='\u0000' && LA9_0<='\t')||(LA9_0>='\u000B' && LA9_0<='\f')||(LA9_0>='\u000E' && LA9_0<='\uFFFF')) ) {
+                    alt9=1;
                 }
 
 
-                switch (alt8) {
+                switch (alt9) {
             	case 1 :
-            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:160:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:164:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -463,31 +538,31 @@ public class InternalPrologLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop8;
+            	    break loop9;
                 }
             } while (true);
 
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:160:40: ( ( '\\r' )? '\\n' )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:164:40: ( ( '\\r' )? '\\n' )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA10_0=='\n'||LA10_0=='\r') ) {
-                alt10=1;
+            if ( (LA11_0=='\n'||LA11_0=='\r') ) {
+                alt11=1;
             }
-            switch (alt10) {
+            switch (alt11) {
                 case 1 :
-                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:160:41: ( '\\r' )? '\\n'
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:164:41: ( '\\r' )? '\\n'
                     {
-                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:160:41: ( '\\r' )?
-                    int alt9=2;
-                    int LA9_0 = input.LA(1);
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:164:41: ( '\\r' )?
+                    int alt10=2;
+                    int LA10_0 = input.LA(1);
 
-                    if ( (LA9_0=='\r') ) {
-                        alt9=1;
+                    if ( (LA10_0=='\r') ) {
+                        alt10=1;
                     }
-                    switch (alt9) {
+                    switch (alt10) {
                         case 1 :
-                            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:160:41: '\\r'
+                            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:164:41: '\\r'
                             {
                             match('\r'); 
 
@@ -519,22 +594,22 @@ public class InternalPrologLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:162:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:162:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:166:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:166:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:162:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
-            int cnt11=0;
-            loop11:
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:166:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            int cnt12=0;
+            loop12:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt12=2;
+                int LA12_0 = input.LA(1);
 
-                if ( ((LA11_0>='\t' && LA11_0<='\n')||LA11_0=='\r'||LA11_0==' ') ) {
-                    alt11=1;
+                if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {
+                    alt12=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt12) {
             	case 1 :
             	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:
             	    {
@@ -552,12 +627,12 @@ public class InternalPrologLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt11 >= 1 ) break loop11;
+            	    if ( cnt12 >= 1 ) break loop12;
                         EarlyExitException eee =
-                            new EarlyExitException(11, input);
+                            new EarlyExitException(12, input);
                         throw eee;
                 }
-                cnt11++;
+                cnt12++;
             } while (true);
 
 
@@ -576,8 +651,8 @@ public class InternalPrologLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:164:16: ( . )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:164:18: .
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:168:16: ( . )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:168:18: .
             {
             matchAny(); 
 
@@ -592,68 +667,82 @@ public class InternalPrologLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:8: ( T__11 | T__12 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=9;
-        alt12 = dfa12.predict(input);
-        switch (alt12) {
+        // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:8: ( T__13 | T__14 | RULE_VARIABLE | RULE_IDENT | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt13=11;
+        alt13 = dfa13.predict(input);
+        switch (alt13) {
             case 1 :
-                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:10: T__11
+                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:10: T__13
                 {
-                mT__11(); 
+                mT__13(); 
 
                 }
                 break;
             case 2 :
-                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:16: T__12
+                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:16: T__14
                 {
-                mT__12(); 
+                mT__14(); 
 
                 }
                 break;
             case 3 :
-                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:22: RULE_ID
+                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:22: RULE_VARIABLE
+                {
+                mRULE_VARIABLE(); 
+
+                }
+                break;
+            case 4 :
+                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:36: RULE_IDENT
+                {
+                mRULE_IDENT(); 
+
+                }
+                break;
+            case 5 :
+                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:47: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 4 :
-                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:30: RULE_INT
+            case 6 :
+                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:55: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 5 :
-                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:39: RULE_STRING
+            case 7 :
+                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:64: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 6 :
-                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:51: RULE_ML_COMMENT
+            case 8 :
+                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:76: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 7 :
-                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:67: RULE_SL_COMMENT
+            case 9 :
+                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:92: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 8 :
-                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:83: RULE_WS
+            case 10 :
+                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:108: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 9 :
-                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:91: RULE_ANY_OTHER
+            case 11 :
+                // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:1:116: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -665,135 +754,144 @@ public class InternalPrologLexer extends Lexer {
     }
 
 
-    protected DFA12 dfa12 = new DFA12(this);
-    static final String DFA12_eotS =
-        "\1\uffff\1\14\1\uffff\1\12\2\uffff\3\12\2\uffff\1\14\7\uffff\2\14"+
-        "\1\26\1\uffff";
-    static final String DFA12_eofS =
-        "\27\uffff";
-    static final String DFA12_minS =
-        "\1\0\1\145\1\uffff\1\101\2\uffff\2\0\1\52\2\uffff\1\154\7\uffff"+
-        "\1\154\1\157\1\60\1\uffff";
-    static final String DFA12_maxS =
-        "\1\uffff\1\145\1\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff\1\154"+
-        "\7\uffff\1\154\1\157\1\172\1\uffff";
-    static final String DFA12_acceptS =
-        "\2\uffff\1\2\1\uffff\1\3\1\4\3\uffff\1\10\1\11\1\uffff\1\3\1\2\1"+
-        "\4\1\5\1\6\1\7\1\10\3\uffff\1\1";
-    static final String DFA12_specialS =
-        "\1\0\5\uffff\1\2\1\1\17\uffff}>";
-    static final String[] DFA12_transitionS = {
-            "\11\12\2\11\2\12\1\11\22\12\1\11\1\2\1\6\4\12\1\7\7\12\1\10"+
-            "\12\5\7\12\7\4\1\1\22\4\3\12\1\3\1\4\1\12\32\4\uff85\12",
-            "\1\13",
+    protected DFA13 dfa13 = new DFA13(this);
+    static final String DFA13_eotS =
+        "\1\uffff\1\17\1\uffff\1\17\1\22\1\14\2\uffff\3\14\2\uffff\1\16\3"+
+        "\uffff\1\22\6\uffff\2\16\1\33\1\uffff";
+    static final String DFA13_eofS =
+        "\34\uffff";
+    static final String DFA13_minS =
+        "\1\0\1\60\1\uffff\2\60\1\101\2\uffff\2\0\1\52\2\uffff\1\154\3\uffff"+
+        "\1\60\6\uffff\1\154\1\157\1\60\1\uffff";
+    static final String DFA13_maxS =
+        "\1\uffff\1\172\1\uffff\3\172\2\uffff\2\uffff\1\57\2\uffff\1\154"+
+        "\3\uffff\1\172\6\uffff\1\154\1\157\1\172\1\uffff";
+    static final String DFA13_acceptS =
+        "\2\uffff\1\2\3\uffff\1\5\1\6\3\uffff\1\12\1\13\1\uffff\1\5\1\3\1"+
+        "\2\1\uffff\1\4\1\6\1\7\1\10\1\11\1\12\3\uffff\1\1";
+    static final String DFA13_specialS =
+        "\1\1\7\uffff\1\0\1\2\22\uffff}>";
+    static final String[] DFA13_transitionS = {
+            "\11\14\2\13\2\14\1\13\22\14\1\13\1\2\1\10\4\14\1\11\7\14\1\12"+
+            "\12\7\7\14\7\3\1\1\22\3\3\14\1\5\1\6\1\14\32\4\uff85\14",
+            "\12\16\7\uffff\32\16\4\uffff\1\16\1\uffff\4\16\1\15\25\16",
             "",
-            "\32\14\4\uffff\1\14\1\uffff\32\14",
-            "",
-            "",
-            "\0\17",
-            "\0\17",
-            "\1\20\4\uffff\1\21",
+            "\12\16\7\uffff\32\16\4\uffff\1\16\1\uffff\32\16",
+            "\12\21\7\uffff\32\21\4\uffff\1\21\1\uffff\32\21",
+            "\32\16\4\uffff\1\16\1\uffff\32\16",
             "",
             "",
-            "\1\23",
+            "\0\24",
+            "\0\24",
+            "\1\25\4\uffff\1\26",
             "",
             "",
-            "",
-            "",
+            "\1\30",
             "",
             "",
             "",
-            "\1\24",
-            "\1\25",
-            "\12\14\7\uffff\32\14\4\uffff\1\14\1\uffff\32\14",
+            "\12\21\7\uffff\32\21\4\uffff\1\21\1\uffff\32\21",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\31",
+            "\1\32",
+            "\12\16\7\uffff\32\16\4\uffff\1\16\1\uffff\32\16",
             ""
     };
 
-    static final short[] DFA12_eot = DFA.unpackEncodedString(DFA12_eotS);
-    static final short[] DFA12_eof = DFA.unpackEncodedString(DFA12_eofS);
-    static final char[] DFA12_min = DFA.unpackEncodedStringToUnsignedChars(DFA12_minS);
-    static final char[] DFA12_max = DFA.unpackEncodedStringToUnsignedChars(DFA12_maxS);
-    static final short[] DFA12_accept = DFA.unpackEncodedString(DFA12_acceptS);
-    static final short[] DFA12_special = DFA.unpackEncodedString(DFA12_specialS);
-    static final short[][] DFA12_transition;
+    static final short[] DFA13_eot = DFA.unpackEncodedString(DFA13_eotS);
+    static final short[] DFA13_eof = DFA.unpackEncodedString(DFA13_eofS);
+    static final char[] DFA13_min = DFA.unpackEncodedStringToUnsignedChars(DFA13_minS);
+    static final char[] DFA13_max = DFA.unpackEncodedStringToUnsignedChars(DFA13_maxS);
+    static final short[] DFA13_accept = DFA.unpackEncodedString(DFA13_acceptS);
+    static final short[] DFA13_special = DFA.unpackEncodedString(DFA13_specialS);
+    static final short[][] DFA13_transition;
 
     static {
-        int numStates = DFA12_transitionS.length;
-        DFA12_transition = new short[numStates][];
+        int numStates = DFA13_transitionS.length;
+        DFA13_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA12_transition[i] = DFA.unpackEncodedString(DFA12_transitionS[i]);
+            DFA13_transition[i] = DFA.unpackEncodedString(DFA13_transitionS[i]);
         }
     }
 
-    class DFA12 extends DFA {
+    class DFA13 extends DFA {
 
-        public DFA12(BaseRecognizer recognizer) {
+        public DFA13(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 12;
-            this.eot = DFA12_eot;
-            this.eof = DFA12_eof;
-            this.min = DFA12_min;
-            this.max = DFA12_max;
-            this.accept = DFA12_accept;
-            this.special = DFA12_special;
-            this.transition = DFA12_transition;
+            this.decisionNumber = 13;
+            this.eot = DFA13_eot;
+            this.eof = DFA13_eof;
+            this.min = DFA13_min;
+            this.max = DFA13_max;
+            this.accept = DFA13_accept;
+            this.special = DFA13_special;
+            this.transition = DFA13_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__13 | T__14 | RULE_VARIABLE | RULE_IDENT | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA12_0 = input.LA(1);
+                        int LA13_8 = input.LA(1);
 
                         s = -1;
-                        if ( (LA12_0=='H') ) {s = 1;}
+                        if ( ((LA13_8>='\u0000' && LA13_8<='\uFFFF')) ) {s = 20;}
 
-                        else if ( (LA12_0=='!') ) {s = 2;}
-
-                        else if ( (LA12_0=='^') ) {s = 3;}
-
-                        else if ( ((LA12_0>='A' && LA12_0<='G')||(LA12_0>='I' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='z')) ) {s = 4;}
-
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 5;}
-
-                        else if ( (LA12_0=='\"') ) {s = 6;}
-
-                        else if ( (LA12_0=='\'') ) {s = 7;}
-
-                        else if ( (LA12_0=='/') ) {s = 8;}
-
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 9;}
-
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='.')||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||(LA12_0>='{' && LA12_0<='\uFFFF')) ) {s = 10;}
+                        else s = 12;
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA12_7 = input.LA(1);
+                        int LA13_0 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_7>='\u0000' && LA12_7<='\uFFFF')) ) {s = 15;}
+                        if ( (LA13_0=='H') ) {s = 1;}
 
-                        else s = 10;
+                        else if ( (LA13_0=='!') ) {s = 2;}
+
+                        else if ( ((LA13_0>='A' && LA13_0<='G')||(LA13_0>='I' && LA13_0<='Z')) ) {s = 3;}
+
+                        else if ( ((LA13_0>='a' && LA13_0<='z')) ) {s = 4;}
+
+                        else if ( (LA13_0=='^') ) {s = 5;}
+
+                        else if ( (LA13_0=='_') ) {s = 6;}
+
+                        else if ( ((LA13_0>='0' && LA13_0<='9')) ) {s = 7;}
+
+                        else if ( (LA13_0=='\"') ) {s = 8;}
+
+                        else if ( (LA13_0=='\'') ) {s = 9;}
+
+                        else if ( (LA13_0=='/') ) {s = 10;}
+
+                        else if ( ((LA13_0>='\t' && LA13_0<='\n')||LA13_0=='\r'||LA13_0==' ') ) {s = 11;}
+
+                        else if ( ((LA13_0>='\u0000' && LA13_0<='\b')||(LA13_0>='\u000B' && LA13_0<='\f')||(LA13_0>='\u000E' && LA13_0<='\u001F')||(LA13_0>='#' && LA13_0<='&')||(LA13_0>='(' && LA13_0<='.')||(LA13_0>=':' && LA13_0<='@')||(LA13_0>='[' && LA13_0<=']')||LA13_0=='`'||(LA13_0>='{' && LA13_0<='\uFFFF')) ) {s = 12;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA12_6 = input.LA(1);
+                        int LA13_9 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_6>='\u0000' && LA12_6<='\uFFFF')) ) {s = 15;}
+                        if ( ((LA13_9>='\u0000' && LA13_9<='\uFFFF')) ) {s = 20;}
 
-                        else s = 10;
+                        else s = 12;
 
                         if ( s>=0 ) return s;
                         break;
             }
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 12, _s, input);
+                new NoViableAltException(getDescription(), 13, _s, input);
             error(nvae);
             throw nvae;
         }
