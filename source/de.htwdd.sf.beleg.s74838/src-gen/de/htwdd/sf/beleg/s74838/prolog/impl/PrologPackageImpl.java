@@ -5,15 +5,13 @@
  */
 package de.htwdd.sf.beleg.s74838.prolog.impl;
 
-import de.htwdd.sf.beleg.s74838.prolog.Greeting;
-import de.htwdd.sf.beleg.s74838.prolog.Model;
+import de.htwdd.sf.beleg.s74838.prolog.PrologDsl;
 import de.htwdd.sf.beleg.s74838.prolog.PrologFactory;
 import de.htwdd.sf.beleg.s74838.prolog.PrologPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
@@ -30,14 +28,7 @@ public class PrologPackageImpl extends EPackageImpl implements PrologPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass modelEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass greetingEClass = null;
+  private EClass prologDslEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -107,9 +98,9 @@ public class PrologPackageImpl extends EPackageImpl implements PrologPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getModel()
+  public EClass getPrologDsl()
   {
-    return modelEClass;
+    return prologDslEClass;
   }
 
   /**
@@ -117,9 +108,9 @@ public class PrologPackageImpl extends EPackageImpl implements PrologPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModel_Greetings()
+  public EAttribute getPrologDsl_Program()
   {
-    return (EReference)modelEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)prologDslEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -127,19 +118,9 @@ public class PrologPackageImpl extends EPackageImpl implements PrologPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getGreeting()
+  public EAttribute getPrologDsl_Exquery()
   {
-    return greetingEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getGreeting_Name()
-  {
-    return (EAttribute)greetingEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)prologDslEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -172,11 +153,9 @@ public class PrologPackageImpl extends EPackageImpl implements PrologPackage
     isCreated = true;
 
     // Create classes and their features
-    modelEClass = createEClass(MODEL);
-    createEReference(modelEClass, MODEL__GREETINGS);
-
-    greetingEClass = createEClass(GREETING);
-    createEAttribute(greetingEClass, GREETING__NAME);
+    prologDslEClass = createEClass(PROLOG_DSL);
+    createEAttribute(prologDslEClass, PROLOG_DSL__PROGRAM);
+    createEAttribute(prologDslEClass, PROLOG_DSL__EXQUERY);
   }
 
   /**
@@ -210,11 +189,9 @@ public class PrologPackageImpl extends EPackageImpl implements PrologPackage
     // Add supertypes to classes
 
     // Initialize classes and features; add operations and parameters
-    initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getModel_Greetings(), this.getGreeting(), null, "greetings", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(greetingEClass, Greeting.class, "Greeting", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getGreeting_Name(), ecorePackage.getEString(), "name", null, 0, 1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(prologDslEClass, PrologDsl.class, "PrologDsl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getPrologDsl_Program(), ecorePackage.getEString(), "program", null, 0, 1, PrologDsl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPrologDsl_Exquery(), ecorePackage.getEString(), "exquery", null, 0, 1, PrologDsl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

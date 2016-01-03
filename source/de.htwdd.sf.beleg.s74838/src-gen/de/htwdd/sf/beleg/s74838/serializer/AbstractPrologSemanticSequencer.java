@@ -2,8 +2,7 @@ package de.htwdd.sf.beleg.s74838.serializer;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
-import de.htwdd.sf.beleg.s74838.prolog.Greeting;
-import de.htwdd.sf.beleg.s74838.prolog.Model;
+import de.htwdd.sf.beleg.s74838.prolog.PrologDsl;
 import de.htwdd.sf.beleg.s74838.prolog.PrologPackage;
 import de.htwdd.sf.beleg.s74838.services.PrologGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
@@ -46,15 +45,9 @@ public class AbstractPrologSemanticSequencer extends AbstractSemanticSequencer {
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == PrologPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
-			case PrologPackage.GREETING:
-				if(context == grammarAccess.getGreetingRule()) {
-					sequence_Greeting(context, (Greeting) semanticObject); 
-					return; 
-				}
-				else break;
-			case PrologPackage.MODEL:
-				if(context == grammarAccess.getModelRule()) {
-					sequence_Model(context, (Model) semanticObject); 
+			case PrologPackage.PROLOG_DSL:
+				if(context == grammarAccess.getPrologDslRule()) {
+					sequence_PrologDsl(context, (PrologDsl) semanticObject); 
 					return; 
 				}
 				else break;
@@ -64,31 +57,23 @@ public class AbstractPrologSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     (program=Program exquery=Exquery)
 	 *
 	 * Features:
-	 *    name[1, 1]
+	 *    program[1, 1]
+	 *    exquery[1, 1]
 	 */
-	protected void sequence_Greeting(EObject context, Greeting semanticObject) {
+	protected void sequence_PrologDsl(EObject context, PrologDsl semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, PrologPackage.Literals.GREETING__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PrologPackage.Literals.GREETING__NAME));
+			if(transientValues.isValueTransient(semanticObject, PrologPackage.Literals.PROLOG_DSL__PROGRAM) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PrologPackage.Literals.PROLOG_DSL__PROGRAM));
+			if(transientValues.isValueTransient(semanticObject, PrologPackage.Literals.PROLOG_DSL__EXQUERY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PrologPackage.Literals.PROLOG_DSL__EXQUERY));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getPrologDslAccess().getProgramProgramParserRuleCall_0_0(), semanticObject.getProgram());
+		feeder.accept(grammarAccess.getPrologDslAccess().getExqueryExqueryParserRuleCall_1_0(), semanticObject.getExquery());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     greetings+=Greeting*
-	 *
-	 * Features:
-	 *    greetings[0, *]
-	 */
-	protected void sequence_Model(EObject context, Model semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 }

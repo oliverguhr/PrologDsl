@@ -8,7 +8,6 @@ package de.htwdd.sf.beleg.s74838.prolog;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -60,103 +59,74 @@ public interface PrologPackage extends EPackage
   PrologPackage eINSTANCE = de.htwdd.sf.beleg.s74838.prolog.impl.PrologPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link de.htwdd.sf.beleg.s74838.prolog.impl.ModelImpl <em>Model</em>}' class.
+   * The meta object id for the '{@link de.htwdd.sf.beleg.s74838.prolog.impl.PrologDslImpl <em>Dsl</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see de.htwdd.sf.beleg.s74838.prolog.impl.ModelImpl
-   * @see de.htwdd.sf.beleg.s74838.prolog.impl.PrologPackageImpl#getModel()
+   * @see de.htwdd.sf.beleg.s74838.prolog.impl.PrologDslImpl
+   * @see de.htwdd.sf.beleg.s74838.prolog.impl.PrologPackageImpl#getPrologDsl()
    * @generated
    */
-  int MODEL = 0;
+  int PROLOG_DSL = 0;
 
   /**
-   * The feature id for the '<em><b>Greetings</b></em>' containment reference list.
+   * The feature id for the '<em><b>Program</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL__GREETINGS = 0;
+  int PROLOG_DSL__PROGRAM = 0;
 
   /**
-   * The number of structural features of the '<em>Model</em>' class.
+   * The feature id for the '<em><b>Exquery</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 1;
+  int PROLOG_DSL__EXQUERY = 1;
 
   /**
-   * The meta object id for the '{@link de.htwdd.sf.beleg.s74838.prolog.impl.GreetingImpl <em>Greeting</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see de.htwdd.sf.beleg.s74838.prolog.impl.GreetingImpl
-   * @see de.htwdd.sf.beleg.s74838.prolog.impl.PrologPackageImpl#getGreeting()
-   * @generated
-   */
-  int GREETING = 1;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * The number of structural features of the '<em>Dsl</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GREETING__NAME = 0;
-
-  /**
-   * The number of structural features of the '<em>Greeting</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GREETING_FEATURE_COUNT = 1;
+  int PROLOG_DSL_FEATURE_COUNT = 2;
 
 
   /**
-   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s74838.prolog.Model <em>Model</em>}'.
+   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s74838.prolog.PrologDsl <em>Dsl</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Model</em>'.
-   * @see de.htwdd.sf.beleg.s74838.prolog.Model
+   * @return the meta object for class '<em>Dsl</em>'.
+   * @see de.htwdd.sf.beleg.s74838.prolog.PrologDsl
    * @generated
    */
-  EClass getModel();
+  EClass getPrologDsl();
 
   /**
-   * Returns the meta object for the containment reference list '{@link de.htwdd.sf.beleg.s74838.prolog.Model#getGreetings <em>Greetings</em>}'.
+   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s74838.prolog.PrologDsl#getProgram <em>Program</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Greetings</em>'.
-   * @see de.htwdd.sf.beleg.s74838.prolog.Model#getGreetings()
-   * @see #getModel()
+   * @return the meta object for the attribute '<em>Program</em>'.
+   * @see de.htwdd.sf.beleg.s74838.prolog.PrologDsl#getProgram()
+   * @see #getPrologDsl()
    * @generated
    */
-  EReference getModel_Greetings();
+  EAttribute getPrologDsl_Program();
 
   /**
-   * Returns the meta object for class '{@link de.htwdd.sf.beleg.s74838.prolog.Greeting <em>Greeting</em>}'.
+   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s74838.prolog.PrologDsl#getExquery <em>Exquery</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Greeting</em>'.
-   * @see de.htwdd.sf.beleg.s74838.prolog.Greeting
+   * @return the meta object for the attribute '<em>Exquery</em>'.
+   * @see de.htwdd.sf.beleg.s74838.prolog.PrologDsl#getExquery()
+   * @see #getPrologDsl()
    * @generated
    */
-  EClass getGreeting();
-
-  /**
-   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s74838.prolog.Greeting#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see de.htwdd.sf.beleg.s74838.prolog.Greeting#getName()
-   * @see #getGreeting()
-   * @generated
-   */
-  EAttribute getGreeting_Name();
+  EAttribute getPrologDsl_Exquery();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -182,40 +152,30 @@ public interface PrologPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link de.htwdd.sf.beleg.s74838.prolog.impl.ModelImpl <em>Model</em>}' class.
+     * The meta object literal for the '{@link de.htwdd.sf.beleg.s74838.prolog.impl.PrologDslImpl <em>Dsl</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see de.htwdd.sf.beleg.s74838.prolog.impl.ModelImpl
-     * @see de.htwdd.sf.beleg.s74838.prolog.impl.PrologPackageImpl#getModel()
+     * @see de.htwdd.sf.beleg.s74838.prolog.impl.PrologDslImpl
+     * @see de.htwdd.sf.beleg.s74838.prolog.impl.PrologPackageImpl#getPrologDsl()
      * @generated
      */
-    EClass MODEL = eINSTANCE.getModel();
+    EClass PROLOG_DSL = eINSTANCE.getPrologDsl();
 
     /**
-     * The meta object literal for the '<em><b>Greetings</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Program</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MODEL__GREETINGS = eINSTANCE.getModel_Greetings();
+    EAttribute PROLOG_DSL__PROGRAM = eINSTANCE.getPrologDsl_Program();
 
     /**
-     * The meta object literal for the '{@link de.htwdd.sf.beleg.s74838.prolog.impl.GreetingImpl <em>Greeting</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see de.htwdd.sf.beleg.s74838.prolog.impl.GreetingImpl
-     * @see de.htwdd.sf.beleg.s74838.prolog.impl.PrologPackageImpl#getGreeting()
-     * @generated
-     */
-    EClass GREETING = eINSTANCE.getGreeting();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Exquery</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GREETING__NAME = eINSTANCE.getGreeting_Name();
+    EAttribute PROLOG_DSL__EXQUERY = eINSTANCE.getPrologDsl_Exquery();
 
   }
 

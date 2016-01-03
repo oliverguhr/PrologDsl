@@ -37,15 +37,24 @@ public class PrologParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getClauseAccess().getAlternatives(), "rule__Clause__Alternatives");
 					put(grammarAccess.getTermAccess().getAlternatives(), "rule__Term__Alternatives");
 					put(grammarAccess.getAtomAccess().getAlternatives(), "rule__Atom__Alternatives");
 					put(grammarAccess.getListAccess().getAlternatives(), "rule__List__Alternatives");
-					put(grammarAccess.getGreetingAccess().getGroup(), "rule__Greeting__Group__0");
+					put(grammarAccess.getPrologDslAccess().getGroup(), "rule__PrologDsl__Group__0");
+					put(grammarAccess.getProgramAccess().getGroup(), "rule__Program__Group__0");
+					put(grammarAccess.getExqueryAccess().getGroup(), "rule__Exquery__Group__0");
+					put(grammarAccess.getQueryAccess().getGroup(), "rule__Query__Group__0");
+					put(grammarAccess.getQueryAccess().getGroup_1(), "rule__Query__Group_1__0");
+					put(grammarAccess.getFactAccess().getGroup(), "rule__Fact__Group__0");
+					put(grammarAccess.getRuleAccess().getGroup(), "rule__Rule__Group__0");
+					put(grammarAccess.getPredicateAccess().getGroup(), "rule__Predicate__Group__0");
+					put(grammarAccess.getPredicateAccess().getGroup_3(), "rule__Predicate__Group_3__0");
+					put(grammarAccess.getNotEmptyListAccess().getGroup(), "rule__NotEmptyList__Group__0");
 					put(grammarAccess.getFolgeAccess().getGroup(), "rule__Folge__Group__0");
 					put(grammarAccess.getFolgeAccess().getGroup_1(), "rule__Folge__Group_1__0");
-					put(grammarAccess.getNotEmptyListAccess().getGroup(), "rule__NotEmptyList__Group__0");
-					put(grammarAccess.getModelAccess().getGreetingsAssignment(), "rule__Model__GreetingsAssignment");
-					put(grammarAccess.getGreetingAccess().getNameAssignment_1(), "rule__Greeting__NameAssignment_1");
+					put(grammarAccess.getPrologDslAccess().getProgramAssignment_0(), "rule__PrologDsl__ProgramAssignment_0");
+					put(grammarAccess.getPrologDslAccess().getExqueryAssignment_1(), "rule__PrologDsl__ExqueryAssignment_1");
 				}
 			};
 		}
@@ -56,7 +65,7 @@ public class PrologParser extends AbstractContentAssistParser {
 	protected Collection<FollowElement> getFollowElements(AbstractInternalContentAssistParser parser) {
 		try {
 			de.htwdd.sf.beleg.s74838.ui.contentassist.antlr.internal.InternalPrologParser typedParser = (de.htwdd.sf.beleg.s74838.ui.contentassist.antlr.internal.InternalPrologParser) parser;
-			typedParser.entryRuleModel();
+			typedParser.entryRulePrologDsl();
 			return typedParser.getFollowElements();
 		} catch(RecognitionException ex) {
 			throw new RuntimeException(ex);

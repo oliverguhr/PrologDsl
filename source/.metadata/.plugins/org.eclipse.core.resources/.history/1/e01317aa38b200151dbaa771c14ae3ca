@@ -1,0 +1,25 @@
+grammar de.htwdd.sf.beleg.s74838.Prolog with org.eclipse.xtext.common.Terminals
+
+generate prolog "http://www.htwdd.de/sf/beleg/s74838/Prolog"
+
+	
+PrologDsl: Program Exquery;	
+Program: Clause (Clause)*;
+Exquery: '?-' Query '.';	
+Query: Predicate (',' Predicate)*;
+Clause: Fact | Rule;
+Fact: Predicate '.';
+Rule: Predicate ':-' Query '.';
+Predicate: Functor '(' Term (','Term)* ')';
+Functor:ident;
+Term:Atom|List;
+Atom: ident| variable | Number;
+List: '[]' | NotEmptyList;
+NotEmptyList:'[' Folge ']';
+Folge: Atom (',' Atom)* ;
+
+Number:INT;
+
+	 
+terminal variable: 'A'..'Z';
+terminal ident: 'a'..'z'('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

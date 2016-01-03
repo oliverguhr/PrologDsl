@@ -67,8 +67,7 @@ public class PrologFactoryImpl extends EFactoryImpl implements PrologFactory
   {
     switch (eClass.getClassifierID())
     {
-      case PrologPackage.MODEL: return createModel();
-      case PrologPackage.GREETING: return createGreeting();
+      case PrologPackage.PROLOG_DSL: return createPrologDsl();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -79,21 +78,10 @@ public class PrologFactoryImpl extends EFactoryImpl implements PrologFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Model createModel()
+  public PrologDsl createPrologDsl()
   {
-    ModelImpl model = new ModelImpl();
-    return model;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Greeting createGreeting()
-  {
-    GreetingImpl greeting = new GreetingImpl();
-    return greeting;
+    PrologDslImpl prologDsl = new PrologDslImpl();
+    return prologDsl;
   }
 
   /**

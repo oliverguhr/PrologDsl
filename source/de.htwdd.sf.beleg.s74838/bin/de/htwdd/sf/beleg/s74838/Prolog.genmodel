@@ -9,11 +9,9 @@
     editorPluginID="de.htwdd.sf.beleg.s74838.editor">
   <genPackages prefix="Prolog" basePackage="de.htwdd.sf.beleg.s74838" disposableProviderFactory="true"
       ecorePackage="platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#/">
-    <genClasses ecoreClass="platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Model">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Model/greetings"/>
-    </genClasses>
-    <genClasses ecoreClass="platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Greeting">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Greeting/name"/>
+    <genClasses ecoreClass="platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//PrologDsl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//PrologDsl/program"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//PrologDsl/exquery"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

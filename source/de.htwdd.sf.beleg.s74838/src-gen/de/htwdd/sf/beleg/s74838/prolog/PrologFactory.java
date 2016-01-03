@@ -26,22 +26,13 @@ public interface PrologFactory extends EFactory
   PrologFactory eINSTANCE = de.htwdd.sf.beleg.s74838.prolog.impl.PrologFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Model</em>'.
+   * Returns a new object of class '<em>Dsl</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Model</em>'.
+   * @return a new object of class '<em>Dsl</em>'.
    * @generated
    */
-  Model createModel();
-
-  /**
-   * Returns a new object of class '<em>Greeting</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Greeting</em>'.
-   * @generated
-   */
-  Greeting createGreeting();
+  PrologDsl createPrologDsl();
 
   /**
    * Returns the package supported by this factory.

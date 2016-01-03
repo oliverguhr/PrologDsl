@@ -25,7 +25,7 @@ public class PrologParser extends org.eclipse.xtext.parser.antlr.AbstractAntlrPa
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Model";
+		return "PrologDsl";
 	}
 	
 	public PrologGrammarAccess getGrammarAccess() {

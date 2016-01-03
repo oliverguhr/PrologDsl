@@ -78,14 +78,9 @@ public class PrologAdapterFactory extends AdapterFactoryImpl
     new PrologSwitch<Adapter>()
     {
       @Override
-      public Adapter caseModel(Model object)
+      public Adapter casePrologDsl(PrologDsl object)
       {
-        return createModelAdapter();
-      }
-      @Override
-      public Adapter caseGreeting(Greeting object)
-      {
-        return createGreetingAdapter();
+        return createPrologDslAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -110,31 +105,16 @@ public class PrologAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s74838.prolog.Model <em>Model</em>}'.
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s74838.prolog.PrologDsl <em>Dsl</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see de.htwdd.sf.beleg.s74838.prolog.Model
+   * @see de.htwdd.sf.beleg.s74838.prolog.PrologDsl
    * @generated
    */
-  public Adapter createModelAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s74838.prolog.Greeting <em>Greeting</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see de.htwdd.sf.beleg.s74838.prolog.Greeting
-   * @generated
-   */
-  public Adapter createGreetingAdapter()
+  public Adapter createPrologDslAdapter()
   {
     return null;
   }
