@@ -37,8 +37,13 @@ public class PrologParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getTermAccess().getAlternatives(), "rule__Term__Alternatives");
 					put(grammarAccess.getAtomAccess().getAlternatives(), "rule__Atom__Alternatives");
+					put(grammarAccess.getListAccess().getAlternatives(), "rule__List__Alternatives");
 					put(grammarAccess.getGreetingAccess().getGroup(), "rule__Greeting__Group__0");
+					put(grammarAccess.getFolgeAccess().getGroup(), "rule__Folge__Group__0");
+					put(grammarAccess.getFolgeAccess().getGroup_1(), "rule__Folge__Group_1__0");
+					put(grammarAccess.getNotEmptyListAccess().getGroup(), "rule__NotEmptyList__Group__0");
 					put(grammarAccess.getModelAccess().getGreetingsAssignment(), "rule__Model__GreetingsAssignment");
 					put(grammarAccess.getGreetingAccess().getNameAssignment_1(), "rule__Greeting__NameAssignment_1");
 				}

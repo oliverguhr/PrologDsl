@@ -18,13 +18,11 @@ Greeting:
 	'Hello' name=ID '!';
 	
 	
-Term:Atom|List;
 Functor:ident;
 Atom: ident| variable | Number;
 Number:INT;
 Folge: Atom (',' Atom)* ;
 NotEmptyList:'[' Folge ']';
-List: '[]' | NotEmptyList;
 
 	 
 terminal variable: 'A'..'Z';

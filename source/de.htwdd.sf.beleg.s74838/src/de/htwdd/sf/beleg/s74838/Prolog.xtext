@@ -18,9 +18,14 @@ Greeting:
 	'Hello' name=ID '!';
 	
 	
+Term:Atom|List;
 Functor:ident;
 Atom: ident| variable | Number;
 Number:INT;
+Folge: Atom (',' Atom)* ;
+NotEmptyList:'[' Folge ']';
+List: '[]' | NotEmptyList;
+
 	 
 terminal variable: 'A'..'Z';
 terminal ident: 'a'..'z'('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

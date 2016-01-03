@@ -64,6 +64,26 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getExclamationMarkKeyword_2() { return cExclamationMarkKeyword_2; }
 	}
 
+	public class TermElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Term");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cAtomParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cListParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//Term:
+		//	Atom | List;
+		public ParserRule getRule() { return rule; }
+
+		//Atom | List
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//Atom
+		public RuleCall getAtomParserRuleCall_0() { return cAtomParserRuleCall_0; }
+
+		//List
+		public RuleCall getListParserRuleCall_1() { return cListParserRuleCall_1; }
+	}
+
 	public class FunctorElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Functor");
 		private final RuleCall cIdentTerminalRuleCall = (RuleCall)rule.eContents().get(1);
@@ -111,13 +131,89 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getINTTerminalRuleCall() { return cINTTerminalRuleCall; }
 	}
+
+	public class FolgeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Folge");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cAtomParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final RuleCall cAtomParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		
+		//Folge:
+		//	Atom ("," Atom)*;
+		public ParserRule getRule() { return rule; }
+
+		//Atom ("," Atom)*
+		public Group getGroup() { return cGroup; }
+
+		//Atom
+		public RuleCall getAtomParserRuleCall_0() { return cAtomParserRuleCall_0; }
+
+		//("," Atom)*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//","
+		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
+
+		//Atom
+		public RuleCall getAtomParserRuleCall_1_1() { return cAtomParserRuleCall_1_1; }
+	}
+
+	public class NotEmptyListElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "NotEmptyList");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cLeftSquareBracketKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final RuleCall cFolgeParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Keyword cRightSquareBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//NotEmptyList:
+		//	"[" Folge "]";
+		public ParserRule getRule() { return rule; }
+
+		//"[" Folge "]"
+		public Group getGroup() { return cGroup; }
+
+		//"["
+		public Keyword getLeftSquareBracketKeyword_0() { return cLeftSquareBracketKeyword_0; }
+
+		//Folge
+		public RuleCall getFolgeParserRuleCall_1() { return cFolgeParserRuleCall_1; }
+
+		//"]"
+		public Keyword getRightSquareBracketKeyword_2() { return cRightSquareBracketKeyword_2; }
+	}
+
+	public class ListElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "List");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Keyword cLeftSquareBracketRightSquareBracketKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
+		private final RuleCall cNotEmptyListParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//List:
+		//	"[]" | NotEmptyList;
+		public ParserRule getRule() { return rule; }
+
+		//"[]" | NotEmptyList
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//"[]"
+		public Keyword getLeftSquareBracketRightSquareBracketKeyword_0() { return cLeftSquareBracketRightSquareBracketKeyword_0; }
+
+		//NotEmptyList
+		public RuleCall getNotEmptyListParserRuleCall_1() { return cNotEmptyListParserRuleCall_1; }
+	}
 	
 	
 	private ModelElements pModel;
 	private GreetingElements pGreeting;
+	private TermElements pTerm;
 	private FunctorElements pFunctor;
 	private AtomElements pAtom;
 	private NumberElements pNumber;
+	private FolgeElements pFolge;
+	private NotEmptyListElements pNotEmptyList;
+	private ListElements pList;
 	private TerminalRule tVariable;
 	private TerminalRule tIdent;
 	
@@ -165,6 +261,16 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 		return getGreetingAccess().getRule();
 	}
 
+	//Term:
+	//	Atom | List;
+	public TermElements getTermAccess() {
+		return (pTerm != null) ? pTerm : (pTerm = new TermElements());
+	}
+	
+	public ParserRule getTermRule() {
+		return getTermAccess().getRule();
+	}
+
 	//Functor:
 	//	ident;
 	public FunctorElements getFunctorAccess() {
@@ -193,6 +299,36 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getNumberRule() {
 		return getNumberAccess().getRule();
+	}
+
+	//Folge:
+	//	Atom ("," Atom)*;
+	public FolgeElements getFolgeAccess() {
+		return (pFolge != null) ? pFolge : (pFolge = new FolgeElements());
+	}
+	
+	public ParserRule getFolgeRule() {
+		return getFolgeAccess().getRule();
+	}
+
+	//NotEmptyList:
+	//	"[" Folge "]";
+	public NotEmptyListElements getNotEmptyListAccess() {
+		return (pNotEmptyList != null) ? pNotEmptyList : (pNotEmptyList = new NotEmptyListElements());
+	}
+	
+	public ParserRule getNotEmptyListRule() {
+		return getNotEmptyListAccess().getRule();
+	}
+
+	//List:
+	//	"[]" | NotEmptyList;
+	public ListElements getListAccess() {
+		return (pList != null) ? pList : (pList = new ListElements());
+	}
+	
+	public ParserRule getListRule() {
+		return getListAccess().getRule();
 	}
 
 	//terminal variable:

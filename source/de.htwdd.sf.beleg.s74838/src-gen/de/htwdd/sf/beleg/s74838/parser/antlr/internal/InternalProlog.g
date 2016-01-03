@@ -153,6 +153,54 @@ ruleGreeting returns [EObject current=null]
 
 
 
+// Entry rule entryRuleAtom
+entryRuleAtom returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getAtomRule()); } 
+	 iv_ruleAtom=ruleAtom 
+	 { $current=$iv_ruleAtom.current.getText(); }  
+	 EOF 
+;
+
+// Rule Atom
+ruleAtom returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(    this_ident_0=RULE_IDENT    {
+		$current.merge(this_ident_0);
+    }
+
+    { 
+    newLeafNode(this_ident_0, grammarAccess.getAtomAccess().getIdentTerminalRuleCall_0()); 
+    }
+
+    |    this_variable_1=RULE_VARIABLE    {
+		$current.merge(this_variable_1);
+    }
+
+    { 
+    newLeafNode(this_variable_1, grammarAccess.getAtomAccess().getVariableTerminalRuleCall_1()); 
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getAtomAccess().getNumberParserRuleCall_2()); 
+    }
+    this_Number_2=ruleNumber    {
+		$current.merge(this_Number_2);
+    }
+
+    { 
+        afterParserOrEnumRuleCall();
+    }
+)
+    ;
+
+
+
+
+
 // Entry rule entryRuleNumber
 entryRuleNumber returns [String current=null] 
 	:
@@ -175,6 +223,138 @@ ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
     newLeafNode(this_INT_0, grammarAccess.getNumberAccess().getINTTerminalRuleCall()); 
     }
 
+    ;
+
+
+
+
+
+// Entry rule entryRuleFolge
+entryRuleFolge returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getFolgeRule()); } 
+	 iv_ruleFolge=ruleFolge 
+	 { $current=$iv_ruleFolge.current.getText(); }  
+	 EOF 
+;
+
+// Rule Folge
+ruleFolge returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+    { 
+        newCompositeNode(grammarAccess.getFolgeAccess().getAtomParserRuleCall_0()); 
+    }
+    this_Atom_0=ruleAtom    {
+		$current.merge(this_Atom_0);
+    }
+
+    { 
+        afterParserOrEnumRuleCall();
+    }
+(
+	kw=',' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getFolgeAccess().getCommaKeyword_1_0()); 
+    }
+
+    { 
+        newCompositeNode(grammarAccess.getFolgeAccess().getAtomParserRuleCall_1_1()); 
+    }
+    this_Atom_2=ruleAtom    {
+		$current.merge(this_Atom_2);
+    }
+
+    { 
+        afterParserOrEnumRuleCall();
+    }
+)*)
+    ;
+
+
+
+
+
+// Entry rule entryRuleNotEmptyList
+entryRuleNotEmptyList returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getNotEmptyListRule()); } 
+	 iv_ruleNotEmptyList=ruleNotEmptyList 
+	 { $current=$iv_ruleNotEmptyList.current.getText(); }  
+	 EOF 
+;
+
+// Rule NotEmptyList
+ruleNotEmptyList returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+	kw='[' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getNotEmptyListAccess().getLeftSquareBracketKeyword_0()); 
+    }
+
+    { 
+        newCompositeNode(grammarAccess.getNotEmptyListAccess().getFolgeParserRuleCall_1()); 
+    }
+    this_Folge_1=ruleFolge    {
+		$current.merge(this_Folge_1);
+    }
+
+    { 
+        afterParserOrEnumRuleCall();
+    }
+
+	kw=']' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getNotEmptyListAccess().getRightSquareBracketKeyword_2()); 
+    }
+)
+    ;
+
+
+
+
+
+// Entry rule entryRuleList
+entryRuleList returns [String current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getListRule()); } 
+	 iv_ruleList=ruleList 
+	 { $current=$iv_ruleList.current.getText(); }  
+	 EOF 
+;
+
+// Rule List
+ruleList returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+	kw='[]' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getListAccess().getLeftSquareBracketRightSquareBracketKeyword_0()); 
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getListAccess().getNotEmptyListParserRuleCall_1()); 
+    }
+    this_NotEmptyList_1=ruleNotEmptyList    {
+		$current.merge(this_NotEmptyList_1);
+    }
+
+    { 
+        afterParserOrEnumRuleCall();
+    }
+)
     ;
 
 
