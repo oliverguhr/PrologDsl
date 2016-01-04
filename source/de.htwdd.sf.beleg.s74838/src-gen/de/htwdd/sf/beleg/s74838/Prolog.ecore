@@ -4,7 +4,66 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="prolog"
     nsURI="http://www.htwdd.de/sf/beleg/s74838/Prolog" nsPrefix="prolog">
   <eClassifiers xsi:type="ecore:EClass" name="PrologDsl">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="program" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="exquery" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="program" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Program"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exquery" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Exquery"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Program">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="clause" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Clause"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Exquery">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="query" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Query"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Query">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="predicate" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Predicate"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nthPredicate" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Predicate"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Clause">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fact" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Fact"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rule" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Rule"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Fact">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="predicate" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Predicate"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rule">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="predicate" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Predicate"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="query" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Query"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Predicate">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="functor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="term" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Term"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nthTerm" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Term"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Term">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="term" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Atom">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="atom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="List">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="list" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NotEmptyList" eSuperTypes="platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//List">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="folge" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Folge"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Folge">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="atom" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Atom"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nthAtom" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Atom"
+        containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

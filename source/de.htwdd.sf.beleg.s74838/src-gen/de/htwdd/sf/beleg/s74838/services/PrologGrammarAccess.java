@@ -47,43 +47,43 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class ProgramElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Program");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cClauseParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
-		private final RuleCall cClauseParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cClauseAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cClauseClauseParserRuleCall_0 = (RuleCall)cClauseAssignment.eContents().get(0);
 		
 		//Program:
-		//	Clause Clause*;
+		//	clause=Clause+;
 		public ParserRule getRule() { return rule; }
 
-		//Clause Clause*
-		public Group getGroup() { return cGroup; }
+		//clause=Clause+
+		public Assignment getClauseAssignment() { return cClauseAssignment; }
 
 		//Clause
-		public RuleCall getClauseParserRuleCall_0() { return cClauseParserRuleCall_0; }
-
-		//Clause*
-		public RuleCall getClauseParserRuleCall_1() { return cClauseParserRuleCall_1; }
+		public RuleCall getClauseClauseParserRuleCall_0() { return cClauseClauseParserRuleCall_0; }
 	}
 
 	public class ExqueryElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Exquery");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cQuestionMarkHyphenMinusKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cQueryParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cQueryAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cQueryQueryParserRuleCall_1_0 = (RuleCall)cQueryAssignment_1.eContents().get(0);
 		private final Keyword cFullStopKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//Exquery:
-		//	"?-" Query ".";
+		//	"?-" query=Query ".";
 		public ParserRule getRule() { return rule; }
 
-		//"?-" Query "."
+		//"?-" query=Query "."
 		public Group getGroup() { return cGroup; }
 
 		//"?-"
 		public Keyword getQuestionMarkHyphenMinusKeyword_0() { return cQuestionMarkHyphenMinusKeyword_0; }
 
+		//query=Query
+		public Assignment getQueryAssignment_1() { return cQueryAssignment_1; }
+
 		//Query
-		public RuleCall getQueryParserRuleCall_1() { return cQueryParserRuleCall_1; }
+		public RuleCall getQueryQueryParserRuleCall_1_0() { return cQueryQueryParserRuleCall_1_0; }
 
 		//"."
 		public Keyword getFullStopKeyword_2() { return cFullStopKeyword_2; }
@@ -92,66 +92,86 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	public class QueryElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Query");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cPredicateParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Assignment cPredicateAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cPredicatePredicateParserRuleCall_0_0 = (RuleCall)cPredicateAssignment_0.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final RuleCall cPredicateParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final Assignment cNthPredicateAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cNthPredicatePredicateParserRuleCall_1_1_0 = (RuleCall)cNthPredicateAssignment_1_1.eContents().get(0);
 		
 		//Query:
-		//	Predicate ("," Predicate)*;
+		//	predicate=Predicate ("," nthPredicate=Predicate)*;
 		public ParserRule getRule() { return rule; }
 
-		//Predicate ("," Predicate)*
+		//predicate=Predicate ("," nthPredicate=Predicate)*
 		public Group getGroup() { return cGroup; }
 
-		//Predicate
-		public RuleCall getPredicateParserRuleCall_0() { return cPredicateParserRuleCall_0; }
+		//predicate=Predicate
+		public Assignment getPredicateAssignment_0() { return cPredicateAssignment_0; }
 
-		//("," Predicate)*
+		//Predicate
+		public RuleCall getPredicatePredicateParserRuleCall_0_0() { return cPredicatePredicateParserRuleCall_0_0; }
+
+		//("," nthPredicate=Predicate)*
 		public Group getGroup_1() { return cGroup_1; }
 
 		//","
 		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
 
+		//nthPredicate=Predicate
+		public Assignment getNthPredicateAssignment_1_1() { return cNthPredicateAssignment_1_1; }
+
 		//Predicate
-		public RuleCall getPredicateParserRuleCall_1_1() { return cPredicateParserRuleCall_1_1; }
+		public RuleCall getNthPredicatePredicateParserRuleCall_1_1_0() { return cNthPredicatePredicateParserRuleCall_1_1_0; }
 	}
 
 	public class ClauseElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Clause");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cFactParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cRuleParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final Assignment cFactAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final RuleCall cFactFactParserRuleCall_0_0 = (RuleCall)cFactAssignment_0.eContents().get(0);
+		private final Assignment cRuleAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final RuleCall cRuleRuleParserRuleCall_1_0 = (RuleCall)cRuleAssignment_1.eContents().get(0);
 		
 		//Clause:
-		//	Fact | Rule;
+		//	fact=Fact | rule=Rule;
 		public ParserRule getRule() { return rule; }
 
-		//Fact | Rule
+		//fact=Fact | rule=Rule
 		public Alternatives getAlternatives() { return cAlternatives; }
 
+		//fact=Fact
+		public Assignment getFactAssignment_0() { return cFactAssignment_0; }
+
 		//Fact
-		public RuleCall getFactParserRuleCall_0() { return cFactParserRuleCall_0; }
+		public RuleCall getFactFactParserRuleCall_0_0() { return cFactFactParserRuleCall_0_0; }
+
+		//rule=Rule
+		public Assignment getRuleAssignment_1() { return cRuleAssignment_1; }
 
 		//Rule
-		public RuleCall getRuleParserRuleCall_1() { return cRuleParserRuleCall_1; }
+		public RuleCall getRuleRuleParserRuleCall_1_0() { return cRuleRuleParserRuleCall_1_0; }
 	}
 
 	public class FactElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Fact");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cPredicateParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Assignment cPredicateAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cPredicatePredicateParserRuleCall_0_0 = (RuleCall)cPredicateAssignment_0.eContents().get(0);
 		private final Keyword cFullStopKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		
 		//Fact:
-		//	Predicate ".";
+		//	predicate=Predicate ".";
 		public ParserRule getRule() { return rule; }
 
-		//Predicate "."
+		//predicate=Predicate "."
 		public Group getGroup() { return cGroup; }
 
+		//predicate=Predicate
+		public Assignment getPredicateAssignment_0() { return cPredicateAssignment_0; }
+
 		//Predicate
-		public RuleCall getPredicateParserRuleCall_0() { return cPredicateParserRuleCall_0; }
+		public RuleCall getPredicatePredicateParserRuleCall_0_0() { return cPredicatePredicateParserRuleCall_0_0; }
 
 		//"."
 		public Keyword getFullStopKeyword_1() { return cFullStopKeyword_1; }
@@ -160,26 +180,34 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	public class RuleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Rule");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cPredicateParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Assignment cPredicateAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cPredicatePredicateParserRuleCall_0_0 = (RuleCall)cPredicateAssignment_0.eContents().get(0);
 		private final Keyword cColonHyphenMinusKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final RuleCall cQueryParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Assignment cQueryAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cQueryQueryParserRuleCall_2_0 = (RuleCall)cQueryAssignment_2.eContents().get(0);
 		private final Keyword cFullStopKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//Rule:
-		//	Predicate ":-" Query ".";
+		//	predicate=Predicate ":-" query=Query ".";
 		public ParserRule getRule() { return rule; }
 
-		//Predicate ":-" Query "."
+		//predicate=Predicate ":-" query=Query "."
 		public Group getGroup() { return cGroup; }
 
+		//predicate=Predicate
+		public Assignment getPredicateAssignment_0() { return cPredicateAssignment_0; }
+
 		//Predicate
-		public RuleCall getPredicateParserRuleCall_0() { return cPredicateParserRuleCall_0; }
+		public RuleCall getPredicatePredicateParserRuleCall_0_0() { return cPredicatePredicateParserRuleCall_0_0; }
 
 		//":-"
 		public Keyword getColonHyphenMinusKeyword_1() { return cColonHyphenMinusKeyword_1; }
 
+		//query=Query
+		public Assignment getQueryAssignment_2() { return cQueryAssignment_2; }
+
 		//Query
-		public RuleCall getQueryParserRuleCall_2() { return cQueryParserRuleCall_2; }
+		public RuleCall getQueryQueryParserRuleCall_2_0() { return cQueryQueryParserRuleCall_2_0; }
 
 		//"."
 		public Keyword getFullStopKeyword_3() { return cFullStopKeyword_3; }
@@ -188,38 +216,50 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	public class PredicateElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Predicate");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cFunctorParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Assignment cFunctorAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cFunctorFunctorParserRuleCall_0_0 = (RuleCall)cFunctorAssignment_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final RuleCall cTermParserRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
+		private final Assignment cTermAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTermTermParserRuleCall_2_0 = (RuleCall)cTermAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final RuleCall cTermParserRuleCall_3_1 = (RuleCall)cGroup_3.eContents().get(1);
+		private final Assignment cNthTermAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cNthTermTermParserRuleCall_3_1_0 = (RuleCall)cNthTermAssignment_3_1.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Predicate:
-		//	Functor "(" Term ("," Term)* ")";
+		//	functor=Functor "(" term=Term ("," nthTerm=Term)* ")";
 		public ParserRule getRule() { return rule; }
 
-		//Functor "(" Term ("," Term)* ")"
+		//functor=Functor "(" term=Term ("," nthTerm=Term)* ")"
 		public Group getGroup() { return cGroup; }
 
+		//functor=Functor
+		public Assignment getFunctorAssignment_0() { return cFunctorAssignment_0; }
+
 		//Functor
-		public RuleCall getFunctorParserRuleCall_0() { return cFunctorParserRuleCall_0; }
+		public RuleCall getFunctorFunctorParserRuleCall_0_0() { return cFunctorFunctorParserRuleCall_0_0; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
 
-		//Term
-		public RuleCall getTermParserRuleCall_2() { return cTermParserRuleCall_2; }
+		//term=Term
+		public Assignment getTermAssignment_2() { return cTermAssignment_2; }
 
-		//("," Term)*
+		//Term
+		public RuleCall getTermTermParserRuleCall_2_0() { return cTermTermParserRuleCall_2_0; }
+
+		//("," nthTerm=Term)*
 		public Group getGroup_3() { return cGroup_3; }
 
 		//","
 		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
 
+		//nthTerm=Term
+		public Assignment getNthTermAssignment_3_1() { return cNthTermAssignment_3_1; }
+
 		//Term
-		public RuleCall getTermParserRuleCall_3_1() { return cTermParserRuleCall_3_1; }
+		public RuleCall getNthTermTermParserRuleCall_3_1_0() { return cNthTermTermParserRuleCall_3_1_0; }
 
 		//")"
 		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
@@ -239,63 +279,75 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class TermElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Term");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cAtomParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cListParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final Assignment cTermAssignment = (Assignment)rule.eContents().get(1);
+		private final Alternatives cTermAlternatives_0 = (Alternatives)cTermAssignment.eContents().get(0);
+		private final RuleCall cTermAtomParserRuleCall_0_0 = (RuleCall)cTermAlternatives_0.eContents().get(0);
+		private final RuleCall cTermListParserRuleCall_0_1 = (RuleCall)cTermAlternatives_0.eContents().get(1);
 		
 		//Term:
-		//	Atom | List;
+		//	term=(Atom | List);
 		public ParserRule getRule() { return rule; }
 
+		//term=(Atom | List)
+		public Assignment getTermAssignment() { return cTermAssignment; }
+
 		//Atom | List
-		public Alternatives getAlternatives() { return cAlternatives; }
+		public Alternatives getTermAlternatives_0() { return cTermAlternatives_0; }
 
 		//Atom
-		public RuleCall getAtomParserRuleCall_0() { return cAtomParserRuleCall_0; }
+		public RuleCall getTermAtomParserRuleCall_0_0() { return cTermAtomParserRuleCall_0_0; }
 
 		//List
-		public RuleCall getListParserRuleCall_1() { return cListParserRuleCall_1; }
+		public RuleCall getTermListParserRuleCall_0_1() { return cTermListParserRuleCall_0_1; }
 	}
 
 	public class AtomElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Atom");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cIdentTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cVariableTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cNumberParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final Assignment cAtomAssignment = (Assignment)rule.eContents().get(1);
+		private final Alternatives cAtomAlternatives_0 = (Alternatives)cAtomAssignment.eContents().get(0);
+		private final RuleCall cAtomIdentTerminalRuleCall_0_0 = (RuleCall)cAtomAlternatives_0.eContents().get(0);
+		private final RuleCall cAtomVariableTerminalRuleCall_0_1 = (RuleCall)cAtomAlternatives_0.eContents().get(1);
+		private final RuleCall cAtomNumberParserRuleCall_0_2 = (RuleCall)cAtomAlternatives_0.eContents().get(2);
 		
 		//Atom:
-		//	ident | variable | Number;
+		//	atom=(ident | variable | Number);
 		public ParserRule getRule() { return rule; }
 
+		//atom=(ident | variable | Number)
+		public Assignment getAtomAssignment() { return cAtomAssignment; }
+
 		//ident | variable | Number
-		public Alternatives getAlternatives() { return cAlternatives; }
+		public Alternatives getAtomAlternatives_0() { return cAtomAlternatives_0; }
 
 		//ident
-		public RuleCall getIdentTerminalRuleCall_0() { return cIdentTerminalRuleCall_0; }
+		public RuleCall getAtomIdentTerminalRuleCall_0_0() { return cAtomIdentTerminalRuleCall_0_0; }
 
 		//variable
-		public RuleCall getVariableTerminalRuleCall_1() { return cVariableTerminalRuleCall_1; }
+		public RuleCall getAtomVariableTerminalRuleCall_0_1() { return cAtomVariableTerminalRuleCall_0_1; }
 
 		//Number
-		public RuleCall getNumberParserRuleCall_2() { return cNumberParserRuleCall_2; }
+		public RuleCall getAtomNumberParserRuleCall_0_2() { return cAtomNumberParserRuleCall_0_2; }
 	}
 
 	public class ListElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "List");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Keyword cLeftSquareBracketRightSquareBracketKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
+		private final Assignment cListAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final Keyword cListLeftSquareBracketRightSquareBracketKeyword_0_0 = (Keyword)cListAssignment_0.eContents().get(0);
 		private final RuleCall cNotEmptyListParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//List:
-		//	"[]" | NotEmptyList;
+		//	list="[]" | NotEmptyList;
 		public ParserRule getRule() { return rule; }
 
-		//"[]" | NotEmptyList
+		//list="[]" | NotEmptyList
 		public Alternatives getAlternatives() { return cAlternatives; }
 
+		//list="[]"
+		public Assignment getListAssignment_0() { return cListAssignment_0; }
+
 		//"[]"
-		public Keyword getLeftSquareBracketRightSquareBracketKeyword_0() { return cLeftSquareBracketRightSquareBracketKeyword_0; }
+		public Keyword getListLeftSquareBracketRightSquareBracketKeyword_0_0() { return cListLeftSquareBracketRightSquareBracketKeyword_0_0; }
 
 		//NotEmptyList
 		public RuleCall getNotEmptyListParserRuleCall_1() { return cNotEmptyListParserRuleCall_1; }
@@ -305,21 +357,25 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "NotEmptyList");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cLeftSquareBracketKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final RuleCall cFolgeParserRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
+		private final Assignment cFolgeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cFolgeFolgeParserRuleCall_1_0 = (RuleCall)cFolgeAssignment_1.eContents().get(0);
 		private final Keyword cRightSquareBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//NotEmptyList:
-		//	"[" Folge "]";
+		//	"[" folge=Folge "]";
 		public ParserRule getRule() { return rule; }
 
-		//"[" Folge "]"
+		//"[" folge=Folge "]"
 		public Group getGroup() { return cGroup; }
 
 		//"["
 		public Keyword getLeftSquareBracketKeyword_0() { return cLeftSquareBracketKeyword_0; }
 
+		//folge=Folge
+		public Assignment getFolgeAssignment_1() { return cFolgeAssignment_1; }
+
 		//Folge
-		public RuleCall getFolgeParserRuleCall_1() { return cFolgeParserRuleCall_1; }
+		public RuleCall getFolgeFolgeParserRuleCall_1_0() { return cFolgeFolgeParserRuleCall_1_0; }
 
 		//"]"
 		public Keyword getRightSquareBracketKeyword_2() { return cRightSquareBracketKeyword_2; }
@@ -328,29 +384,37 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	public class FolgeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Folge");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cAtomParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Assignment cAtomAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cAtomAtomParserRuleCall_0_0 = (RuleCall)cAtomAssignment_0.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
 		private final Keyword cCommaKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final RuleCall cAtomParserRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final Assignment cNthAtomAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cNthAtomAtomParserRuleCall_1_1_0 = (RuleCall)cNthAtomAssignment_1_1.eContents().get(0);
 		
 		//Folge:
-		//	Atom ("," Atom)*;
+		//	atom=Atom ("," nthAtom=Atom)*;
 		public ParserRule getRule() { return rule; }
 
-		//Atom ("," Atom)*
+		//atom=Atom ("," nthAtom=Atom)*
 		public Group getGroup() { return cGroup; }
 
-		//Atom
-		public RuleCall getAtomParserRuleCall_0() { return cAtomParserRuleCall_0; }
+		//atom=Atom
+		public Assignment getAtomAssignment_0() { return cAtomAssignment_0; }
 
-		//("," Atom)*
+		//Atom
+		public RuleCall getAtomAtomParserRuleCall_0_0() { return cAtomAtomParserRuleCall_0_0; }
+
+		//("," nthAtom=Atom)*
 		public Group getGroup_1() { return cGroup_1; }
 
 		//","
 		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
 
+		//nthAtom=Atom
+		public Assignment getNthAtomAssignment_1_1() { return cNthAtomAssignment_1_1; }
+
 		//Atom
-		public RuleCall getAtomParserRuleCall_1_1() { return cAtomParserRuleCall_1_1; }
+		public RuleCall getNthAtomAtomParserRuleCall_1_1_0() { return cNthAtomAtomParserRuleCall_1_1_0; }
 	}
 
 	public class NumberElements extends AbstractParserRuleElementFinder {
@@ -416,7 +480,7 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Program:
-	//	Clause Clause*;
+	//	clause=Clause+;
 	public ProgramElements getProgramAccess() {
 		return (pProgram != null) ? pProgram : (pProgram = new ProgramElements());
 	}
@@ -426,7 +490,7 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Exquery:
-	//	"?-" Query ".";
+	//	"?-" query=Query ".";
 	public ExqueryElements getExqueryAccess() {
 		return (pExquery != null) ? pExquery : (pExquery = new ExqueryElements());
 	}
@@ -436,7 +500,7 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Query:
-	//	Predicate ("," Predicate)*;
+	//	predicate=Predicate ("," nthPredicate=Predicate)*;
 	public QueryElements getQueryAccess() {
 		return (pQuery != null) ? pQuery : (pQuery = new QueryElements());
 	}
@@ -446,7 +510,7 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Clause:
-	//	Fact | Rule;
+	//	fact=Fact | rule=Rule;
 	public ClauseElements getClauseAccess() {
 		return (pClause != null) ? pClause : (pClause = new ClauseElements());
 	}
@@ -456,7 +520,7 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Fact:
-	//	Predicate ".";
+	//	predicate=Predicate ".";
 	public FactElements getFactAccess() {
 		return (pFact != null) ? pFact : (pFact = new FactElements());
 	}
@@ -466,7 +530,7 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Rule:
-	//	Predicate ":-" Query ".";
+	//	predicate=Predicate ":-" query=Query ".";
 	public RuleElements getRuleAccess() {
 		return (pRule != null) ? pRule : (pRule = new RuleElements());
 	}
@@ -476,7 +540,7 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Predicate:
-	//	Functor "(" Term ("," Term)* ")";
+	//	functor=Functor "(" term=Term ("," nthTerm=Term)* ")";
 	public PredicateElements getPredicateAccess() {
 		return (pPredicate != null) ? pPredicate : (pPredicate = new PredicateElements());
 	}
@@ -496,7 +560,7 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Term:
-	//	Atom | List;
+	//	term=(Atom | List);
 	public TermElements getTermAccess() {
 		return (pTerm != null) ? pTerm : (pTerm = new TermElements());
 	}
@@ -506,7 +570,7 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Atom:
-	//	ident | variable | Number;
+	//	atom=(ident | variable | Number);
 	public AtomElements getAtomAccess() {
 		return (pAtom != null) ? pAtom : (pAtom = new AtomElements());
 	}
@@ -516,7 +580,7 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//List:
-	//	"[]" | NotEmptyList;
+	//	list="[]" | NotEmptyList;
 	public ListElements getListAccess() {
 		return (pList != null) ? pList : (pList = new ListElements());
 	}
@@ -526,7 +590,7 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//NotEmptyList:
-	//	"[" Folge "]";
+	//	"[" folge=Folge "]";
 	public NotEmptyListElements getNotEmptyListAccess() {
 		return (pNotEmptyList != null) ? pNotEmptyList : (pNotEmptyList = new NotEmptyListElements());
 	}
@@ -536,7 +600,7 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Folge:
-	//	Atom ("," Atom)*;
+	//	atom=Atom ("," nthAtom=Atom)*;
 	public FolgeElements getFolgeAccess() {
 		return (pFolge != null) ? pFolge : (pFolge = new FolgeElements());
 	}

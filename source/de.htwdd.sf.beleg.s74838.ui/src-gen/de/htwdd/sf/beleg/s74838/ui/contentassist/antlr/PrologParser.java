@@ -38,11 +38,10 @@ public class PrologParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getClauseAccess().getAlternatives(), "rule__Clause__Alternatives");
-					put(grammarAccess.getTermAccess().getAlternatives(), "rule__Term__Alternatives");
-					put(grammarAccess.getAtomAccess().getAlternatives(), "rule__Atom__Alternatives");
+					put(grammarAccess.getTermAccess().getTermAlternatives_0(), "rule__Term__TermAlternatives_0");
+					put(grammarAccess.getAtomAccess().getAtomAlternatives_0(), "rule__Atom__AtomAlternatives_0");
 					put(grammarAccess.getListAccess().getAlternatives(), "rule__List__Alternatives");
 					put(grammarAccess.getPrologDslAccess().getGroup(), "rule__PrologDsl__Group__0");
-					put(grammarAccess.getProgramAccess().getGroup(), "rule__Program__Group__0");
 					put(grammarAccess.getExqueryAccess().getGroup(), "rule__Exquery__Group__0");
 					put(grammarAccess.getQueryAccess().getGroup(), "rule__Query__Group__0");
 					put(grammarAccess.getQueryAccess().getGroup_1(), "rule__Query__Group_1__0");
@@ -55,6 +54,24 @@ public class PrologParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFolgeAccess().getGroup_1(), "rule__Folge__Group_1__0");
 					put(grammarAccess.getPrologDslAccess().getProgramAssignment_0(), "rule__PrologDsl__ProgramAssignment_0");
 					put(grammarAccess.getPrologDslAccess().getExqueryAssignment_1(), "rule__PrologDsl__ExqueryAssignment_1");
+					put(grammarAccess.getProgramAccess().getClauseAssignment(), "rule__Program__ClauseAssignment");
+					put(grammarAccess.getExqueryAccess().getQueryAssignment_1(), "rule__Exquery__QueryAssignment_1");
+					put(grammarAccess.getQueryAccess().getPredicateAssignment_0(), "rule__Query__PredicateAssignment_0");
+					put(grammarAccess.getQueryAccess().getNthPredicateAssignment_1_1(), "rule__Query__NthPredicateAssignment_1_1");
+					put(grammarAccess.getClauseAccess().getFactAssignment_0(), "rule__Clause__FactAssignment_0");
+					put(grammarAccess.getClauseAccess().getRuleAssignment_1(), "rule__Clause__RuleAssignment_1");
+					put(grammarAccess.getFactAccess().getPredicateAssignment_0(), "rule__Fact__PredicateAssignment_0");
+					put(grammarAccess.getRuleAccess().getPredicateAssignment_0(), "rule__Rule__PredicateAssignment_0");
+					put(grammarAccess.getRuleAccess().getQueryAssignment_2(), "rule__Rule__QueryAssignment_2");
+					put(grammarAccess.getPredicateAccess().getFunctorAssignment_0(), "rule__Predicate__FunctorAssignment_0");
+					put(grammarAccess.getPredicateAccess().getTermAssignment_2(), "rule__Predicate__TermAssignment_2");
+					put(grammarAccess.getPredicateAccess().getNthTermAssignment_3_1(), "rule__Predicate__NthTermAssignment_3_1");
+					put(grammarAccess.getTermAccess().getTermAssignment(), "rule__Term__TermAssignment");
+					put(grammarAccess.getAtomAccess().getAtomAssignment(), "rule__Atom__AtomAssignment");
+					put(grammarAccess.getListAccess().getListAssignment_0(), "rule__List__ListAssignment_0");
+					put(grammarAccess.getNotEmptyListAccess().getFolgeAssignment_1(), "rule__NotEmptyList__FolgeAssignment_1");
+					put(grammarAccess.getFolgeAccess().getAtomAssignment_0(), "rule__Folge__AtomAssignment_0");
+					put(grammarAccess.getFolgeAccess().getNthAtomAssignment_1_1(), "rule__Folge__NthAtomAssignment_1_1");
 				}
 			};
 		}

@@ -83,6 +83,66 @@ public class PrologAdapterFactory extends AdapterFactoryImpl
         return createPrologDslAdapter();
       }
       @Override
+      public Adapter caseProgram(Program object)
+      {
+        return createProgramAdapter();
+      }
+      @Override
+      public Adapter caseExquery(Exquery object)
+      {
+        return createExqueryAdapter();
+      }
+      @Override
+      public Adapter caseQuery(Query object)
+      {
+        return createQueryAdapter();
+      }
+      @Override
+      public Adapter caseClause(Clause object)
+      {
+        return createClauseAdapter();
+      }
+      @Override
+      public Adapter caseFact(Fact object)
+      {
+        return createFactAdapter();
+      }
+      @Override
+      public Adapter caseRule(Rule object)
+      {
+        return createRuleAdapter();
+      }
+      @Override
+      public Adapter casePredicate(Predicate object)
+      {
+        return createPredicateAdapter();
+      }
+      @Override
+      public Adapter caseTerm(Term object)
+      {
+        return createTermAdapter();
+      }
+      @Override
+      public Adapter caseAtom(Atom object)
+      {
+        return createAtomAdapter();
+      }
+      @Override
+      public Adapter caseList(List object)
+      {
+        return createListAdapter();
+      }
+      @Override
+      public Adapter caseNotEmptyList(NotEmptyList object)
+      {
+        return createNotEmptyListAdapter();
+      }
+      @Override
+      public Adapter caseFolge(Folge object)
+      {
+        return createFolgeAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -115,6 +175,186 @@ public class PrologAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createPrologDslAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s74838.prolog.Program <em>Program</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.htwdd.sf.beleg.s74838.prolog.Program
+   * @generated
+   */
+  public Adapter createProgramAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s74838.prolog.Exquery <em>Exquery</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.htwdd.sf.beleg.s74838.prolog.Exquery
+   * @generated
+   */
+  public Adapter createExqueryAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s74838.prolog.Query <em>Query</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.htwdd.sf.beleg.s74838.prolog.Query
+   * @generated
+   */
+  public Adapter createQueryAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s74838.prolog.Clause <em>Clause</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.htwdd.sf.beleg.s74838.prolog.Clause
+   * @generated
+   */
+  public Adapter createClauseAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s74838.prolog.Fact <em>Fact</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.htwdd.sf.beleg.s74838.prolog.Fact
+   * @generated
+   */
+  public Adapter createFactAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s74838.prolog.Rule <em>Rule</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.htwdd.sf.beleg.s74838.prolog.Rule
+   * @generated
+   */
+  public Adapter createRuleAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s74838.prolog.Predicate <em>Predicate</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.htwdd.sf.beleg.s74838.prolog.Predicate
+   * @generated
+   */
+  public Adapter createPredicateAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s74838.prolog.Term <em>Term</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.htwdd.sf.beleg.s74838.prolog.Term
+   * @generated
+   */
+  public Adapter createTermAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s74838.prolog.Atom <em>Atom</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.htwdd.sf.beleg.s74838.prolog.Atom
+   * @generated
+   */
+  public Adapter createAtomAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s74838.prolog.List <em>List</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.htwdd.sf.beleg.s74838.prolog.List
+   * @generated
+   */
+  public Adapter createListAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s74838.prolog.NotEmptyList <em>Not Empty List</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.htwdd.sf.beleg.s74838.prolog.NotEmptyList
+   * @generated
+   */
+  public Adapter createNotEmptyListAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link de.htwdd.sf.beleg.s74838.prolog.Folge <em>Folge</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see de.htwdd.sf.beleg.s74838.prolog.Folge
+   * @generated
+   */
+  public Adapter createFolgeAdapter()
   {
     return null;
   }

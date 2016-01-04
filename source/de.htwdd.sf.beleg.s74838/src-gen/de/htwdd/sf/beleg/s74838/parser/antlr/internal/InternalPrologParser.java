@@ -122,9 +122,9 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
     public final EObject rulePrologDsl() throws RecognitionException {
         EObject current = null;
 
-        AntlrDatatypeRuleToken lv_program_0_0 = null;
+        EObject lv_program_0_0 = null;
 
-        AntlrDatatypeRuleToken lv_exquery_1_0 = null;
+        EObject lv_exquery_1_0 = null;
 
 
          enterRule(); 
@@ -219,11 +219,11 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleProgram"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:124:1: entryRuleProgram returns [String current=null] : iv_ruleProgram= ruleProgram EOF ;
-    public final String entryRuleProgram() throws RecognitionException {
-        String current = null;
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:124:1: entryRuleProgram returns [EObject current=null] : iv_ruleProgram= ruleProgram EOF ;
+    public final EObject entryRuleProgram() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleProgram = null;
+        EObject iv_ruleProgram = null;
 
 
         try {
@@ -231,13 +231,13 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
             // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:126:2: iv_ruleProgram= ruleProgram EOF
             {
              newCompositeNode(grammarAccess.getProgramRule()); 
-            pushFollow(FOLLOW_ruleProgram_in_entryRuleProgram189);
+            pushFollow(FOLLOW_ruleProgram_in_entryRuleProgram188);
             iv_ruleProgram=ruleProgram();
 
             state._fsp--;
 
-             current =iv_ruleProgram.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleProgram200); 
+             current =iv_ruleProgram; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleProgram198); 
 
             }
 
@@ -255,39 +255,21 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleProgram"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:133:1: ruleProgram returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Clause_0= ruleClause (this_Clause_1= ruleClause )* ) ;
-    public final AntlrDatatypeRuleToken ruleProgram() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:133:1: ruleProgram returns [EObject current=null] : ( (lv_clause_0_0= ruleClause ) )+ ;
+    public final EObject ruleProgram() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken this_Clause_0 = null;
-
-        AntlrDatatypeRuleToken this_Clause_1 = null;
+        EObject lv_clause_0_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:136:28: ( (this_Clause_0= ruleClause (this_Clause_1= ruleClause )* ) )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:137:1: (this_Clause_0= ruleClause (this_Clause_1= ruleClause )* )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:136:28: ( ( (lv_clause_0_0= ruleClause ) )+ )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:137:1: ( (lv_clause_0_0= ruleClause ) )+
             {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:137:1: (this_Clause_0= ruleClause (this_Clause_1= ruleClause )* )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:138:5: this_Clause_0= ruleClause (this_Clause_1= ruleClause )*
-            {
-             
-                    newCompositeNode(grammarAccess.getProgramAccess().getClauseParserRuleCall_0()); 
-                
-            pushFollow(FOLLOW_ruleClause_in_ruleProgram247);
-            this_Clause_0=ruleClause();
-
-            state._fsp--;
-
-
-            		current.merge(this_Clause_0);
-                
-             
-                    afterParserOrEnumRuleCall();
-                
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:148:1: (this_Clause_1= ruleClause )*
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:137:1: ( (lv_clause_0_0= ruleClause ) )+
+            int cnt1=0;
             loop1:
             do {
                 int alt1=2;
@@ -300,33 +282,45 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:149:5: this_Clause_1= ruleClause
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:138:1: (lv_clause_0_0= ruleClause )
+            	    {
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:138:1: (lv_clause_0_0= ruleClause )
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:139:3: lv_clause_0_0= ruleClause
             	    {
             	     
-            	            newCompositeNode(grammarAccess.getProgramAccess().getClauseParserRuleCall_1()); 
-            	        
-            	    pushFollow(FOLLOW_ruleClause_in_ruleProgram275);
-            	    this_Clause_1=ruleClause();
+            	    	        newCompositeNode(grammarAccess.getProgramAccess().getClauseClauseParserRuleCall_0()); 
+            	    	    
+            	    pushFollow(FOLLOW_ruleClause_in_ruleProgram243);
+            	    lv_clause_0_0=ruleClause();
 
             	    state._fsp--;
 
 
-            	    		current.merge(this_Clause_1);
-            	        
-            	     
-            	            afterParserOrEnumRuleCall();
-            	        
+            	    	        if (current==null) {
+            	    	            current = createModelElementForParent(grammarAccess.getProgramRule());
+            	    	        }
+            	           		set(
+            	           			current, 
+            	           			"clause",
+            	            		lv_clause_0_0, 
+            	            		"Clause");
+            	    	        afterParserOrEnumRuleCall();
+            	    	    
+
+            	    }
+
 
             	    }
             	    break;
 
             	default :
-            	    break loop1;
+            	    if ( cnt1 >= 1 ) break loop1;
+                        EarlyExitException eee =
+                            new EarlyExitException(1, input);
+                        throw eee;
                 }
+                cnt1++;
             } while (true);
-
-
-            }
 
 
             }
@@ -346,25 +340,25 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleExquery"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:167:1: entryRuleExquery returns [String current=null] : iv_ruleExquery= ruleExquery EOF ;
-    public final String entryRuleExquery() throws RecognitionException {
-        String current = null;
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:163:1: entryRuleExquery returns [EObject current=null] : iv_ruleExquery= ruleExquery EOF ;
+    public final EObject entryRuleExquery() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleExquery = null;
+        EObject iv_ruleExquery = null;
 
 
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:168:2: (iv_ruleExquery= ruleExquery EOF )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:169:2: iv_ruleExquery= ruleExquery EOF
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:164:2: (iv_ruleExquery= ruleExquery EOF )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:165:2: iv_ruleExquery= ruleExquery EOF
             {
              newCompositeNode(grammarAccess.getExqueryRule()); 
-            pushFollow(FOLLOW_ruleExquery_in_entryRuleExquery323);
+            pushFollow(FOLLOW_ruleExquery_in_entryRuleExquery279);
             iv_ruleExquery=ruleExquery();
 
             state._fsp--;
 
-             current =iv_ruleExquery.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleExquery334); 
+             current =iv_ruleExquery; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleExquery289); 
 
             }
 
@@ -382,46 +376,62 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleExquery"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:176:1: ruleExquery returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '?-' this_Query_1= ruleQuery kw= '.' ) ;
-    public final AntlrDatatypeRuleToken ruleExquery() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:172:1: ruleExquery returns [EObject current=null] : (otherlv_0= '?-' ( (lv_query_1_0= ruleQuery ) ) otherlv_2= '.' ) ;
+    public final EObject ruleExquery() throws RecognitionException {
+        EObject current = null;
 
-        Token kw=null;
-        AntlrDatatypeRuleToken this_Query_1 = null;
+        Token otherlv_0=null;
+        Token otherlv_2=null;
+        EObject lv_query_1_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:179:28: ( (kw= '?-' this_Query_1= ruleQuery kw= '.' ) )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:180:1: (kw= '?-' this_Query_1= ruleQuery kw= '.' )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:175:28: ( (otherlv_0= '?-' ( (lv_query_1_0= ruleQuery ) ) otherlv_2= '.' ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:176:1: (otherlv_0= '?-' ( (lv_query_1_0= ruleQuery ) ) otherlv_2= '.' )
             {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:180:1: (kw= '?-' this_Query_1= ruleQuery kw= '.' )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:181:2: kw= '?-' this_Query_1= ruleQuery kw= '.'
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:176:1: (otherlv_0= '?-' ( (lv_query_1_0= ruleQuery ) ) otherlv_2= '.' )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:176:3: otherlv_0= '?-' ( (lv_query_1_0= ruleQuery ) ) otherlv_2= '.'
             {
-            kw=(Token)match(input,13,FOLLOW_13_in_ruleExquery372); 
+            otherlv_0=(Token)match(input,13,FOLLOW_13_in_ruleExquery326); 
 
-                    current.merge(kw);
-                    newLeafNode(kw, grammarAccess.getExqueryAccess().getQuestionMarkHyphenMinusKeyword_0()); 
+                	newLeafNode(otherlv_0, grammarAccess.getExqueryAccess().getQuestionMarkHyphenMinusKeyword_0());
                 
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:180:1: ( (lv_query_1_0= ruleQuery ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:181:1: (lv_query_1_0= ruleQuery )
+            {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:181:1: (lv_query_1_0= ruleQuery )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:182:3: lv_query_1_0= ruleQuery
+            {
              
-                    newCompositeNode(grammarAccess.getExqueryAccess().getQueryParserRuleCall_1()); 
-                
-            pushFollow(FOLLOW_ruleQuery_in_ruleExquery394);
-            this_Query_1=ruleQuery();
+            	        newCompositeNode(grammarAccess.getExqueryAccess().getQueryQueryParserRuleCall_1_0()); 
+            	    
+            pushFollow(FOLLOW_ruleQuery_in_ruleExquery347);
+            lv_query_1_0=ruleQuery();
 
             state._fsp--;
 
 
-            		current.merge(this_Query_1);
-                
-             
-                    afterParserOrEnumRuleCall();
-                
-            kw=(Token)match(input,14,FOLLOW_14_in_ruleExquery412); 
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getExqueryRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"query",
+                    		lv_query_1_0, 
+                    		"Query");
+            	        afterParserOrEnumRuleCall();
+            	    
 
-                    current.merge(kw);
-                    newLeafNode(kw, grammarAccess.getExqueryAccess().getFullStopKeyword_2()); 
+            }
+
+
+            }
+
+            otherlv_2=(Token)match(input,14,FOLLOW_14_in_ruleExquery359); 
+
+                	newLeafNode(otherlv_2, grammarAccess.getExqueryAccess().getFullStopKeyword_2());
                 
 
             }
@@ -444,25 +454,25 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQuery"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:211:1: entryRuleQuery returns [String current=null] : iv_ruleQuery= ruleQuery EOF ;
-    public final String entryRuleQuery() throws RecognitionException {
-        String current = null;
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:210:1: entryRuleQuery returns [EObject current=null] : iv_ruleQuery= ruleQuery EOF ;
+    public final EObject entryRuleQuery() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleQuery = null;
+        EObject iv_ruleQuery = null;
 
 
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:212:2: (iv_ruleQuery= ruleQuery EOF )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:213:2: iv_ruleQuery= ruleQuery EOF
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:211:2: (iv_ruleQuery= ruleQuery EOF )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:212:2: iv_ruleQuery= ruleQuery EOF
             {
              newCompositeNode(grammarAccess.getQueryRule()); 
-            pushFollow(FOLLOW_ruleQuery_in_entryRuleQuery453);
+            pushFollow(FOLLOW_ruleQuery_in_entryRuleQuery395);
             iv_ruleQuery=ruleQuery();
 
             state._fsp--;
 
-             current =iv_ruleQuery.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleQuery464); 
+             current =iv_ruleQuery; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleQuery405); 
 
             }
 
@@ -480,40 +490,57 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQuery"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:220:1: ruleQuery returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Predicate_0= rulePredicate (kw= ',' this_Predicate_2= rulePredicate )* ) ;
-    public final AntlrDatatypeRuleToken ruleQuery() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:219:1: ruleQuery returns [EObject current=null] : ( ( (lv_predicate_0_0= rulePredicate ) ) (otherlv_1= ',' ( (lv_nthPredicate_2_0= rulePredicate ) ) )* ) ;
+    public final EObject ruleQuery() throws RecognitionException {
+        EObject current = null;
 
-        Token kw=null;
-        AntlrDatatypeRuleToken this_Predicate_0 = null;
+        Token otherlv_1=null;
+        EObject lv_predicate_0_0 = null;
 
-        AntlrDatatypeRuleToken this_Predicate_2 = null;
+        EObject lv_nthPredicate_2_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:223:28: ( (this_Predicate_0= rulePredicate (kw= ',' this_Predicate_2= rulePredicate )* ) )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:224:1: (this_Predicate_0= rulePredicate (kw= ',' this_Predicate_2= rulePredicate )* )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:222:28: ( ( ( (lv_predicate_0_0= rulePredicate ) ) (otherlv_1= ',' ( (lv_nthPredicate_2_0= rulePredicate ) ) )* ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:223:1: ( ( (lv_predicate_0_0= rulePredicate ) ) (otherlv_1= ',' ( (lv_nthPredicate_2_0= rulePredicate ) ) )* )
             {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:224:1: (this_Predicate_0= rulePredicate (kw= ',' this_Predicate_2= rulePredicate )* )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:225:5: this_Predicate_0= rulePredicate (kw= ',' this_Predicate_2= rulePredicate )*
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:223:1: ( ( (lv_predicate_0_0= rulePredicate ) ) (otherlv_1= ',' ( (lv_nthPredicate_2_0= rulePredicate ) ) )* )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:223:2: ( (lv_predicate_0_0= rulePredicate ) ) (otherlv_1= ',' ( (lv_nthPredicate_2_0= rulePredicate ) ) )*
+            {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:223:2: ( (lv_predicate_0_0= rulePredicate ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:224:1: (lv_predicate_0_0= rulePredicate )
+            {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:224:1: (lv_predicate_0_0= rulePredicate )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:225:3: lv_predicate_0_0= rulePredicate
             {
              
-                    newCompositeNode(grammarAccess.getQueryAccess().getPredicateParserRuleCall_0()); 
-                
-            pushFollow(FOLLOW_rulePredicate_in_ruleQuery511);
-            this_Predicate_0=rulePredicate();
+            	        newCompositeNode(grammarAccess.getQueryAccess().getPredicatePredicateParserRuleCall_0_0()); 
+            	    
+            pushFollow(FOLLOW_rulePredicate_in_ruleQuery451);
+            lv_predicate_0_0=rulePredicate();
 
             state._fsp--;
 
 
-            		current.merge(this_Predicate_0);
-                
-             
-                    afterParserOrEnumRuleCall();
-                
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:235:1: (kw= ',' this_Predicate_2= rulePredicate )*
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getQueryRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"predicate",
+                    		lv_predicate_0_0, 
+                    		"Predicate");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:241:2: (otherlv_1= ',' ( (lv_nthPredicate_2_0= rulePredicate ) ) )*
             loop2:
             do {
                 int alt2=2;
@@ -526,27 +553,43 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:236:2: kw= ',' this_Predicate_2= rulePredicate
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:241:4: otherlv_1= ',' ( (lv_nthPredicate_2_0= rulePredicate ) )
             	    {
-            	    kw=(Token)match(input,15,FOLLOW_15_in_ruleQuery530); 
+            	    otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleQuery464); 
 
-            	            current.merge(kw);
-            	            newLeafNode(kw, grammarAccess.getQueryAccess().getCommaKeyword_1_0()); 
+            	        	newLeafNode(otherlv_1, grammarAccess.getQueryAccess().getCommaKeyword_1_0());
             	        
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:245:1: ( (lv_nthPredicate_2_0= rulePredicate ) )
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:246:1: (lv_nthPredicate_2_0= rulePredicate )
+            	    {
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:246:1: (lv_nthPredicate_2_0= rulePredicate )
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:247:3: lv_nthPredicate_2_0= rulePredicate
+            	    {
             	     
-            	            newCompositeNode(grammarAccess.getQueryAccess().getPredicateParserRuleCall_1_1()); 
-            	        
-            	    pushFollow(FOLLOW_rulePredicate_in_ruleQuery552);
-            	    this_Predicate_2=rulePredicate();
+            	    	        newCompositeNode(grammarAccess.getQueryAccess().getNthPredicatePredicateParserRuleCall_1_1_0()); 
+            	    	    
+            	    pushFollow(FOLLOW_rulePredicate_in_ruleQuery485);
+            	    lv_nthPredicate_2_0=rulePredicate();
 
             	    state._fsp--;
 
 
-            	    		current.merge(this_Predicate_2);
-            	        
-            	     
-            	            afterParserOrEnumRuleCall();
-            	        
+            	    	        if (current==null) {
+            	    	            current = createModelElementForParent(grammarAccess.getQueryRule());
+            	    	        }
+            	           		set(
+            	           			current, 
+            	           			"nthPredicate",
+            	            		lv_nthPredicate_2_0, 
+            	            		"Predicate");
+            	    	        afterParserOrEnumRuleCall();
+            	    	    
+
+            	    }
+
+
+            	    }
+
 
             	    }
             	    break;
@@ -577,25 +620,25 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleClause"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:260:1: entryRuleClause returns [String current=null] : iv_ruleClause= ruleClause EOF ;
-    public final String entryRuleClause() throws RecognitionException {
-        String current = null;
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:271:1: entryRuleClause returns [EObject current=null] : iv_ruleClause= ruleClause EOF ;
+    public final EObject entryRuleClause() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleClause = null;
+        EObject iv_ruleClause = null;
 
 
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:261:2: (iv_ruleClause= ruleClause EOF )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:262:2: iv_ruleClause= ruleClause EOF
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:272:2: (iv_ruleClause= ruleClause EOF )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:273:2: iv_ruleClause= ruleClause EOF
             {
              newCompositeNode(grammarAccess.getClauseRule()); 
-            pushFollow(FOLLOW_ruleClause_in_entryRuleClause600);
+            pushFollow(FOLLOW_ruleClause_in_entryRuleClause523);
             iv_ruleClause=ruleClause();
 
             state._fsp--;
 
-             current =iv_ruleClause.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleClause611); 
+             current =iv_ruleClause; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleClause533); 
 
             }
 
@@ -613,62 +656,96 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleClause"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:269:1: ruleClause returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Fact_0= ruleFact | this_Rule_1= ruleRule ) ;
-    public final AntlrDatatypeRuleToken ruleClause() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:280:1: ruleClause returns [EObject current=null] : ( ( (lv_fact_0_0= ruleFact ) ) | ( (lv_rule_1_0= ruleRule ) ) ) ;
+    public final EObject ruleClause() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken this_Fact_0 = null;
+        EObject lv_fact_0_0 = null;
 
-        AntlrDatatypeRuleToken this_Rule_1 = null;
+        EObject lv_rule_1_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:272:28: ( (this_Fact_0= ruleFact | this_Rule_1= ruleRule ) )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:273:1: (this_Fact_0= ruleFact | this_Rule_1= ruleRule )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:283:28: ( ( ( (lv_fact_0_0= ruleFact ) ) | ( (lv_rule_1_0= ruleRule ) ) ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:284:1: ( ( (lv_fact_0_0= ruleFact ) ) | ( (lv_rule_1_0= ruleRule ) ) )
             {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:273:1: (this_Fact_0= ruleFact | this_Rule_1= ruleRule )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:284:1: ( ( (lv_fact_0_0= ruleFact ) ) | ( (lv_rule_1_0= ruleRule ) ) )
             int alt3=2;
             alt3 = dfa3.predict(input);
             switch (alt3) {
                 case 1 :
-                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:274:5: this_Fact_0= ruleFact
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:284:2: ( (lv_fact_0_0= ruleFact ) )
+                    {
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:284:2: ( (lv_fact_0_0= ruleFact ) )
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:285:1: (lv_fact_0_0= ruleFact )
+                    {
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:285:1: (lv_fact_0_0= ruleFact )
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:286:3: lv_fact_0_0= ruleFact
                     {
                      
-                            newCompositeNode(grammarAccess.getClauseAccess().getFactParserRuleCall_0()); 
-                        
-                    pushFollow(FOLLOW_ruleFact_in_ruleClause658);
-                    this_Fact_0=ruleFact();
+                    	        newCompositeNode(grammarAccess.getClauseAccess().getFactFactParserRuleCall_0_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleFact_in_ruleClause579);
+                    lv_fact_0_0=ruleFact();
 
                     state._fsp--;
 
 
-                    		current.merge(this_Fact_0);
-                        
-                     
-                            afterParserOrEnumRuleCall();
-                        
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getClauseRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"fact",
+                            		lv_fact_0_0, 
+                            		"Fact");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
                 case 2 :
-                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:286:5: this_Rule_1= ruleRule
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:303:6: ( (lv_rule_1_0= ruleRule ) )
+                    {
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:303:6: ( (lv_rule_1_0= ruleRule ) )
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:304:1: (lv_rule_1_0= ruleRule )
+                    {
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:304:1: (lv_rule_1_0= ruleRule )
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:305:3: lv_rule_1_0= ruleRule
                     {
                      
-                            newCompositeNode(grammarAccess.getClauseAccess().getRuleParserRuleCall_1()); 
-                        
-                    pushFollow(FOLLOW_ruleRule_in_ruleClause691);
-                    this_Rule_1=ruleRule();
+                    	        newCompositeNode(grammarAccess.getClauseAccess().getRuleRuleParserRuleCall_1_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleRule_in_ruleClause606);
+                    lv_rule_1_0=ruleRule();
 
                     state._fsp--;
 
 
-                    		current.merge(this_Rule_1);
-                        
-                     
-                            afterParserOrEnumRuleCall();
-                        
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getClauseRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"rule",
+                            		lv_rule_1_0, 
+                            		"Rule");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
@@ -693,25 +770,25 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFact"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:304:1: entryRuleFact returns [String current=null] : iv_ruleFact= ruleFact EOF ;
-    public final String entryRuleFact() throws RecognitionException {
-        String current = null;
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:329:1: entryRuleFact returns [EObject current=null] : iv_ruleFact= ruleFact EOF ;
+    public final EObject entryRuleFact() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleFact = null;
+        EObject iv_ruleFact = null;
 
 
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:305:2: (iv_ruleFact= ruleFact EOF )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:306:2: iv_ruleFact= ruleFact EOF
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:330:2: (iv_ruleFact= ruleFact EOF )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:331:2: iv_ruleFact= ruleFact EOF
             {
              newCompositeNode(grammarAccess.getFactRule()); 
-            pushFollow(FOLLOW_ruleFact_in_entryRuleFact737);
+            pushFollow(FOLLOW_ruleFact_in_entryRuleFact642);
             iv_ruleFact=ruleFact();
 
             state._fsp--;
 
-             current =iv_ruleFact.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFact748); 
+             current =iv_ruleFact; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFact652); 
 
             }
 
@@ -729,41 +806,57 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFact"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:313:1: ruleFact returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Predicate_0= rulePredicate kw= '.' ) ;
-    public final AntlrDatatypeRuleToken ruleFact() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:338:1: ruleFact returns [EObject current=null] : ( ( (lv_predicate_0_0= rulePredicate ) ) otherlv_1= '.' ) ;
+    public final EObject ruleFact() throws RecognitionException {
+        EObject current = null;
 
-        Token kw=null;
-        AntlrDatatypeRuleToken this_Predicate_0 = null;
+        Token otherlv_1=null;
+        EObject lv_predicate_0_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:316:28: ( (this_Predicate_0= rulePredicate kw= '.' ) )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:317:1: (this_Predicate_0= rulePredicate kw= '.' )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:341:28: ( ( ( (lv_predicate_0_0= rulePredicate ) ) otherlv_1= '.' ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:342:1: ( ( (lv_predicate_0_0= rulePredicate ) ) otherlv_1= '.' )
             {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:317:1: (this_Predicate_0= rulePredicate kw= '.' )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:318:5: this_Predicate_0= rulePredicate kw= '.'
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:342:1: ( ( (lv_predicate_0_0= rulePredicate ) ) otherlv_1= '.' )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:342:2: ( (lv_predicate_0_0= rulePredicate ) ) otherlv_1= '.'
+            {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:342:2: ( (lv_predicate_0_0= rulePredicate ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:343:1: (lv_predicate_0_0= rulePredicate )
+            {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:343:1: (lv_predicate_0_0= rulePredicate )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:344:3: lv_predicate_0_0= rulePredicate
             {
              
-                    newCompositeNode(grammarAccess.getFactAccess().getPredicateParserRuleCall_0()); 
-                
-            pushFollow(FOLLOW_rulePredicate_in_ruleFact795);
-            this_Predicate_0=rulePredicate();
+            	        newCompositeNode(grammarAccess.getFactAccess().getPredicatePredicateParserRuleCall_0_0()); 
+            	    
+            pushFollow(FOLLOW_rulePredicate_in_ruleFact698);
+            lv_predicate_0_0=rulePredicate();
 
             state._fsp--;
 
 
-            		current.merge(this_Predicate_0);
-                
-             
-                    afterParserOrEnumRuleCall();
-                
-            kw=(Token)match(input,14,FOLLOW_14_in_ruleFact813); 
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getFactRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"predicate",
+                    		lv_predicate_0_0, 
+                    		"Predicate");
+            	        afterParserOrEnumRuleCall();
+            	    
 
-                    current.merge(kw);
-                    newLeafNode(kw, grammarAccess.getFactAccess().getFullStopKeyword_1()); 
+            }
+
+
+            }
+
+            otherlv_1=(Token)match(input,14,FOLLOW_14_in_ruleFact710); 
+
+                	newLeafNode(otherlv_1, grammarAccess.getFactAccess().getFullStopKeyword_1());
                 
 
             }
@@ -786,25 +879,25 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRule"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:342:1: entryRuleRule returns [String current=null] : iv_ruleRule= ruleRule EOF ;
-    public final String entryRuleRule() throws RecognitionException {
-        String current = null;
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:372:1: entryRuleRule returns [EObject current=null] : iv_ruleRule= ruleRule EOF ;
+    public final EObject entryRuleRule() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleRule = null;
+        EObject iv_ruleRule = null;
 
 
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:343:2: (iv_ruleRule= ruleRule EOF )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:344:2: iv_ruleRule= ruleRule EOF
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:373:2: (iv_ruleRule= ruleRule EOF )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:374:2: iv_ruleRule= ruleRule EOF
             {
              newCompositeNode(grammarAccess.getRuleRule()); 
-            pushFollow(FOLLOW_ruleRule_in_entryRuleRule854);
+            pushFollow(FOLLOW_ruleRule_in_entryRuleRule746);
             iv_ruleRule=ruleRule();
 
             state._fsp--;
 
-             current =iv_ruleRule.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRule865); 
+             current =iv_ruleRule; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRule756); 
 
             }
 
@@ -822,62 +915,95 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRule"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:351:1: ruleRule returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Predicate_0= rulePredicate kw= ':-' this_Query_2= ruleQuery kw= '.' ) ;
-    public final AntlrDatatypeRuleToken ruleRule() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:381:1: ruleRule returns [EObject current=null] : ( ( (lv_predicate_0_0= rulePredicate ) ) otherlv_1= ':-' ( (lv_query_2_0= ruleQuery ) ) otherlv_3= '.' ) ;
+    public final EObject ruleRule() throws RecognitionException {
+        EObject current = null;
 
-        Token kw=null;
-        AntlrDatatypeRuleToken this_Predicate_0 = null;
+        Token otherlv_1=null;
+        Token otherlv_3=null;
+        EObject lv_predicate_0_0 = null;
 
-        AntlrDatatypeRuleToken this_Query_2 = null;
+        EObject lv_query_2_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:354:28: ( (this_Predicate_0= rulePredicate kw= ':-' this_Query_2= ruleQuery kw= '.' ) )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:355:1: (this_Predicate_0= rulePredicate kw= ':-' this_Query_2= ruleQuery kw= '.' )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:384:28: ( ( ( (lv_predicate_0_0= rulePredicate ) ) otherlv_1= ':-' ( (lv_query_2_0= ruleQuery ) ) otherlv_3= '.' ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:385:1: ( ( (lv_predicate_0_0= rulePredicate ) ) otherlv_1= ':-' ( (lv_query_2_0= ruleQuery ) ) otherlv_3= '.' )
             {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:355:1: (this_Predicate_0= rulePredicate kw= ':-' this_Query_2= ruleQuery kw= '.' )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:356:5: this_Predicate_0= rulePredicate kw= ':-' this_Query_2= ruleQuery kw= '.'
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:385:1: ( ( (lv_predicate_0_0= rulePredicate ) ) otherlv_1= ':-' ( (lv_query_2_0= ruleQuery ) ) otherlv_3= '.' )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:385:2: ( (lv_predicate_0_0= rulePredicate ) ) otherlv_1= ':-' ( (lv_query_2_0= ruleQuery ) ) otherlv_3= '.'
+            {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:385:2: ( (lv_predicate_0_0= rulePredicate ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:386:1: (lv_predicate_0_0= rulePredicate )
+            {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:386:1: (lv_predicate_0_0= rulePredicate )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:387:3: lv_predicate_0_0= rulePredicate
             {
              
-                    newCompositeNode(grammarAccess.getRuleAccess().getPredicateParserRuleCall_0()); 
-                
-            pushFollow(FOLLOW_rulePredicate_in_ruleRule912);
-            this_Predicate_0=rulePredicate();
+            	        newCompositeNode(grammarAccess.getRuleAccess().getPredicatePredicateParserRuleCall_0_0()); 
+            	    
+            pushFollow(FOLLOW_rulePredicate_in_ruleRule802);
+            lv_predicate_0_0=rulePredicate();
 
             state._fsp--;
 
 
-            		current.merge(this_Predicate_0);
-                
-             
-                    afterParserOrEnumRuleCall();
-                
-            kw=(Token)match(input,16,FOLLOW_16_in_ruleRule930); 
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getRuleRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"predicate",
+                    		lv_predicate_0_0, 
+                    		"Predicate");
+            	        afterParserOrEnumRuleCall();
+            	    
 
-                    current.merge(kw);
-                    newLeafNode(kw, grammarAccess.getRuleAccess().getColonHyphenMinusKeyword_1()); 
+            }
+
+
+            }
+
+            otherlv_1=(Token)match(input,16,FOLLOW_16_in_ruleRule814); 
+
+                	newLeafNode(otherlv_1, grammarAccess.getRuleAccess().getColonHyphenMinusKeyword_1());
                 
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:407:1: ( (lv_query_2_0= ruleQuery ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:408:1: (lv_query_2_0= ruleQuery )
+            {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:408:1: (lv_query_2_0= ruleQuery )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:409:3: lv_query_2_0= ruleQuery
+            {
              
-                    newCompositeNode(grammarAccess.getRuleAccess().getQueryParserRuleCall_2()); 
-                
-            pushFollow(FOLLOW_ruleQuery_in_ruleRule952);
-            this_Query_2=ruleQuery();
+            	        newCompositeNode(grammarAccess.getRuleAccess().getQueryQueryParserRuleCall_2_0()); 
+            	    
+            pushFollow(FOLLOW_ruleQuery_in_ruleRule835);
+            lv_query_2_0=ruleQuery();
 
             state._fsp--;
 
 
-            		current.merge(this_Query_2);
-                
-             
-                    afterParserOrEnumRuleCall();
-                
-            kw=(Token)match(input,14,FOLLOW_14_in_ruleRule970); 
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getRuleRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"query",
+                    		lv_query_2_0, 
+                    		"Query");
+            	        afterParserOrEnumRuleCall();
+            	    
 
-                    current.merge(kw);
-                    newLeafNode(kw, grammarAccess.getRuleAccess().getFullStopKeyword_3()); 
+            }
+
+
+            }
+
+            otherlv_3=(Token)match(input,14,FOLLOW_14_in_ruleRule847); 
+
+                	newLeafNode(otherlv_3, grammarAccess.getRuleAccess().getFullStopKeyword_3());
                 
 
             }
@@ -900,25 +1026,25 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePredicate"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:397:1: entryRulePredicate returns [String current=null] : iv_rulePredicate= rulePredicate EOF ;
-    public final String entryRulePredicate() throws RecognitionException {
-        String current = null;
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:437:1: entryRulePredicate returns [EObject current=null] : iv_rulePredicate= rulePredicate EOF ;
+    public final EObject entryRulePredicate() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_rulePredicate = null;
+        EObject iv_rulePredicate = null;
 
 
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:398:2: (iv_rulePredicate= rulePredicate EOF )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:399:2: iv_rulePredicate= rulePredicate EOF
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:438:2: (iv_rulePredicate= rulePredicate EOF )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:439:2: iv_rulePredicate= rulePredicate EOF
             {
              newCompositeNode(grammarAccess.getPredicateRule()); 
-            pushFollow(FOLLOW_rulePredicate_in_entryRulePredicate1011);
+            pushFollow(FOLLOW_rulePredicate_in_entryRulePredicate883);
             iv_rulePredicate=rulePredicate();
 
             state._fsp--;
 
-             current =iv_rulePredicate.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulePredicate1022); 
+             current =iv_rulePredicate; 
+            match(input,EOF,FOLLOW_EOF_in_entryRulePredicate893); 
 
             }
 
@@ -936,61 +1062,96 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePredicate"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:406:1: rulePredicate returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Functor_0= ruleFunctor kw= '(' this_Term_2= ruleTerm (kw= ',' this_Term_4= ruleTerm )* kw= ')' ) ;
-    public final AntlrDatatypeRuleToken rulePredicate() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:446:1: rulePredicate returns [EObject current=null] : ( ( (lv_functor_0_0= ruleFunctor ) ) otherlv_1= '(' ( (lv_term_2_0= ruleTerm ) ) (otherlv_3= ',' ( (lv_nthTerm_4_0= ruleTerm ) ) )* otherlv_5= ')' ) ;
+    public final EObject rulePredicate() throws RecognitionException {
+        EObject current = null;
 
-        Token kw=null;
-        AntlrDatatypeRuleToken this_Functor_0 = null;
+        Token otherlv_1=null;
+        Token otherlv_3=null;
+        Token otherlv_5=null;
+        AntlrDatatypeRuleToken lv_functor_0_0 = null;
 
-        AntlrDatatypeRuleToken this_Term_2 = null;
+        EObject lv_term_2_0 = null;
 
-        AntlrDatatypeRuleToken this_Term_4 = null;
+        EObject lv_nthTerm_4_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:409:28: ( (this_Functor_0= ruleFunctor kw= '(' this_Term_2= ruleTerm (kw= ',' this_Term_4= ruleTerm )* kw= ')' ) )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:410:1: (this_Functor_0= ruleFunctor kw= '(' this_Term_2= ruleTerm (kw= ',' this_Term_4= ruleTerm )* kw= ')' )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:449:28: ( ( ( (lv_functor_0_0= ruleFunctor ) ) otherlv_1= '(' ( (lv_term_2_0= ruleTerm ) ) (otherlv_3= ',' ( (lv_nthTerm_4_0= ruleTerm ) ) )* otherlv_5= ')' ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:450:1: ( ( (lv_functor_0_0= ruleFunctor ) ) otherlv_1= '(' ( (lv_term_2_0= ruleTerm ) ) (otherlv_3= ',' ( (lv_nthTerm_4_0= ruleTerm ) ) )* otherlv_5= ')' )
             {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:410:1: (this_Functor_0= ruleFunctor kw= '(' this_Term_2= ruleTerm (kw= ',' this_Term_4= ruleTerm )* kw= ')' )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:411:5: this_Functor_0= ruleFunctor kw= '(' this_Term_2= ruleTerm (kw= ',' this_Term_4= ruleTerm )* kw= ')'
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:450:1: ( ( (lv_functor_0_0= ruleFunctor ) ) otherlv_1= '(' ( (lv_term_2_0= ruleTerm ) ) (otherlv_3= ',' ( (lv_nthTerm_4_0= ruleTerm ) ) )* otherlv_5= ')' )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:450:2: ( (lv_functor_0_0= ruleFunctor ) ) otherlv_1= '(' ( (lv_term_2_0= ruleTerm ) ) (otherlv_3= ',' ( (lv_nthTerm_4_0= ruleTerm ) ) )* otherlv_5= ')'
+            {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:450:2: ( (lv_functor_0_0= ruleFunctor ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:451:1: (lv_functor_0_0= ruleFunctor )
+            {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:451:1: (lv_functor_0_0= ruleFunctor )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:452:3: lv_functor_0_0= ruleFunctor
             {
              
-                    newCompositeNode(grammarAccess.getPredicateAccess().getFunctorParserRuleCall_0()); 
-                
-            pushFollow(FOLLOW_ruleFunctor_in_rulePredicate1069);
-            this_Functor_0=ruleFunctor();
+            	        newCompositeNode(grammarAccess.getPredicateAccess().getFunctorFunctorParserRuleCall_0_0()); 
+            	    
+            pushFollow(FOLLOW_ruleFunctor_in_rulePredicate939);
+            lv_functor_0_0=ruleFunctor();
 
             state._fsp--;
 
 
-            		current.merge(this_Functor_0);
-                
-             
-                    afterParserOrEnumRuleCall();
-                
-            kw=(Token)match(input,17,FOLLOW_17_in_rulePredicate1087); 
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getPredicateRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"functor",
+                    		lv_functor_0_0, 
+                    		"Functor");
+            	        afterParserOrEnumRuleCall();
+            	    
 
-                    current.merge(kw);
-                    newLeafNode(kw, grammarAccess.getPredicateAccess().getLeftParenthesisKeyword_1()); 
+            }
+
+
+            }
+
+            otherlv_1=(Token)match(input,17,FOLLOW_17_in_rulePredicate951); 
+
+                	newLeafNode(otherlv_1, grammarAccess.getPredicateAccess().getLeftParenthesisKeyword_1());
                 
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:472:1: ( (lv_term_2_0= ruleTerm ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:473:1: (lv_term_2_0= ruleTerm )
+            {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:473:1: (lv_term_2_0= ruleTerm )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:474:3: lv_term_2_0= ruleTerm
+            {
              
-                    newCompositeNode(grammarAccess.getPredicateAccess().getTermParserRuleCall_2()); 
-                
-            pushFollow(FOLLOW_ruleTerm_in_rulePredicate1109);
-            this_Term_2=ruleTerm();
+            	        newCompositeNode(grammarAccess.getPredicateAccess().getTermTermParserRuleCall_2_0()); 
+            	    
+            pushFollow(FOLLOW_ruleTerm_in_rulePredicate972);
+            lv_term_2_0=ruleTerm();
 
             state._fsp--;
 
 
-            		current.merge(this_Term_2);
-                
-             
-                    afterParserOrEnumRuleCall();
-                
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:438:1: (kw= ',' this_Term_4= ruleTerm )*
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getPredicateRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"term",
+                    		lv_term_2_0, 
+                    		"Term");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:490:2: (otherlv_3= ',' ( (lv_nthTerm_4_0= ruleTerm ) ) )*
             loop4:
             do {
                 int alt4=2;
@@ -1003,27 +1164,43 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
                 switch (alt4) {
             	case 1 :
-            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:439:2: kw= ',' this_Term_4= ruleTerm
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:490:4: otherlv_3= ',' ( (lv_nthTerm_4_0= ruleTerm ) )
             	    {
-            	    kw=(Token)match(input,15,FOLLOW_15_in_rulePredicate1128); 
+            	    otherlv_3=(Token)match(input,15,FOLLOW_15_in_rulePredicate985); 
 
-            	            current.merge(kw);
-            	            newLeafNode(kw, grammarAccess.getPredicateAccess().getCommaKeyword_3_0()); 
+            	        	newLeafNode(otherlv_3, grammarAccess.getPredicateAccess().getCommaKeyword_3_0());
             	        
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:494:1: ( (lv_nthTerm_4_0= ruleTerm ) )
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:495:1: (lv_nthTerm_4_0= ruleTerm )
+            	    {
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:495:1: (lv_nthTerm_4_0= ruleTerm )
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:496:3: lv_nthTerm_4_0= ruleTerm
+            	    {
             	     
-            	            newCompositeNode(grammarAccess.getPredicateAccess().getTermParserRuleCall_3_1()); 
-            	        
-            	    pushFollow(FOLLOW_ruleTerm_in_rulePredicate1150);
-            	    this_Term_4=ruleTerm();
+            	    	        newCompositeNode(grammarAccess.getPredicateAccess().getNthTermTermParserRuleCall_3_1_0()); 
+            	    	    
+            	    pushFollow(FOLLOW_ruleTerm_in_rulePredicate1006);
+            	    lv_nthTerm_4_0=ruleTerm();
 
             	    state._fsp--;
 
 
-            	    		current.merge(this_Term_4);
-            	        
-            	     
-            	            afterParserOrEnumRuleCall();
-            	        
+            	    	        if (current==null) {
+            	    	            current = createModelElementForParent(grammarAccess.getPredicateRule());
+            	    	        }
+            	           		set(
+            	           			current, 
+            	           			"nthTerm",
+            	            		lv_nthTerm_4_0, 
+            	            		"Term");
+            	    	        afterParserOrEnumRuleCall();
+            	    	    
+
+            	    }
+
+
+            	    }
+
 
             	    }
             	    break;
@@ -1033,10 +1210,9 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            kw=(Token)match(input,18,FOLLOW_18_in_rulePredicate1170); 
+            otherlv_5=(Token)match(input,18,FOLLOW_18_in_rulePredicate1020); 
 
-                    current.merge(kw);
-                    newLeafNode(kw, grammarAccess.getPredicateAccess().getRightParenthesisKeyword_4()); 
+                	newLeafNode(otherlv_5, grammarAccess.getPredicateAccess().getRightParenthesisKeyword_4());
                 
 
             }
@@ -1059,7 +1235,7 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFunctor"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:469:1: entryRuleFunctor returns [String current=null] : iv_ruleFunctor= ruleFunctor EOF ;
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:524:1: entryRuleFunctor returns [String current=null] : iv_ruleFunctor= ruleFunctor EOF ;
     public final String entryRuleFunctor() throws RecognitionException {
         String current = null;
 
@@ -1067,17 +1243,17 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:470:2: (iv_ruleFunctor= ruleFunctor EOF )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:471:2: iv_ruleFunctor= ruleFunctor EOF
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:525:2: (iv_ruleFunctor= ruleFunctor EOF )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:526:2: iv_ruleFunctor= ruleFunctor EOF
             {
              newCompositeNode(grammarAccess.getFunctorRule()); 
-            pushFollow(FOLLOW_ruleFunctor_in_entryRuleFunctor1211);
+            pushFollow(FOLLOW_ruleFunctor_in_entryRuleFunctor1057);
             iv_ruleFunctor=ruleFunctor();
 
             state._fsp--;
 
              current =iv_ruleFunctor.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFunctor1222); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFunctor1068); 
 
             }
 
@@ -1095,7 +1271,7 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFunctor"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:478:1: ruleFunctor returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ident_0= RULE_IDENT ;
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:533:1: ruleFunctor returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ident_0= RULE_IDENT ;
     public final AntlrDatatypeRuleToken ruleFunctor() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1104,10 +1280,10 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:481:28: (this_ident_0= RULE_IDENT )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:482:5: this_ident_0= RULE_IDENT
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:536:28: (this_ident_0= RULE_IDENT )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:537:5: this_ident_0= RULE_IDENT
             {
-            this_ident_0=(Token)match(input,RULE_IDENT,FOLLOW_RULE_IDENT_in_ruleFunctor1261); 
+            this_ident_0=(Token)match(input,RULE_IDENT,FOLLOW_RULE_IDENT_in_ruleFunctor1107); 
 
             		current.merge(this_ident_0);
                 
@@ -1132,25 +1308,25 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTerm"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:497:1: entryRuleTerm returns [String current=null] : iv_ruleTerm= ruleTerm EOF ;
-    public final String entryRuleTerm() throws RecognitionException {
-        String current = null;
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:552:1: entryRuleTerm returns [EObject current=null] : iv_ruleTerm= ruleTerm EOF ;
+    public final EObject entryRuleTerm() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleTerm = null;
+        EObject iv_ruleTerm = null;
 
 
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:498:2: (iv_ruleTerm= ruleTerm EOF )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:499:2: iv_ruleTerm= ruleTerm EOF
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:553:2: (iv_ruleTerm= ruleTerm EOF )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:554:2: iv_ruleTerm= ruleTerm EOF
             {
              newCompositeNode(grammarAccess.getTermRule()); 
-            pushFollow(FOLLOW_ruleTerm_in_entryRuleTerm1306);
+            pushFollow(FOLLOW_ruleTerm_in_entryRuleTerm1151);
             iv_ruleTerm=ruleTerm();
 
             state._fsp--;
 
-             current =iv_ruleTerm.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTerm1317); 
+             current =iv_ruleTerm; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTerm1161); 
 
             }
 
@@ -1168,22 +1344,28 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTerm"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:506:1: ruleTerm returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Atom_0= ruleAtom | this_List_1= ruleList ) ;
-    public final AntlrDatatypeRuleToken ruleTerm() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:561:1: ruleTerm returns [EObject current=null] : ( ( (lv_term_0_1= ruleAtom | lv_term_0_2= ruleList ) ) ) ;
+    public final EObject ruleTerm() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken this_Atom_0 = null;
+        EObject lv_term_0_1 = null;
 
-        AntlrDatatypeRuleToken this_List_1 = null;
+        EObject lv_term_0_2 = null;
 
 
          enterRule(); 
             
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:509:28: ( (this_Atom_0= ruleAtom | this_List_1= ruleList ) )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:510:1: (this_Atom_0= ruleAtom | this_List_1= ruleList )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:564:28: ( ( ( (lv_term_0_1= ruleAtom | lv_term_0_2= ruleList ) ) ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:565:1: ( ( (lv_term_0_1= ruleAtom | lv_term_0_2= ruleList ) ) )
             {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:510:1: (this_Atom_0= ruleAtom | this_List_1= ruleList )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:565:1: ( ( (lv_term_0_1= ruleAtom | lv_term_0_2= ruleList ) ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:566:1: ( (lv_term_0_1= ruleAtom | lv_term_0_2= ruleList ) )
+            {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:566:1: ( (lv_term_0_1= ruleAtom | lv_term_0_2= ruleList ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:567:1: (lv_term_0_1= ruleAtom | lv_term_0_2= ruleList )
+            {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:567:1: (lv_term_0_1= ruleAtom | lv_term_0_2= ruleList )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -1201,45 +1383,61 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
             }
             switch (alt5) {
                 case 1 :
-                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:511:5: this_Atom_0= ruleAtom
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:568:3: lv_term_0_1= ruleAtom
                     {
                      
-                            newCompositeNode(grammarAccess.getTermAccess().getAtomParserRuleCall_0()); 
-                        
-                    pushFollow(FOLLOW_ruleAtom_in_ruleTerm1364);
-                    this_Atom_0=ruleAtom();
+                    	        newCompositeNode(grammarAccess.getTermAccess().getTermAtomParserRuleCall_0_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleAtom_in_ruleTerm1208);
+                    lv_term_0_1=ruleAtom();
 
                     state._fsp--;
 
 
-                    		current.merge(this_Atom_0);
-                        
-                     
-                            afterParserOrEnumRuleCall();
-                        
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getTermRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"term",
+                            		lv_term_0_1, 
+                            		"Atom");
+                    	        afterParserOrEnumRuleCall();
+                    	    
 
                     }
                     break;
                 case 2 :
-                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:523:5: this_List_1= ruleList
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:583:8: lv_term_0_2= ruleList
                     {
                      
-                            newCompositeNode(grammarAccess.getTermAccess().getListParserRuleCall_1()); 
-                        
-                    pushFollow(FOLLOW_ruleList_in_ruleTerm1397);
-                    this_List_1=ruleList();
+                    	        newCompositeNode(grammarAccess.getTermAccess().getTermListParserRuleCall_0_1()); 
+                    	    
+                    pushFollow(FOLLOW_ruleList_in_ruleTerm1227);
+                    lv_term_0_2=ruleList();
 
                     state._fsp--;
 
 
-                    		current.merge(this_List_1);
-                        
-                     
-                            afterParserOrEnumRuleCall();
-                        
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getTermRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"term",
+                            		lv_term_0_2, 
+                            		"List");
+                    	        afterParserOrEnumRuleCall();
+                    	    
 
                     }
                     break;
+
+            }
+
+
+            }
+
 
             }
 
@@ -1261,25 +1459,25 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAtom"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:541:1: entryRuleAtom returns [String current=null] : iv_ruleAtom= ruleAtom EOF ;
-    public final String entryRuleAtom() throws RecognitionException {
-        String current = null;
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:609:1: entryRuleAtom returns [EObject current=null] : iv_ruleAtom= ruleAtom EOF ;
+    public final EObject entryRuleAtom() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleAtom = null;
+        EObject iv_ruleAtom = null;
 
 
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:542:2: (iv_ruleAtom= ruleAtom EOF )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:543:2: iv_ruleAtom= ruleAtom EOF
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:610:2: (iv_ruleAtom= ruleAtom EOF )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:611:2: iv_ruleAtom= ruleAtom EOF
             {
              newCompositeNode(grammarAccess.getAtomRule()); 
-            pushFollow(FOLLOW_ruleAtom_in_entryRuleAtom1443);
+            pushFollow(FOLLOW_ruleAtom_in_entryRuleAtom1265);
             iv_ruleAtom=ruleAtom();
 
             state._fsp--;
 
-             current =iv_ruleAtom.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAtom1454); 
+             current =iv_ruleAtom; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAtom1275); 
 
             }
 
@@ -1297,22 +1495,28 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAtom"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:550:1: ruleAtom returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ident_0= RULE_IDENT | this_variable_1= RULE_VARIABLE | this_Number_2= ruleNumber ) ;
-    public final AntlrDatatypeRuleToken ruleAtom() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:618:1: ruleAtom returns [EObject current=null] : ( ( (lv_atom_0_1= RULE_IDENT | lv_atom_0_2= RULE_VARIABLE | lv_atom_0_3= ruleNumber ) ) ) ;
+    public final EObject ruleAtom() throws RecognitionException {
+        EObject current = null;
 
-        Token this_ident_0=null;
-        Token this_variable_1=null;
-        AntlrDatatypeRuleToken this_Number_2 = null;
+        Token lv_atom_0_1=null;
+        Token lv_atom_0_2=null;
+        AntlrDatatypeRuleToken lv_atom_0_3 = null;
 
 
          enterRule(); 
             
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:553:28: ( (this_ident_0= RULE_IDENT | this_variable_1= RULE_VARIABLE | this_Number_2= ruleNumber ) )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:554:1: (this_ident_0= RULE_IDENT | this_variable_1= RULE_VARIABLE | this_Number_2= ruleNumber )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:621:28: ( ( ( (lv_atom_0_1= RULE_IDENT | lv_atom_0_2= RULE_VARIABLE | lv_atom_0_3= ruleNumber ) ) ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:622:1: ( ( (lv_atom_0_1= RULE_IDENT | lv_atom_0_2= RULE_VARIABLE | lv_atom_0_3= ruleNumber ) ) )
             {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:554:1: (this_ident_0= RULE_IDENT | this_variable_1= RULE_VARIABLE | this_Number_2= ruleNumber )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:622:1: ( ( (lv_atom_0_1= RULE_IDENT | lv_atom_0_2= RULE_VARIABLE | lv_atom_0_3= ruleNumber ) ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:623:1: ( (lv_atom_0_1= RULE_IDENT | lv_atom_0_2= RULE_VARIABLE | lv_atom_0_3= ruleNumber ) )
+            {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:623:1: ( (lv_atom_0_1= RULE_IDENT | lv_atom_0_2= RULE_VARIABLE | lv_atom_0_3= ruleNumber ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:624:1: (lv_atom_0_1= RULE_IDENT | lv_atom_0_2= RULE_VARIABLE | lv_atom_0_3= ruleNumber )
+            {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:624:1: (lv_atom_0_1= RULE_IDENT | lv_atom_0_2= RULE_VARIABLE | lv_atom_0_3= ruleNumber )
             int alt6=3;
             switch ( input.LA(1) ) {
             case RULE_IDENT:
@@ -1339,51 +1543,76 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
             switch (alt6) {
                 case 1 :
-                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:554:6: this_ident_0= RULE_IDENT
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:625:3: lv_atom_0_1= RULE_IDENT
                     {
-                    this_ident_0=(Token)match(input,RULE_IDENT,FOLLOW_RULE_IDENT_in_ruleAtom1494); 
+                    lv_atom_0_1=(Token)match(input,RULE_IDENT,FOLLOW_RULE_IDENT_in_ruleAtom1318); 
 
-                    		current.merge(this_ident_0);
-                        
-                     
-                        newLeafNode(this_ident_0, grammarAccess.getAtomAccess().getIdentTerminalRuleCall_0()); 
-                        
+                    			newLeafNode(lv_atom_0_1, grammarAccess.getAtomAccess().getAtomIdentTerminalRuleCall_0_0()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getAtomRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"atom",
+                            		lv_atom_0_1, 
+                            		"ident");
+                    	    
 
                     }
                     break;
                 case 2 :
-                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:562:10: this_variable_1= RULE_VARIABLE
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:640:8: lv_atom_0_2= RULE_VARIABLE
                     {
-                    this_variable_1=(Token)match(input,RULE_VARIABLE,FOLLOW_RULE_VARIABLE_in_ruleAtom1520); 
+                    lv_atom_0_2=(Token)match(input,RULE_VARIABLE,FOLLOW_RULE_VARIABLE_in_ruleAtom1338); 
 
-                    		current.merge(this_variable_1);
-                        
-                     
-                        newLeafNode(this_variable_1, grammarAccess.getAtomAccess().getVariableTerminalRuleCall_1()); 
-                        
+                    			newLeafNode(lv_atom_0_2, grammarAccess.getAtomAccess().getAtomVariableTerminalRuleCall_0_1()); 
+                    		
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getAtomRule());
+                    	        }
+                           		setWithLastConsumed(
+                           			current, 
+                           			"atom",
+                            		lv_atom_0_2, 
+                            		"variable");
+                    	    
 
                     }
                     break;
                 case 3 :
-                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:571:5: this_Number_2= ruleNumber
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:655:8: lv_atom_0_3= ruleNumber
                     {
                      
-                            newCompositeNode(grammarAccess.getAtomAccess().getNumberParserRuleCall_2()); 
-                        
-                    pushFollow(FOLLOW_ruleNumber_in_ruleAtom1553);
-                    this_Number_2=ruleNumber();
+                    	        newCompositeNode(grammarAccess.getAtomAccess().getAtomNumberParserRuleCall_0_2()); 
+                    	    
+                    pushFollow(FOLLOW_ruleNumber_in_ruleAtom1362);
+                    lv_atom_0_3=ruleNumber();
 
                     state._fsp--;
 
 
-                    		current.merge(this_Number_2);
-                        
-                     
-                            afterParserOrEnumRuleCall();
-                        
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getAtomRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"atom",
+                            		lv_atom_0_3, 
+                            		"Number");
+                    	        afterParserOrEnumRuleCall();
+                    	    
 
                     }
                     break;
+
+            }
+
+
+            }
+
 
             }
 
@@ -1405,25 +1634,25 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleList"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:589:1: entryRuleList returns [String current=null] : iv_ruleList= ruleList EOF ;
-    public final String entryRuleList() throws RecognitionException {
-        String current = null;
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:681:1: entryRuleList returns [EObject current=null] : iv_ruleList= ruleList EOF ;
+    public final EObject entryRuleList() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleList = null;
+        EObject iv_ruleList = null;
 
 
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:590:2: (iv_ruleList= ruleList EOF )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:591:2: iv_ruleList= ruleList EOF
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:682:2: (iv_ruleList= ruleList EOF )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:683:2: iv_ruleList= ruleList EOF
             {
              newCompositeNode(grammarAccess.getListRule()); 
-            pushFollow(FOLLOW_ruleList_in_entryRuleList1599);
+            pushFollow(FOLLOW_ruleList_in_entryRuleList1400);
             iv_ruleList=ruleList();
 
             state._fsp--;
 
-             current =iv_ruleList.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleList1610); 
+             current =iv_ruleList; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleList1410); 
 
             }
 
@@ -1441,21 +1670,21 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleList"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:598:1: ruleList returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '[]' | this_NotEmptyList_1= ruleNotEmptyList ) ;
-    public final AntlrDatatypeRuleToken ruleList() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:690:1: ruleList returns [EObject current=null] : ( ( (lv_list_0_0= '[]' ) ) | this_NotEmptyList_1= ruleNotEmptyList ) ;
+    public final EObject ruleList() throws RecognitionException {
+        EObject current = null;
 
-        Token kw=null;
-        AntlrDatatypeRuleToken this_NotEmptyList_1 = null;
+        Token lv_list_0_0=null;
+        EObject this_NotEmptyList_1 = null;
 
 
          enterRule(); 
             
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:601:28: ( (kw= '[]' | this_NotEmptyList_1= ruleNotEmptyList ) )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:602:1: (kw= '[]' | this_NotEmptyList_1= ruleNotEmptyList )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:693:28: ( ( ( (lv_list_0_0= '[]' ) ) | this_NotEmptyList_1= ruleNotEmptyList ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:694:1: ( ( (lv_list_0_0= '[]' ) ) | this_NotEmptyList_1= ruleNotEmptyList )
             {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:602:1: (kw= '[]' | this_NotEmptyList_1= ruleNotEmptyList )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:694:1: ( ( (lv_list_0_0= '[]' ) ) | this_NotEmptyList_1= ruleNotEmptyList )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1473,31 +1702,46 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
             }
             switch (alt7) {
                 case 1 :
-                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:603:2: kw= '[]'
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:694:2: ( (lv_list_0_0= '[]' ) )
                     {
-                    kw=(Token)match(input,19,FOLLOW_19_in_ruleList1648); 
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:694:2: ( (lv_list_0_0= '[]' ) )
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:695:1: (lv_list_0_0= '[]' )
+                    {
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:695:1: (lv_list_0_0= '[]' )
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:696:3: lv_list_0_0= '[]'
+                    {
+                    lv_list_0_0=(Token)match(input,19,FOLLOW_19_in_ruleList1453); 
 
-                            current.merge(kw);
-                            newLeafNode(kw, grammarAccess.getListAccess().getLeftSquareBracketRightSquareBracketKeyword_0()); 
+                            newLeafNode(lv_list_0_0, grammarAccess.getListAccess().getListLeftSquareBracketRightSquareBracketKeyword_0_0());
                         
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getListRule());
+                    	        }
+                           		setWithLastConsumed(current, "list", lv_list_0_0, "[]");
+                    	    
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
                 case 2 :
-                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:610:5: this_NotEmptyList_1= ruleNotEmptyList
+                    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:711:5: this_NotEmptyList_1= ruleNotEmptyList
                     {
                      
                             newCompositeNode(grammarAccess.getListAccess().getNotEmptyListParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleNotEmptyList_in_ruleList1676);
+                    pushFollow(FOLLOW_ruleNotEmptyList_in_ruleList1494);
                     this_NotEmptyList_1=ruleNotEmptyList();
 
                     state._fsp--;
 
-
-                    		current.merge(this_NotEmptyList_1);
-                        
                      
+                            current = this_NotEmptyList_1; 
                             afterParserOrEnumRuleCall();
                         
 
@@ -1524,25 +1768,25 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNotEmptyList"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:628:1: entryRuleNotEmptyList returns [String current=null] : iv_ruleNotEmptyList= ruleNotEmptyList EOF ;
-    public final String entryRuleNotEmptyList() throws RecognitionException {
-        String current = null;
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:727:1: entryRuleNotEmptyList returns [EObject current=null] : iv_ruleNotEmptyList= ruleNotEmptyList EOF ;
+    public final EObject entryRuleNotEmptyList() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleNotEmptyList = null;
+        EObject iv_ruleNotEmptyList = null;
 
 
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:629:2: (iv_ruleNotEmptyList= ruleNotEmptyList EOF )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:630:2: iv_ruleNotEmptyList= ruleNotEmptyList EOF
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:728:2: (iv_ruleNotEmptyList= ruleNotEmptyList EOF )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:729:2: iv_ruleNotEmptyList= ruleNotEmptyList EOF
             {
              newCompositeNode(grammarAccess.getNotEmptyListRule()); 
-            pushFollow(FOLLOW_ruleNotEmptyList_in_entryRuleNotEmptyList1722);
+            pushFollow(FOLLOW_ruleNotEmptyList_in_entryRuleNotEmptyList1529);
             iv_ruleNotEmptyList=ruleNotEmptyList();
 
             state._fsp--;
 
-             current =iv_ruleNotEmptyList.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNotEmptyList1733); 
+             current =iv_ruleNotEmptyList; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNotEmptyList1539); 
 
             }
 
@@ -1560,46 +1804,62 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNotEmptyList"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:637:1: ruleNotEmptyList returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= '[' this_Folge_1= ruleFolge kw= ']' ) ;
-    public final AntlrDatatypeRuleToken ruleNotEmptyList() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:736:1: ruleNotEmptyList returns [EObject current=null] : (otherlv_0= '[' ( (lv_folge_1_0= ruleFolge ) ) otherlv_2= ']' ) ;
+    public final EObject ruleNotEmptyList() throws RecognitionException {
+        EObject current = null;
 
-        Token kw=null;
-        AntlrDatatypeRuleToken this_Folge_1 = null;
+        Token otherlv_0=null;
+        Token otherlv_2=null;
+        EObject lv_folge_1_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:640:28: ( (kw= '[' this_Folge_1= ruleFolge kw= ']' ) )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:641:1: (kw= '[' this_Folge_1= ruleFolge kw= ']' )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:739:28: ( (otherlv_0= '[' ( (lv_folge_1_0= ruleFolge ) ) otherlv_2= ']' ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:740:1: (otherlv_0= '[' ( (lv_folge_1_0= ruleFolge ) ) otherlv_2= ']' )
             {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:641:1: (kw= '[' this_Folge_1= ruleFolge kw= ']' )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:642:2: kw= '[' this_Folge_1= ruleFolge kw= ']'
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:740:1: (otherlv_0= '[' ( (lv_folge_1_0= ruleFolge ) ) otherlv_2= ']' )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:740:3: otherlv_0= '[' ( (lv_folge_1_0= ruleFolge ) ) otherlv_2= ']'
             {
-            kw=(Token)match(input,20,FOLLOW_20_in_ruleNotEmptyList1771); 
+            otherlv_0=(Token)match(input,20,FOLLOW_20_in_ruleNotEmptyList1576); 
 
-                    current.merge(kw);
-                    newLeafNode(kw, grammarAccess.getNotEmptyListAccess().getLeftSquareBracketKeyword_0()); 
+                	newLeafNode(otherlv_0, grammarAccess.getNotEmptyListAccess().getLeftSquareBracketKeyword_0());
                 
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:744:1: ( (lv_folge_1_0= ruleFolge ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:745:1: (lv_folge_1_0= ruleFolge )
+            {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:745:1: (lv_folge_1_0= ruleFolge )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:746:3: lv_folge_1_0= ruleFolge
+            {
              
-                    newCompositeNode(grammarAccess.getNotEmptyListAccess().getFolgeParserRuleCall_1()); 
-                
-            pushFollow(FOLLOW_ruleFolge_in_ruleNotEmptyList1793);
-            this_Folge_1=ruleFolge();
+            	        newCompositeNode(grammarAccess.getNotEmptyListAccess().getFolgeFolgeParserRuleCall_1_0()); 
+            	    
+            pushFollow(FOLLOW_ruleFolge_in_ruleNotEmptyList1597);
+            lv_folge_1_0=ruleFolge();
 
             state._fsp--;
 
 
-            		current.merge(this_Folge_1);
-                
-             
-                    afterParserOrEnumRuleCall();
-                
-            kw=(Token)match(input,21,FOLLOW_21_in_ruleNotEmptyList1811); 
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getNotEmptyListRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"folge",
+                    		lv_folge_1_0, 
+                    		"Folge");
+            	        afterParserOrEnumRuleCall();
+            	    
 
-                    current.merge(kw);
-                    newLeafNode(kw, grammarAccess.getNotEmptyListAccess().getRightSquareBracketKeyword_2()); 
+            }
+
+
+            }
+
+            otherlv_2=(Token)match(input,21,FOLLOW_21_in_ruleNotEmptyList1609); 
+
+                	newLeafNode(otherlv_2, grammarAccess.getNotEmptyListAccess().getRightSquareBracketKeyword_2());
                 
 
             }
@@ -1622,25 +1882,25 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFolge"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:672:1: entryRuleFolge returns [String current=null] : iv_ruleFolge= ruleFolge EOF ;
-    public final String entryRuleFolge() throws RecognitionException {
-        String current = null;
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:774:1: entryRuleFolge returns [EObject current=null] : iv_ruleFolge= ruleFolge EOF ;
+    public final EObject entryRuleFolge() throws RecognitionException {
+        EObject current = null;
 
-        AntlrDatatypeRuleToken iv_ruleFolge = null;
+        EObject iv_ruleFolge = null;
 
 
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:673:2: (iv_ruleFolge= ruleFolge EOF )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:674:2: iv_ruleFolge= ruleFolge EOF
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:775:2: (iv_ruleFolge= ruleFolge EOF )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:776:2: iv_ruleFolge= ruleFolge EOF
             {
              newCompositeNode(grammarAccess.getFolgeRule()); 
-            pushFollow(FOLLOW_ruleFolge_in_entryRuleFolge1852);
+            pushFollow(FOLLOW_ruleFolge_in_entryRuleFolge1645);
             iv_ruleFolge=ruleFolge();
 
             state._fsp--;
 
-             current =iv_ruleFolge.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFolge1863); 
+             current =iv_ruleFolge; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFolge1655); 
 
             }
 
@@ -1658,40 +1918,57 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFolge"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:681:1: ruleFolge returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_Atom_0= ruleAtom (kw= ',' this_Atom_2= ruleAtom )* ) ;
-    public final AntlrDatatypeRuleToken ruleFolge() throws RecognitionException {
-        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:783:1: ruleFolge returns [EObject current=null] : ( ( (lv_atom_0_0= ruleAtom ) ) (otherlv_1= ',' ( (lv_nthAtom_2_0= ruleAtom ) ) )* ) ;
+    public final EObject ruleFolge() throws RecognitionException {
+        EObject current = null;
 
-        Token kw=null;
-        AntlrDatatypeRuleToken this_Atom_0 = null;
+        Token otherlv_1=null;
+        EObject lv_atom_0_0 = null;
 
-        AntlrDatatypeRuleToken this_Atom_2 = null;
+        EObject lv_nthAtom_2_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:684:28: ( (this_Atom_0= ruleAtom (kw= ',' this_Atom_2= ruleAtom )* ) )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:685:1: (this_Atom_0= ruleAtom (kw= ',' this_Atom_2= ruleAtom )* )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:786:28: ( ( ( (lv_atom_0_0= ruleAtom ) ) (otherlv_1= ',' ( (lv_nthAtom_2_0= ruleAtom ) ) )* ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:787:1: ( ( (lv_atom_0_0= ruleAtom ) ) (otherlv_1= ',' ( (lv_nthAtom_2_0= ruleAtom ) ) )* )
             {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:685:1: (this_Atom_0= ruleAtom (kw= ',' this_Atom_2= ruleAtom )* )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:686:5: this_Atom_0= ruleAtom (kw= ',' this_Atom_2= ruleAtom )*
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:787:1: ( ( (lv_atom_0_0= ruleAtom ) ) (otherlv_1= ',' ( (lv_nthAtom_2_0= ruleAtom ) ) )* )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:787:2: ( (lv_atom_0_0= ruleAtom ) ) (otherlv_1= ',' ( (lv_nthAtom_2_0= ruleAtom ) ) )*
+            {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:787:2: ( (lv_atom_0_0= ruleAtom ) )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:788:1: (lv_atom_0_0= ruleAtom )
+            {
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:788:1: (lv_atom_0_0= ruleAtom )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:789:3: lv_atom_0_0= ruleAtom
             {
              
-                    newCompositeNode(grammarAccess.getFolgeAccess().getAtomParserRuleCall_0()); 
-                
-            pushFollow(FOLLOW_ruleAtom_in_ruleFolge1910);
-            this_Atom_0=ruleAtom();
+            	        newCompositeNode(grammarAccess.getFolgeAccess().getAtomAtomParserRuleCall_0_0()); 
+            	    
+            pushFollow(FOLLOW_ruleAtom_in_ruleFolge1701);
+            lv_atom_0_0=ruleAtom();
 
             state._fsp--;
 
 
-            		current.merge(this_Atom_0);
-                
-             
-                    afterParserOrEnumRuleCall();
-                
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:696:1: (kw= ',' this_Atom_2= ruleAtom )*
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getFolgeRule());
+            	        }
+                   		set(
+                   			current, 
+                   			"atom",
+                    		lv_atom_0_0, 
+                    		"Atom");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:805:2: (otherlv_1= ',' ( (lv_nthAtom_2_0= ruleAtom ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1704,27 +1981,43 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:697:2: kw= ',' this_Atom_2= ruleAtom
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:805:4: otherlv_1= ',' ( (lv_nthAtom_2_0= ruleAtom ) )
             	    {
-            	    kw=(Token)match(input,15,FOLLOW_15_in_ruleFolge1929); 
+            	    otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleFolge1714); 
 
-            	            current.merge(kw);
-            	            newLeafNode(kw, grammarAccess.getFolgeAccess().getCommaKeyword_1_0()); 
+            	        	newLeafNode(otherlv_1, grammarAccess.getFolgeAccess().getCommaKeyword_1_0());
             	        
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:809:1: ( (lv_nthAtom_2_0= ruleAtom ) )
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:810:1: (lv_nthAtom_2_0= ruleAtom )
+            	    {
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:810:1: (lv_nthAtom_2_0= ruleAtom )
+            	    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:811:3: lv_nthAtom_2_0= ruleAtom
+            	    {
             	     
-            	            newCompositeNode(grammarAccess.getFolgeAccess().getAtomParserRuleCall_1_1()); 
-            	        
-            	    pushFollow(FOLLOW_ruleAtom_in_ruleFolge1951);
-            	    this_Atom_2=ruleAtom();
+            	    	        newCompositeNode(grammarAccess.getFolgeAccess().getNthAtomAtomParserRuleCall_1_1_0()); 
+            	    	    
+            	    pushFollow(FOLLOW_ruleAtom_in_ruleFolge1735);
+            	    lv_nthAtom_2_0=ruleAtom();
 
             	    state._fsp--;
 
 
-            	    		current.merge(this_Atom_2);
-            	        
-            	     
-            	            afterParserOrEnumRuleCall();
-            	        
+            	    	        if (current==null) {
+            	    	            current = createModelElementForParent(grammarAccess.getFolgeRule());
+            	    	        }
+            	           		set(
+            	           			current, 
+            	           			"nthAtom",
+            	            		lv_nthAtom_2_0, 
+            	            		"Atom");
+            	    	        afterParserOrEnumRuleCall();
+            	    	    
+
+            	    }
+
+
+            	    }
+
 
             	    }
             	    break;
@@ -1755,7 +2048,7 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNumber"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:721:1: entryRuleNumber returns [String current=null] : iv_ruleNumber= ruleNumber EOF ;
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:835:1: entryRuleNumber returns [String current=null] : iv_ruleNumber= ruleNumber EOF ;
     public final String entryRuleNumber() throws RecognitionException {
         String current = null;
 
@@ -1763,17 +2056,17 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:722:2: (iv_ruleNumber= ruleNumber EOF )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:723:2: iv_ruleNumber= ruleNumber EOF
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:836:2: (iv_ruleNumber= ruleNumber EOF )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:837:2: iv_ruleNumber= ruleNumber EOF
             {
              newCompositeNode(grammarAccess.getNumberRule()); 
-            pushFollow(FOLLOW_ruleNumber_in_entryRuleNumber1999);
+            pushFollow(FOLLOW_ruleNumber_in_entryRuleNumber1774);
             iv_ruleNumber=ruleNumber();
 
             state._fsp--;
 
              current =iv_ruleNumber.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNumber2010); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNumber1785); 
 
             }
 
@@ -1791,7 +2084,7 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNumber"
-    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:730:1: ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_INT_0= RULE_INT ;
+    // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:844:1: ruleNumber returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_INT_0= RULE_INT ;
     public final AntlrDatatypeRuleToken ruleNumber() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1800,10 +2093,10 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:733:28: (this_INT_0= RULE_INT )
-            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:734:5: this_INT_0= RULE_INT
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:847:28: (this_INT_0= RULE_INT )
+            // ../de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/parser/antlr/internal/InternalProlog.g:848:5: this_INT_0= RULE_INT
             {
-            this_INT_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleNumber2049); 
+            this_INT_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleNumber1824); 
 
             		current.merge(this_INT_0);
                 
@@ -1840,7 +2133,7 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
         "\1\4\1\21\1\24\4\22\1\6\1\24\1\20\3\25\4\22\1\6\2\uffff\1\6\1\22"+
         "\6\25\1\6\1\22\3\25";
     static final String DFA3_acceptS =
-        "\22\uffff\1\1\1\2\15\uffff";
+        "\22\uffff\1\2\1\1\15\uffff";
     static final String DFA3_specialS =
         "\41\uffff}>";
     static final String[] DFA3_transitionS = {
@@ -1853,7 +2146,7 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
             "\1\10\2\uffff\1\11",
             "\1\12\1\13\1\14",
             "\1\15\1\16\1\17\14\uffff\1\20\1\21",
-            "\1\22\1\uffff\1\23",
+            "\1\23\1\uffff\1\22",
             "\1\24\5\uffff\1\25",
             "\1\24\5\uffff\1\25",
             "\1\24\5\uffff\1\25",
@@ -1909,7 +2202,7 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
             this.transition = DFA3_transition;
         }
         public String getDescription() {
-            return "273:1: (this_Fact_0= ruleFact | this_Rule_1= ruleRule )";
+            return "284:1: ( ( (lv_fact_0_0= ruleFact ) ) | ( (lv_rule_1_0= ruleRule ) ) )";
         }
     }
  
@@ -1918,70 +2211,69 @@ public class InternalPrologParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRulePrologDsl85 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleProgram_in_rulePrologDsl131 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_ruleExquery_in_rulePrologDsl152 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProgram_in_entryRuleProgram189 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleProgram200 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleClause_in_ruleProgram247 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_ruleClause_in_ruleProgram275 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_ruleExquery_in_entryRuleExquery323 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleExquery334 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_ruleExquery372 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQuery_in_ruleExquery394 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleExquery412 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQuery_in_entryRuleQuery453 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleQuery464 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePredicate_in_ruleQuery511 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_15_in_ruleQuery530 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rulePredicate_in_ruleQuery552 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_ruleClause_in_entryRuleClause600 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleClause611 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFact_in_ruleClause658 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRule_in_ruleClause691 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFact_in_entryRuleFact737 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFact748 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePredicate_in_ruleFact795 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleFact813 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRule_in_entryRuleRule854 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRule865 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePredicate_in_ruleRule912 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_ruleRule930 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleQuery_in_ruleRule952 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleRule970 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePredicate_in_entryRulePredicate1011 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePredicate1022 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunctor_in_rulePredicate1069 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_17_in_rulePredicate1087 = new BitSet(new long[]{0x0000000000180070L});
-    public static final BitSet FOLLOW_ruleTerm_in_rulePredicate1109 = new BitSet(new long[]{0x0000000000048000L});
-    public static final BitSet FOLLOW_15_in_rulePredicate1128 = new BitSet(new long[]{0x0000000000180070L});
-    public static final BitSet FOLLOW_ruleTerm_in_rulePredicate1150 = new BitSet(new long[]{0x0000000000048000L});
-    public static final BitSet FOLLOW_18_in_rulePredicate1170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunctor_in_entryRuleFunctor1211 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFunctor1222 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_IDENT_in_ruleFunctor1261 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerm_in_entryRuleTerm1306 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTerm1317 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAtom_in_ruleTerm1364 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleList_in_ruleTerm1397 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAtom_in_entryRuleAtom1443 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAtom1454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_IDENT_in_ruleAtom1494 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_VARIABLE_in_ruleAtom1520 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumber_in_ruleAtom1553 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleList_in_entryRuleList1599 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleList1610 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_ruleList1648 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNotEmptyList_in_ruleList1676 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNotEmptyList_in_entryRuleNotEmptyList1722 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNotEmptyList1733 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_ruleNotEmptyList1771 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_ruleFolge_in_ruleNotEmptyList1793 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_21_in_ruleNotEmptyList1811 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFolge_in_entryRuleFolge1852 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFolge1863 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAtom_in_ruleFolge1910 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_15_in_ruleFolge1929 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_ruleAtom_in_ruleFolge1951 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_ruleNumber_in_entryRuleNumber1999 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNumber2010 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleNumber2049 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProgram_in_entryRuleProgram188 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleProgram198 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleClause_in_ruleProgram243 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_ruleExquery_in_entryRuleExquery279 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleExquery289 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_ruleExquery326 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQuery_in_ruleExquery347 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleExquery359 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQuery_in_entryRuleQuery395 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleQuery405 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePredicate_in_ruleQuery451 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_15_in_ruleQuery464 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rulePredicate_in_ruleQuery485 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_ruleClause_in_entryRuleClause523 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleClause533 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFact_in_ruleClause579 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRule_in_ruleClause606 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFact_in_entryRuleFact642 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFact652 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePredicate_in_ruleFact698 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleFact710 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRule_in_entryRuleRule746 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRule756 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePredicate_in_ruleRule802 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleRule814 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleQuery_in_ruleRule835 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_14_in_ruleRule847 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePredicate_in_entryRulePredicate883 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePredicate893 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunctor_in_rulePredicate939 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_17_in_rulePredicate951 = new BitSet(new long[]{0x0000000000180070L});
+    public static final BitSet FOLLOW_ruleTerm_in_rulePredicate972 = new BitSet(new long[]{0x0000000000048000L});
+    public static final BitSet FOLLOW_15_in_rulePredicate985 = new BitSet(new long[]{0x0000000000180070L});
+    public static final BitSet FOLLOW_ruleTerm_in_rulePredicate1006 = new BitSet(new long[]{0x0000000000048000L});
+    public static final BitSet FOLLOW_18_in_rulePredicate1020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunctor_in_entryRuleFunctor1057 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFunctor1068 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_IDENT_in_ruleFunctor1107 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTerm_in_entryRuleTerm1151 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTerm1161 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtom_in_ruleTerm1208 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleList_in_ruleTerm1227 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtom_in_entryRuleAtom1265 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAtom1275 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_IDENT_in_ruleAtom1318 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_VARIABLE_in_ruleAtom1338 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumber_in_ruleAtom1362 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleList_in_entryRuleList1400 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleList1410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_ruleList1453 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNotEmptyList_in_ruleList1494 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNotEmptyList_in_entryRuleNotEmptyList1529 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNotEmptyList1539 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_ruleNotEmptyList1576 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_ruleFolge_in_ruleNotEmptyList1597 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleNotEmptyList1609 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFolge_in_entryRuleFolge1645 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFolge1655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtom_in_ruleFolge1701 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_15_in_ruleFolge1714 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_ruleAtom_in_ruleFolge1735 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_ruleNumber_in_entryRuleNumber1774 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNumber1785 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleNumber1824 = new BitSet(new long[]{0x0000000000000002L});
 
 }

@@ -27,55 +27,55 @@ import org.eclipse.emf.ecore.EObject;
 public interface PrologDsl extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Program</b></em>' attribute.
+   * Returns the value of the '<em><b>Program</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Program</em>' attribute isn't clear,
+   * If the meaning of the '<em>Program</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Program</em>' attribute.
-   * @see #setProgram(String)
+   * @return the value of the '<em>Program</em>' containment reference.
+   * @see #setProgram(Program)
    * @see de.htwdd.sf.beleg.s74838.prolog.PrologPackage#getPrologDsl_Program()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getProgram();
+  Program getProgram();
 
   /**
-   * Sets the value of the '{@link de.htwdd.sf.beleg.s74838.prolog.PrologDsl#getProgram <em>Program</em>}' attribute.
+   * Sets the value of the '{@link de.htwdd.sf.beleg.s74838.prolog.PrologDsl#getProgram <em>Program</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Program</em>' attribute.
+   * @param value the new value of the '<em>Program</em>' containment reference.
    * @see #getProgram()
    * @generated
    */
-  void setProgram(String value);
+  void setProgram(Program value);
 
   /**
-   * Returns the value of the '<em><b>Exquery</b></em>' attribute.
+   * Returns the value of the '<em><b>Exquery</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Exquery</em>' attribute isn't clear,
+   * If the meaning of the '<em>Exquery</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Exquery</em>' attribute.
-   * @see #setExquery(String)
+   * @return the value of the '<em>Exquery</em>' containment reference.
+   * @see #setExquery(Exquery)
    * @see de.htwdd.sf.beleg.s74838.prolog.PrologPackage#getPrologDsl_Exquery()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getExquery();
+  Exquery getExquery();
 
   /**
-   * Sets the value of the '{@link de.htwdd.sf.beleg.s74838.prolog.PrologDsl#getExquery <em>Exquery</em>}' attribute.
+   * Sets the value of the '{@link de.htwdd.sf.beleg.s74838.prolog.PrologDsl#getExquery <em>Exquery</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Exquery</em>' attribute.
+   * @param value the new value of the '<em>Exquery</em>' containment reference.
    * @see #getExquery()
    * @generated
    */
-  void setExquery(String value);
+  void setExquery(Exquery value);
 
 } // PrologDsl

@@ -5,12 +5,16 @@
  */
 package de.htwdd.sf.beleg.s74838.prolog.impl;
 
+import de.htwdd.sf.beleg.s74838.prolog.Exquery;
+import de.htwdd.sf.beleg.s74838.prolog.Program;
 import de.htwdd.sf.beleg.s74838.prolog.PrologDsl;
 import de.htwdd.sf.beleg.s74838.prolog.PrologPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -32,44 +36,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class PrologDslImpl extends MinimalEObjectImpl.Container implements PrologDsl
 {
   /**
-   * The default value of the '{@link #getProgram() <em>Program</em>}' attribute.
+   * The cached value of the '{@link #getProgram() <em>Program</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getProgram()
    * @generated
    * @ordered
    */
-  protected static final String PROGRAM_EDEFAULT = null;
+  protected Program program;
 
   /**
-   * The cached value of the '{@link #getProgram() <em>Program</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getProgram()
-   * @generated
-   * @ordered
-   */
-  protected String program = PROGRAM_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getExquery() <em>Exquery</em>}' attribute.
+   * The cached value of the '{@link #getExquery() <em>Exquery</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getExquery()
    * @generated
    * @ordered
    */
-  protected static final String EXQUERY_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getExquery() <em>Exquery</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getExquery()
-   * @generated
-   * @ordered
-   */
-  protected String exquery = EXQUERY_EDEFAULT;
+  protected Exquery exquery;
 
   /**
    * <!-- begin-user-doc -->
@@ -97,7 +81,7 @@ public class PrologDslImpl extends MinimalEObjectImpl.Container implements Prolo
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getProgram()
+  public Program getProgram()
   {
     return program;
   }
@@ -107,12 +91,16 @@ public class PrologDslImpl extends MinimalEObjectImpl.Container implements Prolo
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setProgram(String newProgram)
+  public NotificationChain basicSetProgram(Program newProgram, NotificationChain msgs)
   {
-    String oldProgram = program;
+    Program oldProgram = program;
     program = newProgram;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PrologPackage.PROLOG_DSL__PROGRAM, oldProgram, program));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PrologPackage.PROLOG_DSL__PROGRAM, oldProgram, newProgram);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -120,7 +108,28 @@ public class PrologDslImpl extends MinimalEObjectImpl.Container implements Prolo
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getExquery()
+  public void setProgram(Program newProgram)
+  {
+    if (newProgram != program)
+    {
+      NotificationChain msgs = null;
+      if (program != null)
+        msgs = ((InternalEObject)program).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PrologPackage.PROLOG_DSL__PROGRAM, null, msgs);
+      if (newProgram != null)
+        msgs = ((InternalEObject)newProgram).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PrologPackage.PROLOG_DSL__PROGRAM, null, msgs);
+      msgs = basicSetProgram(newProgram, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PrologPackage.PROLOG_DSL__PROGRAM, newProgram, newProgram));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Exquery getExquery()
   {
     return exquery;
   }
@@ -130,12 +139,55 @@ public class PrologDslImpl extends MinimalEObjectImpl.Container implements Prolo
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setExquery(String newExquery)
+  public NotificationChain basicSetExquery(Exquery newExquery, NotificationChain msgs)
   {
-    String oldExquery = exquery;
+    Exquery oldExquery = exquery;
     exquery = newExquery;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PrologPackage.PROLOG_DSL__EXQUERY, oldExquery, exquery));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PrologPackage.PROLOG_DSL__EXQUERY, oldExquery, newExquery);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setExquery(Exquery newExquery)
+  {
+    if (newExquery != exquery)
+    {
+      NotificationChain msgs = null;
+      if (exquery != null)
+        msgs = ((InternalEObject)exquery).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PrologPackage.PROLOG_DSL__EXQUERY, null, msgs);
+      if (newExquery != null)
+        msgs = ((InternalEObject)newExquery).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PrologPackage.PROLOG_DSL__EXQUERY, null, msgs);
+      msgs = basicSetExquery(newExquery, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PrologPackage.PROLOG_DSL__EXQUERY, newExquery, newExquery));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case PrologPackage.PROLOG_DSL__PROGRAM:
+        return basicSetProgram(null, msgs);
+      case PrologPackage.PROLOG_DSL__EXQUERY:
+        return basicSetExquery(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -167,10 +219,10 @@ public class PrologDslImpl extends MinimalEObjectImpl.Container implements Prolo
     switch (featureID)
     {
       case PrologPackage.PROLOG_DSL__PROGRAM:
-        setProgram((String)newValue);
+        setProgram((Program)newValue);
         return;
       case PrologPackage.PROLOG_DSL__EXQUERY:
-        setExquery((String)newValue);
+        setExquery((Exquery)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -187,10 +239,10 @@ public class PrologDslImpl extends MinimalEObjectImpl.Container implements Prolo
     switch (featureID)
     {
       case PrologPackage.PROLOG_DSL__PROGRAM:
-        setProgram(PROGRAM_EDEFAULT);
+        setProgram((Program)null);
         return;
       case PrologPackage.PROLOG_DSL__EXQUERY:
-        setExquery(EXQUERY_EDEFAULT);
+        setExquery((Exquery)null);
         return;
     }
     super.eUnset(featureID);
@@ -207,30 +259,11 @@ public class PrologDslImpl extends MinimalEObjectImpl.Container implements Prolo
     switch (featureID)
     {
       case PrologPackage.PROLOG_DSL__PROGRAM:
-        return PROGRAM_EDEFAULT == null ? program != null : !PROGRAM_EDEFAULT.equals(program);
+        return program != null;
       case PrologPackage.PROLOG_DSL__EXQUERY:
-        return EXQUERY_EDEFAULT == null ? exquery != null : !EXQUERY_EDEFAULT.equals(exquery);
+        return exquery != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (program: ");
-    result.append(program);
-    result.append(", exquery: ");
-    result.append(exquery);
-    result.append(')');
-    return result.toString();
   }
 
 } //PrologDslImpl
