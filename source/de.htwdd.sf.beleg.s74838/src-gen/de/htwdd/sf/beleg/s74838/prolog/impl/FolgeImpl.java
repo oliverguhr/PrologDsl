@@ -9,14 +9,21 @@ import de.htwdd.sf.beleg.s74838.prolog.Atom;
 import de.htwdd.sf.beleg.s74838.prolog.Folge;
 import de.htwdd.sf.beleg.s74838.prolog.PrologPackage;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,14 +52,14 @@ public class FolgeImpl extends MinimalEObjectImpl.Container implements Folge
   protected Atom atom;
 
   /**
-   * The cached value of the '{@link #getNthAtom() <em>Nth Atom</em>}' containment reference.
+   * The cached value of the '{@link #getNthAtom() <em>Nth Atom</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getNthAtom()
    * @generated
    * @ordered
    */
-  protected Atom nthAtom;
+  protected EList<Atom> nthAtom;
 
   /**
    * <!-- begin-user-doc -->
@@ -128,47 +135,13 @@ public class FolgeImpl extends MinimalEObjectImpl.Container implements Folge
    * <!-- end-user-doc -->
    * @generated
    */
-  public Atom getNthAtom()
+  public EList<Atom> getNthAtom()
   {
+    if (nthAtom == null)
+    {
+      nthAtom = new EObjectContainmentEList<Atom>(Atom.class, this, PrologPackage.FOLGE__NTH_ATOM);
+    }
     return nthAtom;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetNthAtom(Atom newNthAtom, NotificationChain msgs)
-  {
-    Atom oldNthAtom = nthAtom;
-    nthAtom = newNthAtom;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PrologPackage.FOLGE__NTH_ATOM, oldNthAtom, newNthAtom);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setNthAtom(Atom newNthAtom)
-  {
-    if (newNthAtom != nthAtom)
-    {
-      NotificationChain msgs = null;
-      if (nthAtom != null)
-        msgs = ((InternalEObject)nthAtom).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PrologPackage.FOLGE__NTH_ATOM, null, msgs);
-      if (newNthAtom != null)
-        msgs = ((InternalEObject)newNthAtom).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PrologPackage.FOLGE__NTH_ATOM, null, msgs);
-      msgs = basicSetNthAtom(newNthAtom, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PrologPackage.FOLGE__NTH_ATOM, newNthAtom, newNthAtom));
   }
 
   /**
@@ -184,7 +157,7 @@ public class FolgeImpl extends MinimalEObjectImpl.Container implements Folge
       case PrologPackage.FOLGE__ATOM:
         return basicSetAtom(null, msgs);
       case PrologPackage.FOLGE__NTH_ATOM:
-        return basicSetNthAtom(null, msgs);
+        return ((InternalEList<?>)getNthAtom()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -212,6 +185,7 @@ public class FolgeImpl extends MinimalEObjectImpl.Container implements Folge
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -221,7 +195,8 @@ public class FolgeImpl extends MinimalEObjectImpl.Container implements Folge
         setAtom((Atom)newValue);
         return;
       case PrologPackage.FOLGE__NTH_ATOM:
-        setNthAtom((Atom)newValue);
+        getNthAtom().clear();
+        getNthAtom().addAll((Collection<? extends Atom>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -241,7 +216,7 @@ public class FolgeImpl extends MinimalEObjectImpl.Container implements Folge
         setAtom((Atom)null);
         return;
       case PrologPackage.FOLGE__NTH_ATOM:
-        setNthAtom((Atom)null);
+        getNthAtom().clear();
         return;
     }
     super.eUnset(featureID);
@@ -260,7 +235,7 @@ public class FolgeImpl extends MinimalEObjectImpl.Container implements Folge
       case PrologPackage.FOLGE__ATOM:
         return atom != null;
       case PrologPackage.FOLGE__NTH_ATOM:
-        return nthAtom != null;
+        return nthAtom != null && !nthAtom.isEmpty();
     }
     return super.eIsSet(featureID);
   }

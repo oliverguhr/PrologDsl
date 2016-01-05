@@ -5,19 +5,19 @@ generate prolog "http://www.htwdd.de/sf/beleg/s74838/Prolog"
 
 	
 PrologDsl: program=Program exquery=Exquery;	
-Program: clause=(Clause)+;
+Program: clause+=Clause+;
 Exquery: '?-' query=Query '.';	
-Query: predicate=Predicate (',' nthPredicate=Predicate)*;
+Query: predicate=Predicate (',' nthPredicate+=Predicate)*;
 Clause: fact=Fact | rule=Rule;
 Fact: predicate=Predicate '.';
 Rule: predicate=Predicate ':-' query=Query '.';
-Predicate: functor=Functor '(' term=Term (',' nthTerm=Term)* ')';
+Predicate: functor=Functor '(' term=Term (',' nthTerm+=Term)* ')';
 Functor:ident;
 Term:term=(Atom|List);
 Atom: atom=(ident| variable | Number);
 List: list = '[]' | NotEmptyList;
 NotEmptyList:'[' folge=Folge ']';
-Folge: atom=Atom (',' nthAtom=Atom)* ;
+Folge: atom=Atom (',' nthAtom+=Atom)* ;
 
 Number:INT;
 

@@ -9,14 +9,21 @@ import de.htwdd.sf.beleg.s74838.prolog.Predicate;
 import de.htwdd.sf.beleg.s74838.prolog.PrologPackage;
 import de.htwdd.sf.beleg.s74838.prolog.Query;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,14 +52,14 @@ public class QueryImpl extends MinimalEObjectImpl.Container implements Query
   protected Predicate predicate;
 
   /**
-   * The cached value of the '{@link #getNthPredicate() <em>Nth Predicate</em>}' containment reference.
+   * The cached value of the '{@link #getNthPredicate() <em>Nth Predicate</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getNthPredicate()
    * @generated
    * @ordered
    */
-  protected Predicate nthPredicate;
+  protected EList<Predicate> nthPredicate;
 
   /**
    * <!-- begin-user-doc -->
@@ -128,47 +135,13 @@ public class QueryImpl extends MinimalEObjectImpl.Container implements Query
    * <!-- end-user-doc -->
    * @generated
    */
-  public Predicate getNthPredicate()
+  public EList<Predicate> getNthPredicate()
   {
+    if (nthPredicate == null)
+    {
+      nthPredicate = new EObjectContainmentEList<Predicate>(Predicate.class, this, PrologPackage.QUERY__NTH_PREDICATE);
+    }
     return nthPredicate;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetNthPredicate(Predicate newNthPredicate, NotificationChain msgs)
-  {
-    Predicate oldNthPredicate = nthPredicate;
-    nthPredicate = newNthPredicate;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PrologPackage.QUERY__NTH_PREDICATE, oldNthPredicate, newNthPredicate);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setNthPredicate(Predicate newNthPredicate)
-  {
-    if (newNthPredicate != nthPredicate)
-    {
-      NotificationChain msgs = null;
-      if (nthPredicate != null)
-        msgs = ((InternalEObject)nthPredicate).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PrologPackage.QUERY__NTH_PREDICATE, null, msgs);
-      if (newNthPredicate != null)
-        msgs = ((InternalEObject)newNthPredicate).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PrologPackage.QUERY__NTH_PREDICATE, null, msgs);
-      msgs = basicSetNthPredicate(newNthPredicate, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PrologPackage.QUERY__NTH_PREDICATE, newNthPredicate, newNthPredicate));
   }
 
   /**
@@ -184,7 +157,7 @@ public class QueryImpl extends MinimalEObjectImpl.Container implements Query
       case PrologPackage.QUERY__PREDICATE:
         return basicSetPredicate(null, msgs);
       case PrologPackage.QUERY__NTH_PREDICATE:
-        return basicSetNthPredicate(null, msgs);
+        return ((InternalEList<?>)getNthPredicate()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -212,6 +185,7 @@ public class QueryImpl extends MinimalEObjectImpl.Container implements Query
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -221,7 +195,8 @@ public class QueryImpl extends MinimalEObjectImpl.Container implements Query
         setPredicate((Predicate)newValue);
         return;
       case PrologPackage.QUERY__NTH_PREDICATE:
-        setNthPredicate((Predicate)newValue);
+        getNthPredicate().clear();
+        getNthPredicate().addAll((Collection<? extends Predicate>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -241,7 +216,7 @@ public class QueryImpl extends MinimalEObjectImpl.Container implements Query
         setPredicate((Predicate)null);
         return;
       case PrologPackage.QUERY__NTH_PREDICATE:
-        setNthPredicate((Predicate)null);
+        getNthPredicate().clear();
         return;
     }
     super.eUnset(featureID);
@@ -260,7 +235,7 @@ public class QueryImpl extends MinimalEObjectImpl.Container implements Query
       case PrologPackage.QUERY__PREDICATE:
         return predicate != null;
       case PrologPackage.QUERY__NTH_PREDICATE:
-        return nthPredicate != null;
+        return nthPredicate != null && !nthPredicate.isEmpty();
     }
     return super.eIsSet(featureID);
   }

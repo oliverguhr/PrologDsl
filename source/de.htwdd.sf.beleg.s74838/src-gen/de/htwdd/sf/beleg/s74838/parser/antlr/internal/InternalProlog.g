@@ -143,7 +143,7 @@ ruleProgram returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getProgramRule());
 	        }
-       		set(
+       		add(
        			$current, 
        			"clause",
         		lv_clause_0_0, 
@@ -251,7 +251,7 @@ ruleQuery returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getQueryRule());
 	        }
-       		set(
+       		add(
        			$current, 
        			"nthPredicate",
         		lv_nthPredicate_2_0, 
@@ -500,7 +500,7 @@ rulePredicate returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getPredicateRule());
 	        }
-       		set(
+       		add(
        			$current, 
        			"nthTerm",
         		lv_nthTerm_4_0, 
@@ -815,7 +815,7 @@ ruleFolge returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getFolgeRule());
 	        }
-       		set(
+       		add(
        			$current, 
        			"nthAtom",
         		lv_nthAtom_2_0, 

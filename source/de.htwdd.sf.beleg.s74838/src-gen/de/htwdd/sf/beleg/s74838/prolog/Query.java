@@ -5,6 +5,8 @@
  */
 package de.htwdd.sf.beleg.s74838.prolog;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -53,29 +55,19 @@ public interface Query extends EObject
   void setPredicate(Predicate value);
 
   /**
-   * Returns the value of the '<em><b>Nth Predicate</b></em>' containment reference.
+   * Returns the value of the '<em><b>Nth Predicate</b></em>' containment reference list.
+   * The list contents are of type {@link de.htwdd.sf.beleg.s74838.prolog.Predicate}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Nth Predicate</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Nth Predicate</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Nth Predicate</em>' containment reference.
-   * @see #setNthPredicate(Predicate)
+   * @return the value of the '<em>Nth Predicate</em>' containment reference list.
    * @see de.htwdd.sf.beleg.s74838.prolog.PrologPackage#getQuery_NthPredicate()
    * @model containment="true"
    * @generated
    */
-  Predicate getNthPredicate();
-
-  /**
-   * Sets the value of the '{@link de.htwdd.sf.beleg.s74838.prolog.Query#getNthPredicate <em>Nth Predicate</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Nth Predicate</em>' containment reference.
-   * @see #getNthPredicate()
-   * @generated
-   */
-  void setNthPredicate(Predicate value);
+  EList<Predicate> getNthPredicate();
 
 } // Query

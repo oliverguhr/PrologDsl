@@ -5,6 +5,8 @@
  */
 package de.htwdd.sf.beleg.s74838.prolog;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -80,29 +82,19 @@ public interface Predicate extends EObject
   void setTerm(Term value);
 
   /**
-   * Returns the value of the '<em><b>Nth Term</b></em>' containment reference.
+   * Returns the value of the '<em><b>Nth Term</b></em>' containment reference list.
+   * The list contents are of type {@link de.htwdd.sf.beleg.s74838.prolog.Term}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Nth Term</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Nth Term</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Nth Term</em>' containment reference.
-   * @see #setNthTerm(Term)
+   * @return the value of the '<em>Nth Term</em>' containment reference list.
    * @see de.htwdd.sf.beleg.s74838.prolog.PrologPackage#getPredicate_NthTerm()
    * @model containment="true"
    * @generated
    */
-  Term getNthTerm();
-
-  /**
-   * Sets the value of the '{@link de.htwdd.sf.beleg.s74838.prolog.Predicate#getNthTerm <em>Nth Term</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Nth Term</em>' containment reference.
-   * @see #getNthTerm()
-   * @generated
-   */
-  void setNthTerm(Term value);
+  EList<Term> getNthTerm();
 
 } // Predicate

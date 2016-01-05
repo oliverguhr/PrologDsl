@@ -9,14 +9,19 @@ import de.htwdd.sf.beleg.s74838.prolog.Clause;
 import de.htwdd.sf.beleg.s74838.prolog.Program;
 import de.htwdd.sf.beleg.s74838.prolog.PrologPackage;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,14 +39,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 {
   /**
-   * The cached value of the '{@link #getClause() <em>Clause</em>}' containment reference.
+   * The cached value of the '{@link #getClause() <em>Clause</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getClause()
    * @generated
    * @ordered
    */
-  protected Clause clause;
+  protected EList<Clause> clause;
 
   /**
    * <!-- begin-user-doc -->
@@ -69,47 +74,13 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
    * <!-- end-user-doc -->
    * @generated
    */
-  public Clause getClause()
+  public EList<Clause> getClause()
   {
+    if (clause == null)
+    {
+      clause = new EObjectContainmentEList<Clause>(Clause.class, this, PrologPackage.PROGRAM__CLAUSE);
+    }
     return clause;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetClause(Clause newClause, NotificationChain msgs)
-  {
-    Clause oldClause = clause;
-    clause = newClause;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PrologPackage.PROGRAM__CLAUSE, oldClause, newClause);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setClause(Clause newClause)
-  {
-    if (newClause != clause)
-    {
-      NotificationChain msgs = null;
-      if (clause != null)
-        msgs = ((InternalEObject)clause).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PrologPackage.PROGRAM__CLAUSE, null, msgs);
-      if (newClause != null)
-        msgs = ((InternalEObject)newClause).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PrologPackage.PROGRAM__CLAUSE, null, msgs);
-      msgs = basicSetClause(newClause, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PrologPackage.PROGRAM__CLAUSE, newClause, newClause));
   }
 
   /**
@@ -123,7 +94,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
     switch (featureID)
     {
       case PrologPackage.PROGRAM__CLAUSE:
-        return basicSetClause(null, msgs);
+        return ((InternalEList<?>)getClause()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -149,13 +120,15 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
       case PrologPackage.PROGRAM__CLAUSE:
-        setClause((Clause)newValue);
+        getClause().clear();
+        getClause().addAll((Collection<? extends Clause>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -172,7 +145,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
     switch (featureID)
     {
       case PrologPackage.PROGRAM__CLAUSE:
-        setClause((Clause)null);
+        getClause().clear();
         return;
     }
     super.eUnset(featureID);
@@ -189,7 +162,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
     switch (featureID)
     {
       case PrologPackage.PROGRAM__CLAUSE:
-        return clause != null;
+        return clause != null && !clause.isEmpty();
     }
     return super.eIsSet(featureID);
   }

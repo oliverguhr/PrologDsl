@@ -10,7 +10,8 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Program">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="clause" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Clause"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="clause" upperBound="-1"
+        eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Clause"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Exquery">
@@ -20,7 +21,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Query">
     <eStructuralFeatures xsi:type="ecore:EReference" name="predicate" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Predicate"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nthPredicate" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Predicate"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nthPredicate" upperBound="-1"
+        eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Predicate"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Clause">
@@ -43,7 +45,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="functor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="term" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Term"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nthTerm" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Term"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nthTerm" upperBound="-1"
+        eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Term"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Term">
@@ -63,7 +66,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Folge">
     <eStructuralFeatures xsi:type="ecore:EReference" name="atom" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Atom"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nthAtom" eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Atom"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nthAtom" upperBound="-1"
+        eType="ecore:EClass platform:/resource/de.htwdd.sf.beleg.s74838/src-gen/de/htwdd/sf/beleg/s74838/Prolog.ecore#//Atom"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

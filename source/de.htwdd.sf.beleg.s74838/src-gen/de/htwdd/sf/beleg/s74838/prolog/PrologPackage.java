@@ -107,7 +107,7 @@ public interface PrologPackage extends EPackage
   int PROGRAM = 1;
 
   /**
-   * The feature id for the '<em><b>Clause</b></em>' containment reference.
+   * The feature id for the '<em><b>Clause</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -172,7 +172,7 @@ public interface PrologPackage extends EPackage
   int QUERY__PREDICATE = 0;
 
   /**
-   * The feature id for the '<em><b>Nth Predicate</b></em>' containment reference.
+   * The feature id for the '<em><b>Nth Predicate</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -320,7 +320,7 @@ public interface PrologPackage extends EPackage
   int PREDICATE__TERM = 1;
 
   /**
-   * The feature id for the '<em><b>Nth Term</b></em>' containment reference.
+   * The feature id for the '<em><b>Nth Term</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -478,7 +478,7 @@ public interface PrologPackage extends EPackage
   int FOLGE__ATOM = 0;
 
   /**
-   * The feature id for the '<em><b>Nth Atom</b></em>' containment reference.
+   * The feature id for the '<em><b>Nth Atom</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -539,10 +539,10 @@ public interface PrologPackage extends EPackage
   EClass getProgram();
 
   /**
-   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s74838.prolog.Program#getClause <em>Clause</em>}'.
+   * Returns the meta object for the containment reference list '{@link de.htwdd.sf.beleg.s74838.prolog.Program#getClause <em>Clause</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Clause</em>'.
+   * @return the meta object for the containment reference list '<em>Clause</em>'.
    * @see de.htwdd.sf.beleg.s74838.prolog.Program#getClause()
    * @see #getProgram()
    * @generated
@@ -592,10 +592,10 @@ public interface PrologPackage extends EPackage
   EReference getQuery_Predicate();
 
   /**
-   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s74838.prolog.Query#getNthPredicate <em>Nth Predicate</em>}'.
+   * Returns the meta object for the containment reference list '{@link de.htwdd.sf.beleg.s74838.prolog.Query#getNthPredicate <em>Nth Predicate</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Nth Predicate</em>'.
+   * @return the meta object for the containment reference list '<em>Nth Predicate</em>'.
    * @see de.htwdd.sf.beleg.s74838.prolog.Query#getNthPredicate()
    * @see #getQuery()
    * @generated
@@ -720,10 +720,10 @@ public interface PrologPackage extends EPackage
   EReference getPredicate_Term();
 
   /**
-   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s74838.prolog.Predicate#getNthTerm <em>Nth Term</em>}'.
+   * Returns the meta object for the containment reference list '{@link de.htwdd.sf.beleg.s74838.prolog.Predicate#getNthTerm <em>Nth Term</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Nth Term</em>'.
+   * @return the meta object for the containment reference list '<em>Nth Term</em>'.
    * @see de.htwdd.sf.beleg.s74838.prolog.Predicate#getNthTerm()
    * @see #getPredicate()
    * @generated
@@ -836,10 +836,10 @@ public interface PrologPackage extends EPackage
   EReference getFolge_Atom();
 
   /**
-   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s74838.prolog.Folge#getNthAtom <em>Nth Atom</em>}'.
+   * Returns the meta object for the containment reference list '{@link de.htwdd.sf.beleg.s74838.prolog.Folge#getNthAtom <em>Nth Atom</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Nth Atom</em>'.
+   * @return the meta object for the containment reference list '<em>Nth Atom</em>'.
    * @see de.htwdd.sf.beleg.s74838.prolog.Folge#getNthAtom()
    * @see #getFolge()
    * @generated
@@ -906,7 +906,7 @@ public interface PrologPackage extends EPackage
     EClass PROGRAM = eINSTANCE.getProgram();
 
     /**
-     * The meta object literal for the '<em><b>Clause</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Clause</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -950,7 +950,7 @@ public interface PrologPackage extends EPackage
     EReference QUERY__PREDICATE = eINSTANCE.getQuery_Predicate();
 
     /**
-     * The meta object literal for the '<em><b>Nth Predicate</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Nth Predicate</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1054,7 +1054,7 @@ public interface PrologPackage extends EPackage
     EReference PREDICATE__TERM = eINSTANCE.getPredicate_Term();
 
     /**
-     * The meta object literal for the '<em><b>Nth Term</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Nth Term</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1152,7 +1152,7 @@ public interface PrologPackage extends EPackage
     EReference FOLGE__ATOM = eINSTANCE.getFolge_Atom();
 
     /**
-     * The meta object literal for the '<em><b>Nth Atom</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Nth Atom</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated

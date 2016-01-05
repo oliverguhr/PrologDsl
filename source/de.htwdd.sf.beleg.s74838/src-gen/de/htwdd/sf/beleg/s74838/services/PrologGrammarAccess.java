@@ -51,10 +51,10 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cClauseClauseParserRuleCall_0 = (RuleCall)cClauseAssignment.eContents().get(0);
 		
 		//Program:
-		//	clause=Clause+;
+		//	clause+=Clause+;
 		public ParserRule getRule() { return rule; }
 
-		//clause=Clause+
+		//clause+=Clause+
 		public Assignment getClauseAssignment() { return cClauseAssignment; }
 
 		//Clause
@@ -100,10 +100,10 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNthPredicatePredicateParserRuleCall_1_1_0 = (RuleCall)cNthPredicateAssignment_1_1.eContents().get(0);
 		
 		//Query:
-		//	predicate=Predicate ("," nthPredicate=Predicate)*;
+		//	predicate=Predicate ("," nthPredicate+=Predicate)*;
 		public ParserRule getRule() { return rule; }
 
-		//predicate=Predicate ("," nthPredicate=Predicate)*
+		//predicate=Predicate ("," nthPredicate+=Predicate)*
 		public Group getGroup() { return cGroup; }
 
 		//predicate=Predicate
@@ -112,13 +112,13 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 		//Predicate
 		public RuleCall getPredicatePredicateParserRuleCall_0_0() { return cPredicatePredicateParserRuleCall_0_0; }
 
-		//("," nthPredicate=Predicate)*
+		//("," nthPredicate+=Predicate)*
 		public Group getGroup_1() { return cGroup_1; }
 
 		//","
 		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
 
-		//nthPredicate=Predicate
+		//nthPredicate+=Predicate
 		public Assignment getNthPredicateAssignment_1_1() { return cNthPredicateAssignment_1_1; }
 
 		//Predicate
@@ -228,10 +228,10 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Predicate:
-		//	functor=Functor "(" term=Term ("," nthTerm=Term)* ")";
+		//	functor=Functor "(" term=Term ("," nthTerm+=Term)* ")";
 		public ParserRule getRule() { return rule; }
 
-		//functor=Functor "(" term=Term ("," nthTerm=Term)* ")"
+		//functor=Functor "(" term=Term ("," nthTerm+=Term)* ")"
 		public Group getGroup() { return cGroup; }
 
 		//functor=Functor
@@ -249,13 +249,13 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 		//Term
 		public RuleCall getTermTermParserRuleCall_2_0() { return cTermTermParserRuleCall_2_0; }
 
-		//("," nthTerm=Term)*
+		//("," nthTerm+=Term)*
 		public Group getGroup_3() { return cGroup_3; }
 
 		//","
 		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
 
-		//nthTerm=Term
+		//nthTerm+=Term
 		public Assignment getNthTermAssignment_3_1() { return cNthTermAssignment_3_1; }
 
 		//Term
@@ -392,10 +392,10 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNthAtomAtomParserRuleCall_1_1_0 = (RuleCall)cNthAtomAssignment_1_1.eContents().get(0);
 		
 		//Folge:
-		//	atom=Atom ("," nthAtom=Atom)*;
+		//	atom=Atom ("," nthAtom+=Atom)*;
 		public ParserRule getRule() { return rule; }
 
-		//atom=Atom ("," nthAtom=Atom)*
+		//atom=Atom ("," nthAtom+=Atom)*
 		public Group getGroup() { return cGroup; }
 
 		//atom=Atom
@@ -404,13 +404,13 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 		//Atom
 		public RuleCall getAtomAtomParserRuleCall_0_0() { return cAtomAtomParserRuleCall_0_0; }
 
-		//("," nthAtom=Atom)*
+		//("," nthAtom+=Atom)*
 		public Group getGroup_1() { return cGroup_1; }
 
 		//","
 		public Keyword getCommaKeyword_1_0() { return cCommaKeyword_1_0; }
 
-		//nthAtom=Atom
+		//nthAtom+=Atom
 		public Assignment getNthAtomAssignment_1_1() { return cNthAtomAssignment_1_1; }
 
 		//Atom
@@ -480,7 +480,7 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Program:
-	//	clause=Clause+;
+	//	clause+=Clause+;
 	public ProgramElements getProgramAccess() {
 		return (pProgram != null) ? pProgram : (pProgram = new ProgramElements());
 	}
@@ -500,7 +500,7 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Query:
-	//	predicate=Predicate ("," nthPredicate=Predicate)*;
+	//	predicate=Predicate ("," nthPredicate+=Predicate)*;
 	public QueryElements getQueryAccess() {
 		return (pQuery != null) ? pQuery : (pQuery = new QueryElements());
 	}
@@ -540,7 +540,7 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Predicate:
-	//	functor=Functor "(" term=Term ("," nthTerm=Term)* ")";
+	//	functor=Functor "(" term=Term ("," nthTerm+=Term)* ")";
 	public PredicateElements getPredicateAccess() {
 		return (pPredicate != null) ? pPredicate : (pPredicate = new PredicateElements());
 	}
@@ -600,7 +600,7 @@ public class PrologGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Folge:
-	//	atom=Atom ("," nthAtom=Atom)*;
+	//	atom=Atom ("," nthAtom+=Atom)*;
 	public FolgeElements getFolgeAccess() {
 		return (pFolge != null) ? pFolge : (pFolge = new FolgeElements());
 	}

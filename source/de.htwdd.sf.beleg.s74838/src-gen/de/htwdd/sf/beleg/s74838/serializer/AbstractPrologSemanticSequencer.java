@@ -207,7 +207,7 @@ public class AbstractPrologSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (atom=Atom nthAtom=Atom*)
+	 *     (atom=Atom nthAtom+=Atom*)
 	 *
 	 * Features:
 	 *    atom[1, 1]
@@ -251,7 +251,7 @@ public class AbstractPrologSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (functor=Functor term=Term nthTerm=Term*)
+	 *     (functor=Functor term=Term nthTerm+=Term*)
 	 *
 	 * Features:
 	 *    functor[1, 1]
@@ -265,7 +265,7 @@ public class AbstractPrologSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     clause=Clause+
+	 *     clause+=Clause+
 	 *
 	 * Features:
 	 *    clause[1, *]
@@ -300,7 +300,7 @@ public class AbstractPrologSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (predicate=Predicate nthPredicate=Predicate*)
+	 *     (predicate=Predicate nthPredicate+=Predicate*)
 	 *
 	 * Features:
 	 *    predicate[1, 1]

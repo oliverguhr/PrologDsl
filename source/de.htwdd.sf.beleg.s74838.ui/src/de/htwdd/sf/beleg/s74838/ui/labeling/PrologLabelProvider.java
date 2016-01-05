@@ -8,6 +8,20 @@ import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
 
 import com.google.inject.Inject;
 
+import de.htwdd.sf.beleg.s74838.prolog.Atom;
+import de.htwdd.sf.beleg.s74838.prolog.Clause;
+import de.htwdd.sf.beleg.s74838.prolog.Exquery;
+import de.htwdd.sf.beleg.s74838.prolog.Fact;
+import de.htwdd.sf.beleg.s74838.prolog.Folge;
+import de.htwdd.sf.beleg.s74838.prolog.List;
+import de.htwdd.sf.beleg.s74838.prolog.NotEmptyList;
+import de.htwdd.sf.beleg.s74838.prolog.Predicate;
+import de.htwdd.sf.beleg.s74838.prolog.Program;
+import de.htwdd.sf.beleg.s74838.prolog.PrologDsl;
+import de.htwdd.sf.beleg.s74838.prolog.Query;
+import de.htwdd.sf.beleg.s74838.prolog.Rule;
+import de.htwdd.sf.beleg.s74838.prolog.Term;
+
 /**
  * Provides labels for a EObjects.
  * 
@@ -20,15 +34,22 @@ public class PrologLabelProvider extends DefaultEObjectLabelProvider {
 		super(delegate);
 	}
 
-/*
+	
+	
+
 	//Labels and icons can be computed like this:
 	
-	String text(MyModel ele) {
-	  return "my "+ele.getName();
-	}
-	 
-    String image(MyModel ele) {
-      return "MyModel.gif";
-    }
-*/
+	String text(PrologDsl dsl) { return "Prolog"; }	 
+    String text(Program ele) { return "Program"; }
+    String text(Exquery ele) { return "Execute Query"; }
+    String text(Query ele) { return "Query"; }
+    String text(Clause ele) { return "Clause"; }
+    String text(Fact ele) { return "Fact"; }
+    String text(Rule ele) { return "Rule"; }
+    String text(Predicate ele) { return "Predicate"; }
+    String text(Term ele) { return "Term"; }
+    String text(Atom ele) { return "Atom"; }
+    String text(List ele) { return "List"; }
+    String text(NotEmptyList ele) { return "NotEmptyList"; }
+    String text(Folge ele) { return "Folge"; }
 }

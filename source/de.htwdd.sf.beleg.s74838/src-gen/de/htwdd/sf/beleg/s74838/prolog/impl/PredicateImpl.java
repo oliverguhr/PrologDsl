@@ -9,14 +9,21 @@ import de.htwdd.sf.beleg.s74838.prolog.Predicate;
 import de.htwdd.sf.beleg.s74838.prolog.PrologPackage;
 import de.htwdd.sf.beleg.s74838.prolog.Term;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -66,14 +73,14 @@ public class PredicateImpl extends MinimalEObjectImpl.Container implements Predi
   protected Term term;
 
   /**
-   * The cached value of the '{@link #getNthTerm() <em>Nth Term</em>}' containment reference.
+   * The cached value of the '{@link #getNthTerm() <em>Nth Term</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getNthTerm()
    * @generated
    * @ordered
    */
-  protected Term nthTerm;
+  protected EList<Term> nthTerm;
 
   /**
    * <!-- begin-user-doc -->
@@ -172,47 +179,13 @@ public class PredicateImpl extends MinimalEObjectImpl.Container implements Predi
    * <!-- end-user-doc -->
    * @generated
    */
-  public Term getNthTerm()
+  public EList<Term> getNthTerm()
   {
+    if (nthTerm == null)
+    {
+      nthTerm = new EObjectContainmentEList<Term>(Term.class, this, PrologPackage.PREDICATE__NTH_TERM);
+    }
     return nthTerm;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetNthTerm(Term newNthTerm, NotificationChain msgs)
-  {
-    Term oldNthTerm = nthTerm;
-    nthTerm = newNthTerm;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PrologPackage.PREDICATE__NTH_TERM, oldNthTerm, newNthTerm);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setNthTerm(Term newNthTerm)
-  {
-    if (newNthTerm != nthTerm)
-    {
-      NotificationChain msgs = null;
-      if (nthTerm != null)
-        msgs = ((InternalEObject)nthTerm).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PrologPackage.PREDICATE__NTH_TERM, null, msgs);
-      if (newNthTerm != null)
-        msgs = ((InternalEObject)newNthTerm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PrologPackage.PREDICATE__NTH_TERM, null, msgs);
-      msgs = basicSetNthTerm(newNthTerm, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PrologPackage.PREDICATE__NTH_TERM, newNthTerm, newNthTerm));
   }
 
   /**
@@ -228,7 +201,7 @@ public class PredicateImpl extends MinimalEObjectImpl.Container implements Predi
       case PrologPackage.PREDICATE__TERM:
         return basicSetTerm(null, msgs);
       case PrologPackage.PREDICATE__NTH_TERM:
-        return basicSetNthTerm(null, msgs);
+        return ((InternalEList<?>)getNthTerm()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -258,6 +231,7 @@ public class PredicateImpl extends MinimalEObjectImpl.Container implements Predi
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -270,7 +244,8 @@ public class PredicateImpl extends MinimalEObjectImpl.Container implements Predi
         setTerm((Term)newValue);
         return;
       case PrologPackage.PREDICATE__NTH_TERM:
-        setNthTerm((Term)newValue);
+        getNthTerm().clear();
+        getNthTerm().addAll((Collection<? extends Term>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -293,7 +268,7 @@ public class PredicateImpl extends MinimalEObjectImpl.Container implements Predi
         setTerm((Term)null);
         return;
       case PrologPackage.PREDICATE__NTH_TERM:
-        setNthTerm((Term)null);
+        getNthTerm().clear();
         return;
     }
     super.eUnset(featureID);
@@ -314,7 +289,7 @@ public class PredicateImpl extends MinimalEObjectImpl.Container implements Predi
       case PrologPackage.PREDICATE__TERM:
         return term != null;
       case PrologPackage.PREDICATE__NTH_TERM:
-        return nthTerm != null;
+        return nthTerm != null && !nthTerm.isEmpty();
     }
     return super.eIsSet(featureID);
   }
