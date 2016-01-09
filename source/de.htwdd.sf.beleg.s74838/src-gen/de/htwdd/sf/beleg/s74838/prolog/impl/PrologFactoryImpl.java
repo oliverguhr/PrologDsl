@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package de.htwdd.sf.beleg.s74838.prolog.impl;
 
@@ -33,7 +30,7 @@ public class PrologFactoryImpl extends EFactoryImpl implements PrologFactory
   {
     try
     {
-      PrologFactory thePrologFactory = (PrologFactory)EPackage.Registry.INSTANCE.getEFactory("http://www.htwdd.de/sf/beleg/s74838/Prolog"); 
+      PrologFactory thePrologFactory = (PrologFactory)EPackage.Registry.INSTANCE.getEFactory(PrologPackage.eNS_URI);
       if (thePrologFactory != null)
       {
         return thePrologFactory;

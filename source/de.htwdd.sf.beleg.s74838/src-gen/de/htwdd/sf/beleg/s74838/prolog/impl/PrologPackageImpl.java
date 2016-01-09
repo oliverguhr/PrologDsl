@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package de.htwdd.sf.beleg.s74838.prolog.impl;
 
@@ -425,9 +422,19 @@ public class PrologPackageImpl extends EPackageImpl implements PrologPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTerm_Term()
+  public EReference getTerm_Atom()
   {
     return (EReference)termEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTerm_List()
+  {
+    return (EReference)termEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -465,9 +472,19 @@ public class PrologPackageImpl extends EPackageImpl implements PrologPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getList_List()
+  public EAttribute getList_EmptyList()
   {
     return (EAttribute)listEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getList_List()
+  {
+    return (EReference)listEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -581,13 +598,15 @@ public class PrologPackageImpl extends EPackageImpl implements PrologPackage
     createEReference(predicateEClass, PREDICATE__NTH_TERM);
 
     termEClass = createEClass(TERM);
-    createEReference(termEClass, TERM__TERM);
+    createEReference(termEClass, TERM__ATOM);
+    createEReference(termEClass, TERM__LIST);
 
     atomEClass = createEClass(ATOM);
     createEAttribute(atomEClass, ATOM__ATOM);
 
     listEClass = createEClass(LIST);
-    createEAttribute(listEClass, LIST__LIST);
+    createEAttribute(listEClass, LIST__EMPTY_LIST);
+    createEReference(listEClass, LIST__LIST);
 
     notEmptyListEClass = createEClass(NOT_EMPTY_LIST);
     createEReference(notEmptyListEClass, NOT_EMPTY_LIST__FOLGE);
@@ -626,7 +645,6 @@ public class PrologPackageImpl extends EPackageImpl implements PrologPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    notEmptyListEClass.getESuperTypes().add(this.getList());
 
     // Initialize classes and features; add operations and parameters
     initEClass(prologDslEClass, PrologDsl.class, "PrologDsl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -660,13 +678,15 @@ public class PrologPackageImpl extends EPackageImpl implements PrologPackage
     initEReference(getPredicate_NthTerm(), this.getTerm(), null, "nthTerm", null, 0, -1, Predicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(termEClass, Term.class, "Term", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getTerm_Term(), ecorePackage.getEObject(), null, "term", null, 0, 1, Term.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTerm_Atom(), this.getAtom(), null, "atom", null, 0, 1, Term.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTerm_List(), this.getList(), null, "list", null, 0, 1, Term.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(atomEClass, Atom.class, "Atom", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAtom_Atom(), ecorePackage.getEString(), "atom", null, 0, 1, Atom.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(listEClass, List.class, "List", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getList_List(), ecorePackage.getEString(), "list", null, 0, 1, List.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getList_EmptyList(), ecorePackage.getEString(), "emptyList", null, 0, 1, List.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getList_List(), this.getNotEmptyList(), null, "list", null, 0, 1, List.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(notEmptyListEClass, NotEmptyList.class, "NotEmptyList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getNotEmptyList_Folge(), this.getFolge(), null, "folge", null, 0, 1, NotEmptyList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

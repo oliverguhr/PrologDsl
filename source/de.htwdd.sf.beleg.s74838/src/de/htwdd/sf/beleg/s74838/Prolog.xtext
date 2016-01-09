@@ -3,7 +3,6 @@ grammar de.htwdd.sf.beleg.s74838.Prolog with org.eclipse.xtext.common.Terminals
 generate prolog "http://www.htwdd.de/sf/beleg/s74838/Prolog"
 
 
-	
 PrologDsl: program=Program exquery=Exquery;	
 Program: clause+=Clause+;
 Exquery: '?-' query=Query '.';	
@@ -12,15 +11,15 @@ Clause: fact=Fact | rule=Rule;
 Fact: predicate=Predicate '.';
 Rule: predicate=Predicate ':-' query=Query '.';
 Predicate: functor=Functor '(' term=Term (',' nthTerm+=Term)* ')';
-Functor:ident;
-Term:term=(Atom|List);
-Atom: atom=(ident| variable | Number);
-List: list = '[]' | NotEmptyList;
+Functor:IDENT;
+Term:atom=Atom|list=List;
+Atom: atom=(IDENT| VARIABLE | Number);
+List: emptyList = '[]' | list = NotEmptyList;
 NotEmptyList:'[' folge=Folge ']';
 Folge: atom=Atom (',' nthAtom+=Atom)* ;
 
 Number:INT;
 
 	 
-terminal variable: 'A'..'Z';
-terminal ident: 'a'..'z'('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
+terminal VARIABLE: 'A'..'Z';
+terminal IDENT: 'a'..'z'('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

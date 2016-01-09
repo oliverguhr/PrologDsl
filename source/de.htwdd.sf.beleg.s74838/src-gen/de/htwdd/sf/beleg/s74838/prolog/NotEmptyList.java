@@ -1,10 +1,8 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package de.htwdd.sf.beleg.s74838.prolog;
 
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +20,7 @@ package de.htwdd.sf.beleg.s74838.prolog;
  * @model
  * @generated
  */
-public interface NotEmptyList extends List
+public interface NotEmptyList extends EObject
 {
   /**
    * Returns the value of the '<em><b>Folge</b></em>' containment reference.

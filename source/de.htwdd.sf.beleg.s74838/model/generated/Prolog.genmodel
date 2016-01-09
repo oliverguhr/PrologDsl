@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.htwdd.sf.beleg.s74838/src-gen" editDirectory="/de.htwdd.sf.beleg.s74838.edit/src"
+    editorDirectory="/de.htwdd.sf.beleg.s74838.editor/src" modelPluginID="de.htwdd.sf.beleg.s74838"
+    forceOverwrite="true" modelName="Prolog" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="de.htwdd.sf.beleg.s74838.edit"
+    editorPluginID="de.htwdd.sf.beleg.s74838.editor" runtimeVersion="2.10">
+  <genPackages prefix="Prolog" basePackage="de.htwdd.sf.beleg.s74838" disposableProviderFactory="true"
+      fileExtensions="prolog" ecorePackage="Prolog.ecore#/">
+    <genClasses ecoreClass="Prolog.ecore#//PrologDsl">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Prolog.ecore#//PrologDsl/program"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Prolog.ecore#//PrologDsl/exquery"/>
+    </genClasses>
+    <genClasses ecoreClass="Prolog.ecore#//Program">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Prolog.ecore#//Program/clause"/>
+    </genClasses>
+    <genClasses ecoreClass="Prolog.ecore#//Exquery">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Prolog.ecore#//Exquery/query"/>
+    </genClasses>
+    <genClasses ecoreClass="Prolog.ecore#//Query">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Prolog.ecore#//Query/predicate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Prolog.ecore#//Query/nthPredicate"/>
+    </genClasses>
+    <genClasses ecoreClass="Prolog.ecore#//Clause">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Prolog.ecore#//Clause/fact"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Prolog.ecore#//Clause/rule"/>
+    </genClasses>
+    <genClasses ecoreClass="Prolog.ecore#//Fact">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Prolog.ecore#//Fact/predicate"/>
+    </genClasses>
+    <genClasses ecoreClass="Prolog.ecore#//Rule">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Prolog.ecore#//Rule/predicate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Prolog.ecore#//Rule/query"/>
+    </genClasses>
+    <genClasses ecoreClass="Prolog.ecore#//Predicate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Prolog.ecore#//Predicate/functor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Prolog.ecore#//Predicate/term"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Prolog.ecore#//Predicate/nthTerm"/>
+    </genClasses>
+    <genClasses ecoreClass="Prolog.ecore#//Term">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Prolog.ecore#//Term/atom"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Prolog.ecore#//Term/list"/>
+    </genClasses>
+    <genClasses ecoreClass="Prolog.ecore#//Atom">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Prolog.ecore#//Atom/atom"/>
+    </genClasses>
+    <genClasses ecoreClass="Prolog.ecore#//List">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Prolog.ecore#//List/emptyList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Prolog.ecore#//List/list"/>
+    </genClasses>
+    <genClasses ecoreClass="Prolog.ecore#//NotEmptyList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Prolog.ecore#//NotEmptyList/folge"/>
+    </genClasses>
+    <genClasses ecoreClass="Prolog.ecore#//Folge">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Prolog.ecore#//Folge/atom"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Prolog.ecore#//Folge/nthAtom"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

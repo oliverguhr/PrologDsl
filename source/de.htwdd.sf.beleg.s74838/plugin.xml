@@ -7,11 +7,9 @@
     <package 
        uri = "http://www.htwdd.de/sf/beleg/s74838/Prolog" 
        class = "de.htwdd.sf.beleg.s74838.prolog.PrologPackage"
-       genModel = "de/htwdd/sf/beleg/s74838/Prolog.genmodel" /> 
+       genModel = "model/generated/Prolog.genmodel" /> 
 	
   </extension>
-
-
 
 
 

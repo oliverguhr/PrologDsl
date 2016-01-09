@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package de.htwdd.sf.beleg.s74838.prolog.impl;
 

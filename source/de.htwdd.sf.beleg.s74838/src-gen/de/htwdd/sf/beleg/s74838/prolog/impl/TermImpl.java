@@ -1,10 +1,9 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package de.htwdd.sf.beleg.s74838.prolog.impl;
 
+import de.htwdd.sf.beleg.s74838.prolog.Atom;
+import de.htwdd.sf.beleg.s74838.prolog.List;
 import de.htwdd.sf.beleg.s74838.prolog.PrologPackage;
 import de.htwdd.sf.beleg.s74838.prolog.Term;
 
@@ -12,7 +11,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -25,7 +23,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link de.htwdd.sf.beleg.s74838.prolog.impl.TermImpl#getTerm <em>Term</em>}</li>
+ *   <li>{@link de.htwdd.sf.beleg.s74838.prolog.impl.TermImpl#getAtom <em>Atom</em>}</li>
+ *   <li>{@link de.htwdd.sf.beleg.s74838.prolog.impl.TermImpl#getList <em>List</em>}</li>
  * </ul>
  * </p>
  *
@@ -34,14 +33,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class TermImpl extends MinimalEObjectImpl.Container implements Term
 {
   /**
-   * The cached value of the '{@link #getTerm() <em>Term</em>}' containment reference.
+   * The cached value of the '{@link #getAtom() <em>Atom</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTerm()
+   * @see #getAtom()
    * @generated
    * @ordered
    */
-  protected EObject term;
+  protected Atom atom;
+
+  /**
+   * The cached value of the '{@link #getList() <em>List</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getList()
+   * @generated
+   * @ordered
+   */
+  protected List list;
 
   /**
    * <!-- begin-user-doc -->
@@ -69,9 +78,9 @@ public class TermImpl extends MinimalEObjectImpl.Container implements Term
    * <!-- end-user-doc -->
    * @generated
    */
-  public EObject getTerm()
+  public Atom getAtom()
   {
-    return term;
+    return atom;
   }
 
   /**
@@ -79,13 +88,13 @@ public class TermImpl extends MinimalEObjectImpl.Container implements Term
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetTerm(EObject newTerm, NotificationChain msgs)
+  public NotificationChain basicSetAtom(Atom newAtom, NotificationChain msgs)
   {
-    EObject oldTerm = term;
-    term = newTerm;
+    Atom oldAtom = atom;
+    atom = newAtom;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PrologPackage.TERM__TERM, oldTerm, newTerm);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PrologPackage.TERM__ATOM, oldAtom, newAtom);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -96,20 +105,68 @@ public class TermImpl extends MinimalEObjectImpl.Container implements Term
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setTerm(EObject newTerm)
+  public void setAtom(Atom newAtom)
   {
-    if (newTerm != term)
+    if (newAtom != atom)
     {
       NotificationChain msgs = null;
-      if (term != null)
-        msgs = ((InternalEObject)term).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PrologPackage.TERM__TERM, null, msgs);
-      if (newTerm != null)
-        msgs = ((InternalEObject)newTerm).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PrologPackage.TERM__TERM, null, msgs);
-      msgs = basicSetTerm(newTerm, msgs);
+      if (atom != null)
+        msgs = ((InternalEObject)atom).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PrologPackage.TERM__ATOM, null, msgs);
+      if (newAtom != null)
+        msgs = ((InternalEObject)newAtom).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PrologPackage.TERM__ATOM, null, msgs);
+      msgs = basicSetAtom(newAtom, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PrologPackage.TERM__TERM, newTerm, newTerm));
+      eNotify(new ENotificationImpl(this, Notification.SET, PrologPackage.TERM__ATOM, newAtom, newAtom));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public List getList()
+  {
+    return list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetList(List newList, NotificationChain msgs)
+  {
+    List oldList = list;
+    list = newList;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PrologPackage.TERM__LIST, oldList, newList);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setList(List newList)
+  {
+    if (newList != list)
+    {
+      NotificationChain msgs = null;
+      if (list != null)
+        msgs = ((InternalEObject)list).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PrologPackage.TERM__LIST, null, msgs);
+      if (newList != null)
+        msgs = ((InternalEObject)newList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PrologPackage.TERM__LIST, null, msgs);
+      msgs = basicSetList(newList, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, PrologPackage.TERM__LIST, newList, newList));
   }
 
   /**
@@ -122,8 +179,10 @@ public class TermImpl extends MinimalEObjectImpl.Container implements Term
   {
     switch (featureID)
     {
-      case PrologPackage.TERM__TERM:
-        return basicSetTerm(null, msgs);
+      case PrologPackage.TERM__ATOM:
+        return basicSetAtom(null, msgs);
+      case PrologPackage.TERM__LIST:
+        return basicSetList(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -138,8 +197,10 @@ public class TermImpl extends MinimalEObjectImpl.Container implements Term
   {
     switch (featureID)
     {
-      case PrologPackage.TERM__TERM:
-        return getTerm();
+      case PrologPackage.TERM__ATOM:
+        return getAtom();
+      case PrologPackage.TERM__LIST:
+        return getList();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -154,8 +215,11 @@ public class TermImpl extends MinimalEObjectImpl.Container implements Term
   {
     switch (featureID)
     {
-      case PrologPackage.TERM__TERM:
-        setTerm((EObject)newValue);
+      case PrologPackage.TERM__ATOM:
+        setAtom((Atom)newValue);
+        return;
+      case PrologPackage.TERM__LIST:
+        setList((List)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -171,8 +235,11 @@ public class TermImpl extends MinimalEObjectImpl.Container implements Term
   {
     switch (featureID)
     {
-      case PrologPackage.TERM__TERM:
-        setTerm((EObject)null);
+      case PrologPackage.TERM__ATOM:
+        setAtom((Atom)null);
+        return;
+      case PrologPackage.TERM__LIST:
+        setList((List)null);
         return;
     }
     super.eUnset(featureID);
@@ -188,8 +255,10 @@ public class TermImpl extends MinimalEObjectImpl.Container implements Term
   {
     switch (featureID)
     {
-      case PrologPackage.TERM__TERM:
-        return term != null;
+      case PrologPackage.TERM__ATOM:
+        return atom != null;
+      case PrologPackage.TERM__LIST:
+        return list != null;
     }
     return super.eIsSet(featureID);
   }

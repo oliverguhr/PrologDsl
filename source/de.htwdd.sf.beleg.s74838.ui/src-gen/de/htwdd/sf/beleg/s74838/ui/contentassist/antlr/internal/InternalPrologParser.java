@@ -24,25 +24,25 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_IDENT", "RULE_INT", "RULE_VARIABLE", "RULE_ID", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'?-'", "'.'", "','", "':-'", "'('", "')'", "'['", "']'", "'[]'"
     };
-    public static final int RULE_ID=7;
-    public static final int RULE_ANY_OTHER=12;
-    public static final int T__21=21;
-    public static final int T__20=20;
-    public static final int RULE_SL_COMMENT=10;
-    public static final int EOF=-1;
-    public static final int RULE_ML_COMMENT=9;
-    public static final int T__19=19;
     public static final int RULE_STRING=8;
-    public static final int T__16=16;
+    public static final int RULE_SL_COMMENT=10;
+    public static final int T__19=19;
     public static final int T__15=15;
-    public static final int T__18=18;
+    public static final int T__16=16;
     public static final int T__17=17;
-    public static final int RULE_VARIABLE=6;
-    public static final int RULE_IDENT=4;
-    public static final int T__14=14;
+    public static final int T__18=18;
     public static final int T__13=13;
-    public static final int RULE_INT=5;
+    public static final int T__14=14;
+    public static final int EOF=-1;
+    public static final int RULE_ID=7;
     public static final int RULE_WS=11;
+    public static final int RULE_IDENT=4;
+    public static final int RULE_VARIABLE=6;
+    public static final int RULE_ANY_OTHER=12;
+    public static final int RULE_INT=5;
+    public static final int RULE_ML_COMMENT=9;
+    public static final int T__20=20;
+    public static final int T__21=21;
 
     // delegates
     // delegators
@@ -783,9 +783,9 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:305:1: ( RULE_IDENT )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:306:1: RULE_IDENT
             {
-             before(grammarAccess.getFunctorAccess().getIdentTerminalRuleCall()); 
+             before(grammarAccess.getFunctorAccess().getIDENTTerminalRuleCall()); 
             match(input,RULE_IDENT,FOLLOW_RULE_IDENT_in_ruleFunctor591); 
-             after(grammarAccess.getFunctorAccess().getIdentTerminalRuleCall()); 
+             after(grammarAccess.getFunctorAccess().getIDENTTerminalRuleCall()); 
 
             }
 
@@ -838,31 +838,31 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleTerm"
-    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:328:1: ruleTerm : ( ( rule__Term__TermAssignment ) ) ;
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:328:1: ruleTerm : ( ( rule__Term__Alternatives ) ) ;
     public final void ruleTerm() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:332:2: ( ( ( rule__Term__TermAssignment ) ) )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:333:1: ( ( rule__Term__TermAssignment ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:332:2: ( ( ( rule__Term__Alternatives ) ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:333:1: ( ( rule__Term__Alternatives ) )
             {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:333:1: ( ( rule__Term__TermAssignment ) )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:334:1: ( rule__Term__TermAssignment )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:333:1: ( ( rule__Term__Alternatives ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:334:1: ( rule__Term__Alternatives )
             {
-             before(grammarAccess.getTermAccess().getTermAssignment()); 
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:335:1: ( rule__Term__TermAssignment )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:335:2: rule__Term__TermAssignment
+             before(grammarAccess.getTermAccess().getAlternatives()); 
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:335:1: ( rule__Term__Alternatives )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:335:2: rule__Term__Alternatives
             {
-            pushFollow(FOLLOW_rule__Term__TermAssignment_in_ruleTerm650);
-            rule__Term__TermAssignment();
+            pushFollow(FOLLOW_rule__Term__Alternatives_in_ruleTerm650);
+            rule__Term__Alternatives();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTermAccess().getTermAssignment()); 
+             after(grammarAccess.getTermAccess().getAlternatives()); 
 
             }
 
@@ -1337,14 +1337,14 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Clause__Alternatives"
 
 
-    // $ANTLR start "rule__Term__TermAlternatives_0"
-    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:509:1: rule__Term__TermAlternatives_0 : ( ( ruleAtom ) | ( ruleList ) );
-    public final void rule__Term__TermAlternatives_0() throws RecognitionException {
+    // $ANTLR start "rule__Term__Alternatives"
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:509:1: rule__Term__Alternatives : ( ( ( rule__Term__AtomAssignment_0 ) ) | ( ( rule__Term__ListAssignment_1 ) ) );
+    public final void rule__Term__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:513:1: ( ( ruleAtom ) | ( ruleList ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:513:1: ( ( ( rule__Term__AtomAssignment_0 ) ) | ( ( rule__Term__ListAssignment_1 ) ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -1362,18 +1362,24 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             }
             switch (alt3) {
                 case 1 :
-                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:514:1: ( ruleAtom )
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:514:1: ( ( rule__Term__AtomAssignment_0 ) )
                     {
-                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:514:1: ( ruleAtom )
-                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:515:1: ruleAtom
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:514:1: ( ( rule__Term__AtomAssignment_0 ) )
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:515:1: ( rule__Term__AtomAssignment_0 )
                     {
-                     before(grammarAccess.getTermAccess().getTermAtomParserRuleCall_0_0()); 
-                    pushFollow(FOLLOW_ruleAtom_in_rule__Term__TermAlternatives_01036);
-                    ruleAtom();
+                     before(grammarAccess.getTermAccess().getAtomAssignment_0()); 
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:516:1: ( rule__Term__AtomAssignment_0 )
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:516:2: rule__Term__AtomAssignment_0
+                    {
+                    pushFollow(FOLLOW_rule__Term__AtomAssignment_0_in_rule__Term__Alternatives1036);
+                    rule__Term__AtomAssignment_0();
 
                     state._fsp--;
 
-                     after(grammarAccess.getTermAccess().getTermAtomParserRuleCall_0_0()); 
+
+                    }
+
+                     after(grammarAccess.getTermAccess().getAtomAssignment_0()); 
 
                     }
 
@@ -1381,18 +1387,24 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:520:6: ( ruleList )
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:520:6: ( ( rule__Term__ListAssignment_1 ) )
                     {
-                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:520:6: ( ruleList )
-                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:521:1: ruleList
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:520:6: ( ( rule__Term__ListAssignment_1 ) )
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:521:1: ( rule__Term__ListAssignment_1 )
                     {
-                     before(grammarAccess.getTermAccess().getTermListParserRuleCall_0_1()); 
-                    pushFollow(FOLLOW_ruleList_in_rule__Term__TermAlternatives_01053);
-                    ruleList();
+                     before(grammarAccess.getTermAccess().getListAssignment_1()); 
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:522:1: ( rule__Term__ListAssignment_1 )
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:522:2: rule__Term__ListAssignment_1
+                    {
+                    pushFollow(FOLLOW_rule__Term__ListAssignment_1_in_rule__Term__Alternatives1054);
+                    rule__Term__ListAssignment_1();
 
                     state._fsp--;
 
-                     after(grammarAccess.getTermAccess().getTermListParserRuleCall_0_1()); 
+
+                    }
+
+                     after(grammarAccess.getTermAccess().getListAssignment_1()); 
 
                     }
 
@@ -1413,7 +1425,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Term__TermAlternatives_0"
+    // $ANTLR end "rule__Term__Alternatives"
 
 
     // $ANTLR start "rule__Atom__AtomAlternatives_0"
@@ -1455,9 +1467,9 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
                     // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:536:1: ( RULE_IDENT )
                     // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:537:1: RULE_IDENT
                     {
-                     before(grammarAccess.getAtomAccess().getAtomIdentTerminalRuleCall_0_0()); 
-                    match(input,RULE_IDENT,FOLLOW_RULE_IDENT_in_rule__Atom__AtomAlternatives_01085); 
-                     after(grammarAccess.getAtomAccess().getAtomIdentTerminalRuleCall_0_0()); 
+                     before(grammarAccess.getAtomAccess().getAtomIDENTTerminalRuleCall_0_0()); 
+                    match(input,RULE_IDENT,FOLLOW_RULE_IDENT_in_rule__Atom__AtomAlternatives_01087); 
+                     after(grammarAccess.getAtomAccess().getAtomIDENTTerminalRuleCall_0_0()); 
 
                     }
 
@@ -1470,9 +1482,9 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
                     // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:542:6: ( RULE_VARIABLE )
                     // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:543:1: RULE_VARIABLE
                     {
-                     before(grammarAccess.getAtomAccess().getAtomVariableTerminalRuleCall_0_1()); 
-                    match(input,RULE_VARIABLE,FOLLOW_RULE_VARIABLE_in_rule__Atom__AtomAlternatives_01102); 
-                     after(grammarAccess.getAtomAccess().getAtomVariableTerminalRuleCall_0_1()); 
+                     before(grammarAccess.getAtomAccess().getAtomVARIABLETerminalRuleCall_0_1()); 
+                    match(input,RULE_VARIABLE,FOLLOW_RULE_VARIABLE_in_rule__Atom__AtomAlternatives_01104); 
+                     after(grammarAccess.getAtomAccess().getAtomVARIABLETerminalRuleCall_0_1()); 
 
                     }
 
@@ -1486,7 +1498,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
                     // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:549:1: ruleNumber
                     {
                      before(grammarAccess.getAtomAccess().getAtomNumberParserRuleCall_0_2()); 
-                    pushFollow(FOLLOW_ruleNumber_in_rule__Atom__AtomAlternatives_01119);
+                    pushFollow(FOLLOW_ruleNumber_in_rule__Atom__AtomAlternatives_01121);
                     ruleNumber();
 
                     state._fsp--;
@@ -1516,13 +1528,13 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__List__Alternatives"
-    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:559:1: rule__List__Alternatives : ( ( ( rule__List__ListAssignment_0 ) ) | ( ruleNotEmptyList ) );
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:559:1: rule__List__Alternatives : ( ( ( rule__List__EmptyListAssignment_0 ) ) | ( ( rule__List__ListAssignment_1 ) ) );
     public final void rule__List__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:563:1: ( ( ( rule__List__ListAssignment_0 ) ) | ( ruleNotEmptyList ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:563:1: ( ( ( rule__List__EmptyListAssignment_0 ) ) | ( ( rule__List__ListAssignment_1 ) ) )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -1540,24 +1552,24 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             }
             switch (alt5) {
                 case 1 :
-                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:564:1: ( ( rule__List__ListAssignment_0 ) )
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:564:1: ( ( rule__List__EmptyListAssignment_0 ) )
                     {
-                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:564:1: ( ( rule__List__ListAssignment_0 ) )
-                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:565:1: ( rule__List__ListAssignment_0 )
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:564:1: ( ( rule__List__EmptyListAssignment_0 ) )
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:565:1: ( rule__List__EmptyListAssignment_0 )
                     {
-                     before(grammarAccess.getListAccess().getListAssignment_0()); 
-                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:566:1: ( rule__List__ListAssignment_0 )
-                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:566:2: rule__List__ListAssignment_0
+                     before(grammarAccess.getListAccess().getEmptyListAssignment_0()); 
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:566:1: ( rule__List__EmptyListAssignment_0 )
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:566:2: rule__List__EmptyListAssignment_0
                     {
-                    pushFollow(FOLLOW_rule__List__ListAssignment_0_in_rule__List__Alternatives1151);
-                    rule__List__ListAssignment_0();
+                    pushFollow(FOLLOW_rule__List__EmptyListAssignment_0_in_rule__List__Alternatives1153);
+                    rule__List__EmptyListAssignment_0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getListAccess().getListAssignment_0()); 
+                     after(grammarAccess.getListAccess().getEmptyListAssignment_0()); 
 
                     }
 
@@ -1565,18 +1577,24 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:570:6: ( ruleNotEmptyList )
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:570:6: ( ( rule__List__ListAssignment_1 ) )
                     {
-                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:570:6: ( ruleNotEmptyList )
-                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:571:1: ruleNotEmptyList
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:570:6: ( ( rule__List__ListAssignment_1 ) )
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:571:1: ( rule__List__ListAssignment_1 )
                     {
-                     before(grammarAccess.getListAccess().getNotEmptyListParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleNotEmptyList_in_rule__List__Alternatives1169);
-                    ruleNotEmptyList();
+                     before(grammarAccess.getListAccess().getListAssignment_1()); 
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:572:1: ( rule__List__ListAssignment_1 )
+                    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:572:2: rule__List__ListAssignment_1
+                    {
+                    pushFollow(FOLLOW_rule__List__ListAssignment_1_in_rule__List__Alternatives1171);
+                    rule__List__ListAssignment_1();
 
                     state._fsp--;
 
-                     after(grammarAccess.getListAccess().getNotEmptyListParserRuleCall_1()); 
+
+                    }
+
+                     after(grammarAccess.getListAccess().getListAssignment_1()); 
 
                     }
 
@@ -1610,12 +1628,12 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:587:1: ( rule__PrologDsl__Group__0__Impl rule__PrologDsl__Group__1 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:588:2: rule__PrologDsl__Group__0__Impl rule__PrologDsl__Group__1
             {
-            pushFollow(FOLLOW_rule__PrologDsl__Group__0__Impl_in_rule__PrologDsl__Group__01199);
+            pushFollow(FOLLOW_rule__PrologDsl__Group__0__Impl_in_rule__PrologDsl__Group__01202);
             rule__PrologDsl__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__PrologDsl__Group__1_in_rule__PrologDsl__Group__01202);
+            pushFollow(FOLLOW_rule__PrologDsl__Group__1_in_rule__PrologDsl__Group__01205);
             rule__PrologDsl__Group__1();
 
             state._fsp--;
@@ -1655,7 +1673,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:602:1: ( rule__PrologDsl__ProgramAssignment_0 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:602:2: rule__PrologDsl__ProgramAssignment_0
             {
-            pushFollow(FOLLOW_rule__PrologDsl__ProgramAssignment_0_in_rule__PrologDsl__Group__0__Impl1229);
+            pushFollow(FOLLOW_rule__PrologDsl__ProgramAssignment_0_in_rule__PrologDsl__Group__0__Impl1232);
             rule__PrologDsl__ProgramAssignment_0();
 
             state._fsp--;
@@ -1695,7 +1713,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:616:1: ( rule__PrologDsl__Group__1__Impl )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:617:2: rule__PrologDsl__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__PrologDsl__Group__1__Impl_in_rule__PrologDsl__Group__11259);
+            pushFollow(FOLLOW_rule__PrologDsl__Group__1__Impl_in_rule__PrologDsl__Group__11262);
             rule__PrologDsl__Group__1__Impl();
 
             state._fsp--;
@@ -1735,7 +1753,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:630:1: ( rule__PrologDsl__ExqueryAssignment_1 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:630:2: rule__PrologDsl__ExqueryAssignment_1
             {
-            pushFollow(FOLLOW_rule__PrologDsl__ExqueryAssignment_1_in_rule__PrologDsl__Group__1__Impl1286);
+            pushFollow(FOLLOW_rule__PrologDsl__ExqueryAssignment_1_in_rule__PrologDsl__Group__1__Impl1289);
             rule__PrologDsl__ExqueryAssignment_1();
 
             state._fsp--;
@@ -1775,12 +1793,12 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:648:1: ( rule__Exquery__Group__0__Impl rule__Exquery__Group__1 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:649:2: rule__Exquery__Group__0__Impl rule__Exquery__Group__1
             {
-            pushFollow(FOLLOW_rule__Exquery__Group__0__Impl_in_rule__Exquery__Group__01320);
+            pushFollow(FOLLOW_rule__Exquery__Group__0__Impl_in_rule__Exquery__Group__01323);
             rule__Exquery__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Exquery__Group__1_in_rule__Exquery__Group__01323);
+            pushFollow(FOLLOW_rule__Exquery__Group__1_in_rule__Exquery__Group__01326);
             rule__Exquery__Group__1();
 
             state._fsp--;
@@ -1817,7 +1835,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:662:1: '?-'
             {
              before(grammarAccess.getExqueryAccess().getQuestionMarkHyphenMinusKeyword_0()); 
-            match(input,13,FOLLOW_13_in_rule__Exquery__Group__0__Impl1351); 
+            match(input,13,FOLLOW_13_in_rule__Exquery__Group__0__Impl1354); 
              after(grammarAccess.getExqueryAccess().getQuestionMarkHyphenMinusKeyword_0()); 
 
             }
@@ -1850,12 +1868,12 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:679:1: ( rule__Exquery__Group__1__Impl rule__Exquery__Group__2 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:680:2: rule__Exquery__Group__1__Impl rule__Exquery__Group__2
             {
-            pushFollow(FOLLOW_rule__Exquery__Group__1__Impl_in_rule__Exquery__Group__11382);
+            pushFollow(FOLLOW_rule__Exquery__Group__1__Impl_in_rule__Exquery__Group__11385);
             rule__Exquery__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Exquery__Group__2_in_rule__Exquery__Group__11385);
+            pushFollow(FOLLOW_rule__Exquery__Group__2_in_rule__Exquery__Group__11388);
             rule__Exquery__Group__2();
 
             state._fsp--;
@@ -1895,7 +1913,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:694:1: ( rule__Exquery__QueryAssignment_1 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:694:2: rule__Exquery__QueryAssignment_1
             {
-            pushFollow(FOLLOW_rule__Exquery__QueryAssignment_1_in_rule__Exquery__Group__1__Impl1412);
+            pushFollow(FOLLOW_rule__Exquery__QueryAssignment_1_in_rule__Exquery__Group__1__Impl1415);
             rule__Exquery__QueryAssignment_1();
 
             state._fsp--;
@@ -1935,7 +1953,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:708:1: ( rule__Exquery__Group__2__Impl )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:709:2: rule__Exquery__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Exquery__Group__2__Impl_in_rule__Exquery__Group__21442);
+            pushFollow(FOLLOW_rule__Exquery__Group__2__Impl_in_rule__Exquery__Group__21445);
             rule__Exquery__Group__2__Impl();
 
             state._fsp--;
@@ -1972,7 +1990,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:721:1: '.'
             {
              before(grammarAccess.getExqueryAccess().getFullStopKeyword_2()); 
-            match(input,14,FOLLOW_14_in_rule__Exquery__Group__2__Impl1470); 
+            match(input,14,FOLLOW_14_in_rule__Exquery__Group__2__Impl1473); 
              after(grammarAccess.getExqueryAccess().getFullStopKeyword_2()); 
 
             }
@@ -2005,12 +2023,12 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:744:1: ( rule__Query__Group__0__Impl rule__Query__Group__1 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:745:2: rule__Query__Group__0__Impl rule__Query__Group__1
             {
-            pushFollow(FOLLOW_rule__Query__Group__0__Impl_in_rule__Query__Group__01507);
+            pushFollow(FOLLOW_rule__Query__Group__0__Impl_in_rule__Query__Group__01510);
             rule__Query__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Query__Group__1_in_rule__Query__Group__01510);
+            pushFollow(FOLLOW_rule__Query__Group__1_in_rule__Query__Group__01513);
             rule__Query__Group__1();
 
             state._fsp--;
@@ -2050,7 +2068,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:759:1: ( rule__Query__PredicateAssignment_0 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:759:2: rule__Query__PredicateAssignment_0
             {
-            pushFollow(FOLLOW_rule__Query__PredicateAssignment_0_in_rule__Query__Group__0__Impl1537);
+            pushFollow(FOLLOW_rule__Query__PredicateAssignment_0_in_rule__Query__Group__0__Impl1540);
             rule__Query__PredicateAssignment_0();
 
             state._fsp--;
@@ -2090,7 +2108,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:773:1: ( rule__Query__Group__1__Impl )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:774:2: rule__Query__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Query__Group__1__Impl_in_rule__Query__Group__11567);
+            pushFollow(FOLLOW_rule__Query__Group__1__Impl_in_rule__Query__Group__11570);
             rule__Query__Group__1__Impl();
 
             state._fsp--;
@@ -2142,7 +2160,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:787:2: rule__Query__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Query__Group_1__0_in_rule__Query__Group__1__Impl1594);
+            	    pushFollow(FOLLOW_rule__Query__Group_1__0_in_rule__Query__Group__1__Impl1597);
             	    rule__Query__Group_1__0();
 
             	    state._fsp--;
@@ -2188,12 +2206,12 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:805:1: ( rule__Query__Group_1__0__Impl rule__Query__Group_1__1 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:806:2: rule__Query__Group_1__0__Impl rule__Query__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Query__Group_1__0__Impl_in_rule__Query__Group_1__01629);
+            pushFollow(FOLLOW_rule__Query__Group_1__0__Impl_in_rule__Query__Group_1__01632);
             rule__Query__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Query__Group_1__1_in_rule__Query__Group_1__01632);
+            pushFollow(FOLLOW_rule__Query__Group_1__1_in_rule__Query__Group_1__01635);
             rule__Query__Group_1__1();
 
             state._fsp--;
@@ -2230,7 +2248,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:819:1: ','
             {
              before(grammarAccess.getQueryAccess().getCommaKeyword_1_0()); 
-            match(input,15,FOLLOW_15_in_rule__Query__Group_1__0__Impl1660); 
+            match(input,15,FOLLOW_15_in_rule__Query__Group_1__0__Impl1663); 
              after(grammarAccess.getQueryAccess().getCommaKeyword_1_0()); 
 
             }
@@ -2263,7 +2281,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:836:1: ( rule__Query__Group_1__1__Impl )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:837:2: rule__Query__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Query__Group_1__1__Impl_in_rule__Query__Group_1__11691);
+            pushFollow(FOLLOW_rule__Query__Group_1__1__Impl_in_rule__Query__Group_1__11694);
             rule__Query__Group_1__1__Impl();
 
             state._fsp--;
@@ -2303,7 +2321,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:850:1: ( rule__Query__NthPredicateAssignment_1_1 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:850:2: rule__Query__NthPredicateAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Query__NthPredicateAssignment_1_1_in_rule__Query__Group_1__1__Impl1718);
+            pushFollow(FOLLOW_rule__Query__NthPredicateAssignment_1_1_in_rule__Query__Group_1__1__Impl1721);
             rule__Query__NthPredicateAssignment_1_1();
 
             state._fsp--;
@@ -2343,12 +2361,12 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:868:1: ( rule__Fact__Group__0__Impl rule__Fact__Group__1 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:869:2: rule__Fact__Group__0__Impl rule__Fact__Group__1
             {
-            pushFollow(FOLLOW_rule__Fact__Group__0__Impl_in_rule__Fact__Group__01752);
+            pushFollow(FOLLOW_rule__Fact__Group__0__Impl_in_rule__Fact__Group__01755);
             rule__Fact__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Fact__Group__1_in_rule__Fact__Group__01755);
+            pushFollow(FOLLOW_rule__Fact__Group__1_in_rule__Fact__Group__01758);
             rule__Fact__Group__1();
 
             state._fsp--;
@@ -2388,7 +2406,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:883:1: ( rule__Fact__PredicateAssignment_0 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:883:2: rule__Fact__PredicateAssignment_0
             {
-            pushFollow(FOLLOW_rule__Fact__PredicateAssignment_0_in_rule__Fact__Group__0__Impl1782);
+            pushFollow(FOLLOW_rule__Fact__PredicateAssignment_0_in_rule__Fact__Group__0__Impl1785);
             rule__Fact__PredicateAssignment_0();
 
             state._fsp--;
@@ -2428,7 +2446,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:897:1: ( rule__Fact__Group__1__Impl )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:898:2: rule__Fact__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Fact__Group__1__Impl_in_rule__Fact__Group__11812);
+            pushFollow(FOLLOW_rule__Fact__Group__1__Impl_in_rule__Fact__Group__11815);
             rule__Fact__Group__1__Impl();
 
             state._fsp--;
@@ -2465,7 +2483,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:910:1: '.'
             {
              before(grammarAccess.getFactAccess().getFullStopKeyword_1()); 
-            match(input,14,FOLLOW_14_in_rule__Fact__Group__1__Impl1840); 
+            match(input,14,FOLLOW_14_in_rule__Fact__Group__1__Impl1843); 
              after(grammarAccess.getFactAccess().getFullStopKeyword_1()); 
 
             }
@@ -2498,12 +2516,12 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:931:1: ( rule__Rule__Group__0__Impl rule__Rule__Group__1 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:932:2: rule__Rule__Group__0__Impl rule__Rule__Group__1
             {
-            pushFollow(FOLLOW_rule__Rule__Group__0__Impl_in_rule__Rule__Group__01875);
+            pushFollow(FOLLOW_rule__Rule__Group__0__Impl_in_rule__Rule__Group__01878);
             rule__Rule__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Rule__Group__1_in_rule__Rule__Group__01878);
+            pushFollow(FOLLOW_rule__Rule__Group__1_in_rule__Rule__Group__01881);
             rule__Rule__Group__1();
 
             state._fsp--;
@@ -2543,7 +2561,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:946:1: ( rule__Rule__PredicateAssignment_0 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:946:2: rule__Rule__PredicateAssignment_0
             {
-            pushFollow(FOLLOW_rule__Rule__PredicateAssignment_0_in_rule__Rule__Group__0__Impl1905);
+            pushFollow(FOLLOW_rule__Rule__PredicateAssignment_0_in_rule__Rule__Group__0__Impl1908);
             rule__Rule__PredicateAssignment_0();
 
             state._fsp--;
@@ -2583,12 +2601,12 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:960:1: ( rule__Rule__Group__1__Impl rule__Rule__Group__2 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:961:2: rule__Rule__Group__1__Impl rule__Rule__Group__2
             {
-            pushFollow(FOLLOW_rule__Rule__Group__1__Impl_in_rule__Rule__Group__11935);
+            pushFollow(FOLLOW_rule__Rule__Group__1__Impl_in_rule__Rule__Group__11938);
             rule__Rule__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Rule__Group__2_in_rule__Rule__Group__11938);
+            pushFollow(FOLLOW_rule__Rule__Group__2_in_rule__Rule__Group__11941);
             rule__Rule__Group__2();
 
             state._fsp--;
@@ -2625,7 +2643,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:974:1: ':-'
             {
              before(grammarAccess.getRuleAccess().getColonHyphenMinusKeyword_1()); 
-            match(input,16,FOLLOW_16_in_rule__Rule__Group__1__Impl1966); 
+            match(input,16,FOLLOW_16_in_rule__Rule__Group__1__Impl1969); 
              after(grammarAccess.getRuleAccess().getColonHyphenMinusKeyword_1()); 
 
             }
@@ -2658,12 +2676,12 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:991:1: ( rule__Rule__Group__2__Impl rule__Rule__Group__3 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:992:2: rule__Rule__Group__2__Impl rule__Rule__Group__3
             {
-            pushFollow(FOLLOW_rule__Rule__Group__2__Impl_in_rule__Rule__Group__21997);
+            pushFollow(FOLLOW_rule__Rule__Group__2__Impl_in_rule__Rule__Group__22000);
             rule__Rule__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Rule__Group__3_in_rule__Rule__Group__22000);
+            pushFollow(FOLLOW_rule__Rule__Group__3_in_rule__Rule__Group__22003);
             rule__Rule__Group__3();
 
             state._fsp--;
@@ -2703,7 +2721,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1006:1: ( rule__Rule__QueryAssignment_2 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1006:2: rule__Rule__QueryAssignment_2
             {
-            pushFollow(FOLLOW_rule__Rule__QueryAssignment_2_in_rule__Rule__Group__2__Impl2027);
+            pushFollow(FOLLOW_rule__Rule__QueryAssignment_2_in_rule__Rule__Group__2__Impl2030);
             rule__Rule__QueryAssignment_2();
 
             state._fsp--;
@@ -2743,7 +2761,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1020:1: ( rule__Rule__Group__3__Impl )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1021:2: rule__Rule__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Rule__Group__3__Impl_in_rule__Rule__Group__32057);
+            pushFollow(FOLLOW_rule__Rule__Group__3__Impl_in_rule__Rule__Group__32060);
             rule__Rule__Group__3__Impl();
 
             state._fsp--;
@@ -2780,7 +2798,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1033:1: '.'
             {
              before(grammarAccess.getRuleAccess().getFullStopKeyword_3()); 
-            match(input,14,FOLLOW_14_in_rule__Rule__Group__3__Impl2085); 
+            match(input,14,FOLLOW_14_in_rule__Rule__Group__3__Impl2088); 
              after(grammarAccess.getRuleAccess().getFullStopKeyword_3()); 
 
             }
@@ -2813,12 +2831,12 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1058:1: ( rule__Predicate__Group__0__Impl rule__Predicate__Group__1 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1059:2: rule__Predicate__Group__0__Impl rule__Predicate__Group__1
             {
-            pushFollow(FOLLOW_rule__Predicate__Group__0__Impl_in_rule__Predicate__Group__02124);
+            pushFollow(FOLLOW_rule__Predicate__Group__0__Impl_in_rule__Predicate__Group__02127);
             rule__Predicate__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Predicate__Group__1_in_rule__Predicate__Group__02127);
+            pushFollow(FOLLOW_rule__Predicate__Group__1_in_rule__Predicate__Group__02130);
             rule__Predicate__Group__1();
 
             state._fsp--;
@@ -2858,7 +2876,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1073:1: ( rule__Predicate__FunctorAssignment_0 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1073:2: rule__Predicate__FunctorAssignment_0
             {
-            pushFollow(FOLLOW_rule__Predicate__FunctorAssignment_0_in_rule__Predicate__Group__0__Impl2154);
+            pushFollow(FOLLOW_rule__Predicate__FunctorAssignment_0_in_rule__Predicate__Group__0__Impl2157);
             rule__Predicate__FunctorAssignment_0();
 
             state._fsp--;
@@ -2898,12 +2916,12 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1087:1: ( rule__Predicate__Group__1__Impl rule__Predicate__Group__2 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1088:2: rule__Predicate__Group__1__Impl rule__Predicate__Group__2
             {
-            pushFollow(FOLLOW_rule__Predicate__Group__1__Impl_in_rule__Predicate__Group__12184);
+            pushFollow(FOLLOW_rule__Predicate__Group__1__Impl_in_rule__Predicate__Group__12187);
             rule__Predicate__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Predicate__Group__2_in_rule__Predicate__Group__12187);
+            pushFollow(FOLLOW_rule__Predicate__Group__2_in_rule__Predicate__Group__12190);
             rule__Predicate__Group__2();
 
             state._fsp--;
@@ -2940,7 +2958,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1101:1: '('
             {
              before(grammarAccess.getPredicateAccess().getLeftParenthesisKeyword_1()); 
-            match(input,17,FOLLOW_17_in_rule__Predicate__Group__1__Impl2215); 
+            match(input,17,FOLLOW_17_in_rule__Predicate__Group__1__Impl2218); 
              after(grammarAccess.getPredicateAccess().getLeftParenthesisKeyword_1()); 
 
             }
@@ -2973,12 +2991,12 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1118:1: ( rule__Predicate__Group__2__Impl rule__Predicate__Group__3 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1119:2: rule__Predicate__Group__2__Impl rule__Predicate__Group__3
             {
-            pushFollow(FOLLOW_rule__Predicate__Group__2__Impl_in_rule__Predicate__Group__22246);
+            pushFollow(FOLLOW_rule__Predicate__Group__2__Impl_in_rule__Predicate__Group__22249);
             rule__Predicate__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Predicate__Group__3_in_rule__Predicate__Group__22249);
+            pushFollow(FOLLOW_rule__Predicate__Group__3_in_rule__Predicate__Group__22252);
             rule__Predicate__Group__3();
 
             state._fsp--;
@@ -3018,7 +3036,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1133:1: ( rule__Predicate__TermAssignment_2 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1133:2: rule__Predicate__TermAssignment_2
             {
-            pushFollow(FOLLOW_rule__Predicate__TermAssignment_2_in_rule__Predicate__Group__2__Impl2276);
+            pushFollow(FOLLOW_rule__Predicate__TermAssignment_2_in_rule__Predicate__Group__2__Impl2279);
             rule__Predicate__TermAssignment_2();
 
             state._fsp--;
@@ -3058,12 +3076,12 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1147:1: ( rule__Predicate__Group__3__Impl rule__Predicate__Group__4 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1148:2: rule__Predicate__Group__3__Impl rule__Predicate__Group__4
             {
-            pushFollow(FOLLOW_rule__Predicate__Group__3__Impl_in_rule__Predicate__Group__32306);
+            pushFollow(FOLLOW_rule__Predicate__Group__3__Impl_in_rule__Predicate__Group__32309);
             rule__Predicate__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Predicate__Group__4_in_rule__Predicate__Group__32309);
+            pushFollow(FOLLOW_rule__Predicate__Group__4_in_rule__Predicate__Group__32312);
             rule__Predicate__Group__4();
 
             state._fsp--;
@@ -3115,7 +3133,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1162:2: rule__Predicate__Group_3__0
             	    {
-            	    pushFollow(FOLLOW_rule__Predicate__Group_3__0_in_rule__Predicate__Group__3__Impl2336);
+            	    pushFollow(FOLLOW_rule__Predicate__Group_3__0_in_rule__Predicate__Group__3__Impl2339);
             	    rule__Predicate__Group_3__0();
 
             	    state._fsp--;
@@ -3161,7 +3179,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1176:1: ( rule__Predicate__Group__4__Impl )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1177:2: rule__Predicate__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Predicate__Group__4__Impl_in_rule__Predicate__Group__42367);
+            pushFollow(FOLLOW_rule__Predicate__Group__4__Impl_in_rule__Predicate__Group__42370);
             rule__Predicate__Group__4__Impl();
 
             state._fsp--;
@@ -3198,7 +3216,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1189:1: ')'
             {
              before(grammarAccess.getPredicateAccess().getRightParenthesisKeyword_4()); 
-            match(input,18,FOLLOW_18_in_rule__Predicate__Group__4__Impl2395); 
+            match(input,18,FOLLOW_18_in_rule__Predicate__Group__4__Impl2398); 
              after(grammarAccess.getPredicateAccess().getRightParenthesisKeyword_4()); 
 
             }
@@ -3231,12 +3249,12 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1216:1: ( rule__Predicate__Group_3__0__Impl rule__Predicate__Group_3__1 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1217:2: rule__Predicate__Group_3__0__Impl rule__Predicate__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Predicate__Group_3__0__Impl_in_rule__Predicate__Group_3__02436);
+            pushFollow(FOLLOW_rule__Predicate__Group_3__0__Impl_in_rule__Predicate__Group_3__02439);
             rule__Predicate__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Predicate__Group_3__1_in_rule__Predicate__Group_3__02439);
+            pushFollow(FOLLOW_rule__Predicate__Group_3__1_in_rule__Predicate__Group_3__02442);
             rule__Predicate__Group_3__1();
 
             state._fsp--;
@@ -3273,7 +3291,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1230:1: ','
             {
              before(grammarAccess.getPredicateAccess().getCommaKeyword_3_0()); 
-            match(input,15,FOLLOW_15_in_rule__Predicate__Group_3__0__Impl2467); 
+            match(input,15,FOLLOW_15_in_rule__Predicate__Group_3__0__Impl2470); 
              after(grammarAccess.getPredicateAccess().getCommaKeyword_3_0()); 
 
             }
@@ -3306,7 +3324,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1247:1: ( rule__Predicate__Group_3__1__Impl )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1248:2: rule__Predicate__Group_3__1__Impl
             {
-            pushFollow(FOLLOW_rule__Predicate__Group_3__1__Impl_in_rule__Predicate__Group_3__12498);
+            pushFollow(FOLLOW_rule__Predicate__Group_3__1__Impl_in_rule__Predicate__Group_3__12501);
             rule__Predicate__Group_3__1__Impl();
 
             state._fsp--;
@@ -3346,7 +3364,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1261:1: ( rule__Predicate__NthTermAssignment_3_1 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1261:2: rule__Predicate__NthTermAssignment_3_1
             {
-            pushFollow(FOLLOW_rule__Predicate__NthTermAssignment_3_1_in_rule__Predicate__Group_3__1__Impl2525);
+            pushFollow(FOLLOW_rule__Predicate__NthTermAssignment_3_1_in_rule__Predicate__Group_3__1__Impl2528);
             rule__Predicate__NthTermAssignment_3_1();
 
             state._fsp--;
@@ -3386,12 +3404,12 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1279:1: ( rule__NotEmptyList__Group__0__Impl rule__NotEmptyList__Group__1 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1280:2: rule__NotEmptyList__Group__0__Impl rule__NotEmptyList__Group__1
             {
-            pushFollow(FOLLOW_rule__NotEmptyList__Group__0__Impl_in_rule__NotEmptyList__Group__02559);
+            pushFollow(FOLLOW_rule__NotEmptyList__Group__0__Impl_in_rule__NotEmptyList__Group__02562);
             rule__NotEmptyList__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__NotEmptyList__Group__1_in_rule__NotEmptyList__Group__02562);
+            pushFollow(FOLLOW_rule__NotEmptyList__Group__1_in_rule__NotEmptyList__Group__02565);
             rule__NotEmptyList__Group__1();
 
             state._fsp--;
@@ -3428,7 +3446,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1293:1: '['
             {
              before(grammarAccess.getNotEmptyListAccess().getLeftSquareBracketKeyword_0()); 
-            match(input,19,FOLLOW_19_in_rule__NotEmptyList__Group__0__Impl2590); 
+            match(input,19,FOLLOW_19_in_rule__NotEmptyList__Group__0__Impl2593); 
              after(grammarAccess.getNotEmptyListAccess().getLeftSquareBracketKeyword_0()); 
 
             }
@@ -3461,12 +3479,12 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1310:1: ( rule__NotEmptyList__Group__1__Impl rule__NotEmptyList__Group__2 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1311:2: rule__NotEmptyList__Group__1__Impl rule__NotEmptyList__Group__2
             {
-            pushFollow(FOLLOW_rule__NotEmptyList__Group__1__Impl_in_rule__NotEmptyList__Group__12621);
+            pushFollow(FOLLOW_rule__NotEmptyList__Group__1__Impl_in_rule__NotEmptyList__Group__12624);
             rule__NotEmptyList__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__NotEmptyList__Group__2_in_rule__NotEmptyList__Group__12624);
+            pushFollow(FOLLOW_rule__NotEmptyList__Group__2_in_rule__NotEmptyList__Group__12627);
             rule__NotEmptyList__Group__2();
 
             state._fsp--;
@@ -3506,7 +3524,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1325:1: ( rule__NotEmptyList__FolgeAssignment_1 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1325:2: rule__NotEmptyList__FolgeAssignment_1
             {
-            pushFollow(FOLLOW_rule__NotEmptyList__FolgeAssignment_1_in_rule__NotEmptyList__Group__1__Impl2651);
+            pushFollow(FOLLOW_rule__NotEmptyList__FolgeAssignment_1_in_rule__NotEmptyList__Group__1__Impl2654);
             rule__NotEmptyList__FolgeAssignment_1();
 
             state._fsp--;
@@ -3546,7 +3564,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1339:1: ( rule__NotEmptyList__Group__2__Impl )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1340:2: rule__NotEmptyList__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__NotEmptyList__Group__2__Impl_in_rule__NotEmptyList__Group__22681);
+            pushFollow(FOLLOW_rule__NotEmptyList__Group__2__Impl_in_rule__NotEmptyList__Group__22684);
             rule__NotEmptyList__Group__2__Impl();
 
             state._fsp--;
@@ -3583,7 +3601,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1352:1: ']'
             {
              before(grammarAccess.getNotEmptyListAccess().getRightSquareBracketKeyword_2()); 
-            match(input,20,FOLLOW_20_in_rule__NotEmptyList__Group__2__Impl2709); 
+            match(input,20,FOLLOW_20_in_rule__NotEmptyList__Group__2__Impl2712); 
              after(grammarAccess.getNotEmptyListAccess().getRightSquareBracketKeyword_2()); 
 
             }
@@ -3616,12 +3634,12 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1375:1: ( rule__Folge__Group__0__Impl rule__Folge__Group__1 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1376:2: rule__Folge__Group__0__Impl rule__Folge__Group__1
             {
-            pushFollow(FOLLOW_rule__Folge__Group__0__Impl_in_rule__Folge__Group__02746);
+            pushFollow(FOLLOW_rule__Folge__Group__0__Impl_in_rule__Folge__Group__02749);
             rule__Folge__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Folge__Group__1_in_rule__Folge__Group__02749);
+            pushFollow(FOLLOW_rule__Folge__Group__1_in_rule__Folge__Group__02752);
             rule__Folge__Group__1();
 
             state._fsp--;
@@ -3661,7 +3679,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1390:1: ( rule__Folge__AtomAssignment_0 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1390:2: rule__Folge__AtomAssignment_0
             {
-            pushFollow(FOLLOW_rule__Folge__AtomAssignment_0_in_rule__Folge__Group__0__Impl2776);
+            pushFollow(FOLLOW_rule__Folge__AtomAssignment_0_in_rule__Folge__Group__0__Impl2779);
             rule__Folge__AtomAssignment_0();
 
             state._fsp--;
@@ -3701,7 +3719,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1404:1: ( rule__Folge__Group__1__Impl )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1405:2: rule__Folge__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Folge__Group__1__Impl_in_rule__Folge__Group__12806);
+            pushFollow(FOLLOW_rule__Folge__Group__1__Impl_in_rule__Folge__Group__12809);
             rule__Folge__Group__1__Impl();
 
             state._fsp--;
@@ -3753,7 +3771,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1418:2: rule__Folge__Group_1__0
             	    {
-            	    pushFollow(FOLLOW_rule__Folge__Group_1__0_in_rule__Folge__Group__1__Impl2833);
+            	    pushFollow(FOLLOW_rule__Folge__Group_1__0_in_rule__Folge__Group__1__Impl2836);
             	    rule__Folge__Group_1__0();
 
             	    state._fsp--;
@@ -3799,12 +3817,12 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1436:1: ( rule__Folge__Group_1__0__Impl rule__Folge__Group_1__1 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1437:2: rule__Folge__Group_1__0__Impl rule__Folge__Group_1__1
             {
-            pushFollow(FOLLOW_rule__Folge__Group_1__0__Impl_in_rule__Folge__Group_1__02868);
+            pushFollow(FOLLOW_rule__Folge__Group_1__0__Impl_in_rule__Folge__Group_1__02871);
             rule__Folge__Group_1__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Folge__Group_1__1_in_rule__Folge__Group_1__02871);
+            pushFollow(FOLLOW_rule__Folge__Group_1__1_in_rule__Folge__Group_1__02874);
             rule__Folge__Group_1__1();
 
             state._fsp--;
@@ -3841,7 +3859,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1450:1: ','
             {
              before(grammarAccess.getFolgeAccess().getCommaKeyword_1_0()); 
-            match(input,15,FOLLOW_15_in_rule__Folge__Group_1__0__Impl2899); 
+            match(input,15,FOLLOW_15_in_rule__Folge__Group_1__0__Impl2902); 
              after(grammarAccess.getFolgeAccess().getCommaKeyword_1_0()); 
 
             }
@@ -3874,7 +3892,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1467:1: ( rule__Folge__Group_1__1__Impl )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1468:2: rule__Folge__Group_1__1__Impl
             {
-            pushFollow(FOLLOW_rule__Folge__Group_1__1__Impl_in_rule__Folge__Group_1__12930);
+            pushFollow(FOLLOW_rule__Folge__Group_1__1__Impl_in_rule__Folge__Group_1__12933);
             rule__Folge__Group_1__1__Impl();
 
             state._fsp--;
@@ -3914,7 +3932,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1481:1: ( rule__Folge__NthAtomAssignment_1_1 )
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1481:2: rule__Folge__NthAtomAssignment_1_1
             {
-            pushFollow(FOLLOW_rule__Folge__NthAtomAssignment_1_1_in_rule__Folge__Group_1__1__Impl2957);
+            pushFollow(FOLLOW_rule__Folge__NthAtomAssignment_1_1_in_rule__Folge__Group_1__1__Impl2960);
             rule__Folge__NthAtomAssignment_1_1();
 
             state._fsp--;
@@ -3958,7 +3976,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1502:1: ruleProgram
             {
              before(grammarAccess.getPrologDslAccess().getProgramProgramParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleProgram_in_rule__PrologDsl__ProgramAssignment_02996);
+            pushFollow(FOLLOW_ruleProgram_in_rule__PrologDsl__ProgramAssignment_02999);
             ruleProgram();
 
             state._fsp--;
@@ -3999,7 +4017,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1517:1: ruleExquery
             {
              before(grammarAccess.getPrologDslAccess().getExqueryExqueryParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleExquery_in_rule__PrologDsl__ExqueryAssignment_13027);
+            pushFollow(FOLLOW_ruleExquery_in_rule__PrologDsl__ExqueryAssignment_13030);
             ruleExquery();
 
             state._fsp--;
@@ -4040,7 +4058,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1532:1: ruleClause
             {
              before(grammarAccess.getProgramAccess().getClauseClauseParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleClause_in_rule__Program__ClauseAssignment3058);
+            pushFollow(FOLLOW_ruleClause_in_rule__Program__ClauseAssignment3061);
             ruleClause();
 
             state._fsp--;
@@ -4081,7 +4099,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1547:1: ruleQuery
             {
              before(grammarAccess.getExqueryAccess().getQueryQueryParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleQuery_in_rule__Exquery__QueryAssignment_13089);
+            pushFollow(FOLLOW_ruleQuery_in_rule__Exquery__QueryAssignment_13092);
             ruleQuery();
 
             state._fsp--;
@@ -4122,7 +4140,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1562:1: rulePredicate
             {
              before(grammarAccess.getQueryAccess().getPredicatePredicateParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_rulePredicate_in_rule__Query__PredicateAssignment_03120);
+            pushFollow(FOLLOW_rulePredicate_in_rule__Query__PredicateAssignment_03123);
             rulePredicate();
 
             state._fsp--;
@@ -4163,7 +4181,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1577:1: rulePredicate
             {
              before(grammarAccess.getQueryAccess().getNthPredicatePredicateParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_rulePredicate_in_rule__Query__NthPredicateAssignment_1_13151);
+            pushFollow(FOLLOW_rulePredicate_in_rule__Query__NthPredicateAssignment_1_13154);
             rulePredicate();
 
             state._fsp--;
@@ -4204,7 +4222,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1592:1: ruleFact
             {
              before(grammarAccess.getClauseAccess().getFactFactParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleFact_in_rule__Clause__FactAssignment_03182);
+            pushFollow(FOLLOW_ruleFact_in_rule__Clause__FactAssignment_03185);
             ruleFact();
 
             state._fsp--;
@@ -4245,7 +4263,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1607:1: ruleRule
             {
              before(grammarAccess.getClauseAccess().getRuleRuleParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleRule_in_rule__Clause__RuleAssignment_13213);
+            pushFollow(FOLLOW_ruleRule_in_rule__Clause__RuleAssignment_13216);
             ruleRule();
 
             state._fsp--;
@@ -4286,7 +4304,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1622:1: rulePredicate
             {
              before(grammarAccess.getFactAccess().getPredicatePredicateParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_rulePredicate_in_rule__Fact__PredicateAssignment_03244);
+            pushFollow(FOLLOW_rulePredicate_in_rule__Fact__PredicateAssignment_03247);
             rulePredicate();
 
             state._fsp--;
@@ -4327,7 +4345,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1637:1: rulePredicate
             {
              before(grammarAccess.getRuleAccess().getPredicatePredicateParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_rulePredicate_in_rule__Rule__PredicateAssignment_03275);
+            pushFollow(FOLLOW_rulePredicate_in_rule__Rule__PredicateAssignment_03278);
             rulePredicate();
 
             state._fsp--;
@@ -4368,7 +4386,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1652:1: ruleQuery
             {
              before(grammarAccess.getRuleAccess().getQueryQueryParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleQuery_in_rule__Rule__QueryAssignment_23306);
+            pushFollow(FOLLOW_ruleQuery_in_rule__Rule__QueryAssignment_23309);
             ruleQuery();
 
             state._fsp--;
@@ -4409,7 +4427,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1667:1: ruleFunctor
             {
              before(grammarAccess.getPredicateAccess().getFunctorFunctorParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleFunctor_in_rule__Predicate__FunctorAssignment_03337);
+            pushFollow(FOLLOW_ruleFunctor_in_rule__Predicate__FunctorAssignment_03340);
             ruleFunctor();
 
             state._fsp--;
@@ -4450,7 +4468,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1682:1: ruleTerm
             {
              before(grammarAccess.getPredicateAccess().getTermTermParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleTerm_in_rule__Predicate__TermAssignment_23368);
+            pushFollow(FOLLOW_ruleTerm_in_rule__Predicate__TermAssignment_23371);
             ruleTerm();
 
             state._fsp--;
@@ -4491,7 +4509,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
             // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1697:1: ruleTerm
             {
              before(grammarAccess.getPredicateAccess().getNthTermTermParserRuleCall_3_1_0()); 
-            pushFollow(FOLLOW_ruleTerm_in_rule__Predicate__NthTermAssignment_3_13399);
+            pushFollow(FOLLOW_ruleTerm_in_rule__Predicate__NthTermAssignment_3_13402);
             ruleTerm();
 
             state._fsp--;
@@ -4518,32 +4536,26 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Predicate__NthTermAssignment_3_1"
 
 
-    // $ANTLR start "rule__Term__TermAssignment"
-    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1706:1: rule__Term__TermAssignment : ( ( rule__Term__TermAlternatives_0 ) ) ;
-    public final void rule__Term__TermAssignment() throws RecognitionException {
+    // $ANTLR start "rule__Term__AtomAssignment_0"
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1706:1: rule__Term__AtomAssignment_0 : ( ruleAtom ) ;
+    public final void rule__Term__AtomAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1710:1: ( ( ( rule__Term__TermAlternatives_0 ) ) )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1711:1: ( ( rule__Term__TermAlternatives_0 ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1710:1: ( ( ruleAtom ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1711:1: ( ruleAtom )
             {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1711:1: ( ( rule__Term__TermAlternatives_0 ) )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1712:1: ( rule__Term__TermAlternatives_0 )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1711:1: ( ruleAtom )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1712:1: ruleAtom
             {
-             before(grammarAccess.getTermAccess().getTermAlternatives_0()); 
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1713:1: ( rule__Term__TermAlternatives_0 )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1713:2: rule__Term__TermAlternatives_0
-            {
-            pushFollow(FOLLOW_rule__Term__TermAlternatives_0_in_rule__Term__TermAssignment3430);
-            rule__Term__TermAlternatives_0();
+             before(grammarAccess.getTermAccess().getAtomAtomParserRuleCall_0_0()); 
+            pushFollow(FOLLOW_ruleAtom_in_rule__Term__AtomAssignment_03433);
+            ruleAtom();
 
             state._fsp--;
 
-
-            }
-
-             after(grammarAccess.getTermAccess().getTermAlternatives_0()); 
+             after(grammarAccess.getTermAccess().getAtomAtomParserRuleCall_0_0()); 
 
             }
 
@@ -4562,27 +4574,68 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Term__TermAssignment"
+    // $ANTLR end "rule__Term__AtomAssignment_0"
+
+
+    // $ANTLR start "rule__Term__ListAssignment_1"
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1721:1: rule__Term__ListAssignment_1 : ( ruleList ) ;
+    public final void rule__Term__ListAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1725:1: ( ( ruleList ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1726:1: ( ruleList )
+            {
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1726:1: ( ruleList )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1727:1: ruleList
+            {
+             before(grammarAccess.getTermAccess().getListListParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleList_in_rule__Term__ListAssignment_13464);
+            ruleList();
+
+            state._fsp--;
+
+             after(grammarAccess.getTermAccess().getListListParserRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Term__ListAssignment_1"
 
 
     // $ANTLR start "rule__Atom__AtomAssignment"
-    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1722:1: rule__Atom__AtomAssignment : ( ( rule__Atom__AtomAlternatives_0 ) ) ;
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1736:1: rule__Atom__AtomAssignment : ( ( rule__Atom__AtomAlternatives_0 ) ) ;
     public final void rule__Atom__AtomAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1726:1: ( ( ( rule__Atom__AtomAlternatives_0 ) ) )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1727:1: ( ( rule__Atom__AtomAlternatives_0 ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1740:1: ( ( ( rule__Atom__AtomAlternatives_0 ) ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1741:1: ( ( rule__Atom__AtomAlternatives_0 ) )
             {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1727:1: ( ( rule__Atom__AtomAlternatives_0 ) )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1728:1: ( rule__Atom__AtomAlternatives_0 )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1741:1: ( ( rule__Atom__AtomAlternatives_0 ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1742:1: ( rule__Atom__AtomAlternatives_0 )
             {
              before(grammarAccess.getAtomAccess().getAtomAlternatives_0()); 
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1729:1: ( rule__Atom__AtomAlternatives_0 )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1729:2: rule__Atom__AtomAlternatives_0
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1743:1: ( rule__Atom__AtomAlternatives_0 )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1743:2: rule__Atom__AtomAlternatives_0
             {
-            pushFollow(FOLLOW_rule__Atom__AtomAlternatives_0_in_rule__Atom__AtomAssignment3463);
+            pushFollow(FOLLOW_rule__Atom__AtomAlternatives_0_in_rule__Atom__AtomAssignment3495);
             rule__Atom__AtomAlternatives_0();
 
             state._fsp--;
@@ -4612,30 +4665,30 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Atom__AtomAssignment"
 
 
-    // $ANTLR start "rule__List__ListAssignment_0"
-    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1738:1: rule__List__ListAssignment_0 : ( ( '[]' ) ) ;
-    public final void rule__List__ListAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__List__EmptyListAssignment_0"
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1752:1: rule__List__EmptyListAssignment_0 : ( ( '[]' ) ) ;
+    public final void rule__List__EmptyListAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1742:1: ( ( ( '[]' ) ) )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1743:1: ( ( '[]' ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1756:1: ( ( ( '[]' ) ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1757:1: ( ( '[]' ) )
             {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1743:1: ( ( '[]' ) )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1744:1: ( '[]' )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1757:1: ( ( '[]' ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1758:1: ( '[]' )
             {
-             before(grammarAccess.getListAccess().getListLeftSquareBracketRightSquareBracketKeyword_0_0()); 
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1745:1: ( '[]' )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1746:1: '[]'
+             before(grammarAccess.getListAccess().getEmptyListLeftSquareBracketRightSquareBracketKeyword_0_0()); 
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1759:1: ( '[]' )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1760:1: '[]'
             {
-             before(grammarAccess.getListAccess().getListLeftSquareBracketRightSquareBracketKeyword_0_0()); 
-            match(input,21,FOLLOW_21_in_rule__List__ListAssignment_03501); 
-             after(grammarAccess.getListAccess().getListLeftSquareBracketRightSquareBracketKeyword_0_0()); 
+             before(grammarAccess.getListAccess().getEmptyListLeftSquareBracketRightSquareBracketKeyword_0_0()); 
+            match(input,21,FOLLOW_21_in_rule__List__EmptyListAssignment_03533); 
+             after(grammarAccess.getListAccess().getEmptyListLeftSquareBracketRightSquareBracketKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getListAccess().getListLeftSquareBracketRightSquareBracketKeyword_0_0()); 
+             after(grammarAccess.getListAccess().getEmptyListLeftSquareBracketRightSquareBracketKeyword_0_0()); 
 
             }
 
@@ -4654,24 +4707,65 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__List__ListAssignment_0"
+    // $ANTLR end "rule__List__EmptyListAssignment_0"
+
+
+    // $ANTLR start "rule__List__ListAssignment_1"
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1775:1: rule__List__ListAssignment_1 : ( ruleNotEmptyList ) ;
+    public final void rule__List__ListAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1779:1: ( ( ruleNotEmptyList ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1780:1: ( ruleNotEmptyList )
+            {
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1780:1: ( ruleNotEmptyList )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1781:1: ruleNotEmptyList
+            {
+             before(grammarAccess.getListAccess().getListNotEmptyListParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleNotEmptyList_in_rule__List__ListAssignment_13572);
+            ruleNotEmptyList();
+
+            state._fsp--;
+
+             after(grammarAccess.getListAccess().getListNotEmptyListParserRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__List__ListAssignment_1"
 
 
     // $ANTLR start "rule__NotEmptyList__FolgeAssignment_1"
-    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1761:1: rule__NotEmptyList__FolgeAssignment_1 : ( ruleFolge ) ;
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1790:1: rule__NotEmptyList__FolgeAssignment_1 : ( ruleFolge ) ;
     public final void rule__NotEmptyList__FolgeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1765:1: ( ( ruleFolge ) )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1766:1: ( ruleFolge )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1794:1: ( ( ruleFolge ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1795:1: ( ruleFolge )
             {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1766:1: ( ruleFolge )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1767:1: ruleFolge
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1795:1: ( ruleFolge )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1796:1: ruleFolge
             {
              before(grammarAccess.getNotEmptyListAccess().getFolgeFolgeParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleFolge_in_rule__NotEmptyList__FolgeAssignment_13540);
+            pushFollow(FOLLOW_ruleFolge_in_rule__NotEmptyList__FolgeAssignment_13603);
             ruleFolge();
 
             state._fsp--;
@@ -4699,20 +4793,20 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Folge__AtomAssignment_0"
-    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1776:1: rule__Folge__AtomAssignment_0 : ( ruleAtom ) ;
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1805:1: rule__Folge__AtomAssignment_0 : ( ruleAtom ) ;
     public final void rule__Folge__AtomAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1780:1: ( ( ruleAtom ) )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1781:1: ( ruleAtom )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1809:1: ( ( ruleAtom ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1810:1: ( ruleAtom )
             {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1781:1: ( ruleAtom )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1782:1: ruleAtom
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1810:1: ( ruleAtom )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1811:1: ruleAtom
             {
              before(grammarAccess.getFolgeAccess().getAtomAtomParserRuleCall_0_0()); 
-            pushFollow(FOLLOW_ruleAtom_in_rule__Folge__AtomAssignment_03571);
+            pushFollow(FOLLOW_ruleAtom_in_rule__Folge__AtomAssignment_03634);
             ruleAtom();
 
             state._fsp--;
@@ -4740,20 +4834,20 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Folge__NthAtomAssignment_1_1"
-    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1791:1: rule__Folge__NthAtomAssignment_1_1 : ( ruleAtom ) ;
+    // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1820:1: rule__Folge__NthAtomAssignment_1_1 : ( ruleAtom ) ;
     public final void rule__Folge__NthAtomAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1795:1: ( ( ruleAtom ) )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1796:1: ( ruleAtom )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1824:1: ( ( ruleAtom ) )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1825:1: ( ruleAtom )
             {
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1796:1: ( ruleAtom )
-            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1797:1: ruleAtom
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1825:1: ( ruleAtom )
+            // ../de.htwdd.sf.beleg.s74838.ui/src-gen/de/htwdd/sf/beleg/s74838/ui/contentassist/antlr/internal/InternalProlog.g:1826:1: ruleAtom
             {
              before(grammarAccess.getFolgeAccess().getNthAtomAtomParserRuleCall_1_1_0()); 
-            pushFollow(FOLLOW_ruleAtom_in_rule__Folge__NthAtomAssignment_1_13602);
+            pushFollow(FOLLOW_ruleAtom_in_rule__Folge__NthAtomAssignment_1_13665);
             ruleAtom();
 
             state._fsp--;
@@ -4897,7 +4991,7 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_RULE_IDENT_in_ruleFunctor591 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleTerm_in_entryRuleTerm617 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleTerm624 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Term__TermAssignment_in_ruleTerm650 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Term__Alternatives_in_ruleTerm650 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAtom_in_entryRuleAtom677 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleAtom684 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Atom__AtomAssignment_in_ruleAtom710 = new BitSet(new long[]{0x0000000000000002L});
@@ -4915,108 +5009,110 @@ public class InternalPrologParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_RULE_INT_in_ruleNumber950 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Clause__FactAssignment_0_in_rule__Clause__Alternatives985 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Clause__RuleAssignment_1_in_rule__Clause__Alternatives1003 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAtom_in_rule__Term__TermAlternatives_01036 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleList_in_rule__Term__TermAlternatives_01053 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_IDENT_in_rule__Atom__AtomAlternatives_01085 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_VARIABLE_in_rule__Atom__AtomAlternatives_01102 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNumber_in_rule__Atom__AtomAlternatives_01119 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__List__ListAssignment_0_in_rule__List__Alternatives1151 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNotEmptyList_in_rule__List__Alternatives1169 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrologDsl__Group__0__Impl_in_rule__PrologDsl__Group__01199 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_rule__PrologDsl__Group__1_in_rule__PrologDsl__Group__01202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrologDsl__ProgramAssignment_0_in_rule__PrologDsl__Group__0__Impl1229 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrologDsl__Group__1__Impl_in_rule__PrologDsl__Group__11259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__PrologDsl__ExqueryAssignment_1_in_rule__PrologDsl__Group__1__Impl1286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exquery__Group__0__Impl_in_rule__Exquery__Group__01320 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Exquery__Group__1_in_rule__Exquery__Group__01323 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__Exquery__Group__0__Impl1351 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exquery__Group__1__Impl_in_rule__Exquery__Group__11382 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__Exquery__Group__2_in_rule__Exquery__Group__11385 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exquery__QueryAssignment_1_in_rule__Exquery__Group__1__Impl1412 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Exquery__Group__2__Impl_in_rule__Exquery__Group__21442 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Exquery__Group__2__Impl1470 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Query__Group__0__Impl_in_rule__Query__Group__01507 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__Query__Group__1_in_rule__Query__Group__01510 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Query__PredicateAssignment_0_in_rule__Query__Group__0__Impl1537 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Query__Group__1__Impl_in_rule__Query__Group__11567 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Query__Group_1__0_in_rule__Query__Group__1__Impl1594 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_rule__Query__Group_1__0__Impl_in_rule__Query__Group_1__01629 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Query__Group_1__1_in_rule__Query__Group_1__01632 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Query__Group_1__0__Impl1660 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Query__Group_1__1__Impl_in_rule__Query__Group_1__11691 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Query__NthPredicateAssignment_1_1_in_rule__Query__Group_1__1__Impl1718 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fact__Group__0__Impl_in_rule__Fact__Group__01752 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__Fact__Group__1_in_rule__Fact__Group__01755 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fact__PredicateAssignment_0_in_rule__Fact__Group__0__Impl1782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Fact__Group__1__Impl_in_rule__Fact__Group__11812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Fact__Group__1__Impl1840 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Group__0__Impl_in_rule__Rule__Group__01875 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_rule__Rule__Group__1_in_rule__Rule__Group__01878 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__PredicateAssignment_0_in_rule__Rule__Group__0__Impl1905 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Group__1__Impl_in_rule__Rule__Group__11935 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Rule__Group__2_in_rule__Rule__Group__11938 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Rule__Group__1__Impl1966 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Group__2__Impl_in_rule__Rule__Group__21997 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__Rule__Group__3_in_rule__Rule__Group__22000 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__QueryAssignment_2_in_rule__Rule__Group__2__Impl2027 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Rule__Group__3__Impl_in_rule__Rule__Group__32057 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Rule__Group__3__Impl2085 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Predicate__Group__0__Impl_in_rule__Predicate__Group__02124 = new BitSet(new long[]{0x0000000000020000L});
-    public static final BitSet FOLLOW_rule__Predicate__Group__1_in_rule__Predicate__Group__02127 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Predicate__FunctorAssignment_0_in_rule__Predicate__Group__0__Impl2154 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Predicate__Group__1__Impl_in_rule__Predicate__Group__12184 = new BitSet(new long[]{0x0000000000280070L});
-    public static final BitSet FOLLOW_rule__Predicate__Group__2_in_rule__Predicate__Group__12187 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__Predicate__Group__1__Impl2215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Predicate__Group__2__Impl_in_rule__Predicate__Group__22246 = new BitSet(new long[]{0x0000000000048000L});
-    public static final BitSet FOLLOW_rule__Predicate__Group__3_in_rule__Predicate__Group__22249 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Predicate__TermAssignment_2_in_rule__Predicate__Group__2__Impl2276 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Predicate__Group__3__Impl_in_rule__Predicate__Group__32306 = new BitSet(new long[]{0x0000000000048000L});
-    public static final BitSet FOLLOW_rule__Predicate__Group__4_in_rule__Predicate__Group__32309 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Predicate__Group_3__0_in_rule__Predicate__Group__3__Impl2336 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_rule__Predicate__Group__4__Impl_in_rule__Predicate__Group__42367 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__Predicate__Group__4__Impl2395 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Predicate__Group_3__0__Impl_in_rule__Predicate__Group_3__02436 = new BitSet(new long[]{0x0000000000280070L});
-    public static final BitSet FOLLOW_rule__Predicate__Group_3__1_in_rule__Predicate__Group_3__02439 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Predicate__Group_3__0__Impl2467 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Predicate__Group_3__1__Impl_in_rule__Predicate__Group_3__12498 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Predicate__NthTermAssignment_3_1_in_rule__Predicate__Group_3__1__Impl2525 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NotEmptyList__Group__0__Impl_in_rule__NotEmptyList__Group__02559 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_rule__NotEmptyList__Group__1_in_rule__NotEmptyList__Group__02562 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__NotEmptyList__Group__0__Impl2590 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NotEmptyList__Group__1__Impl_in_rule__NotEmptyList__Group__12621 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_rule__NotEmptyList__Group__2_in_rule__NotEmptyList__Group__12624 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NotEmptyList__FolgeAssignment_1_in_rule__NotEmptyList__Group__1__Impl2651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__NotEmptyList__Group__2__Impl_in_rule__NotEmptyList__Group__22681 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__NotEmptyList__Group__2__Impl2709 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Folge__Group__0__Impl_in_rule__Folge__Group__02746 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__Folge__Group__1_in_rule__Folge__Group__02749 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Folge__AtomAssignment_0_in_rule__Folge__Group__0__Impl2776 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Folge__Group__1__Impl_in_rule__Folge__Group__12806 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Folge__Group_1__0_in_rule__Folge__Group__1__Impl2833 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_rule__Folge__Group_1__0__Impl_in_rule__Folge__Group_1__02868 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_rule__Folge__Group_1__1_in_rule__Folge__Group_1__02871 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Folge__Group_1__0__Impl2899 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Folge__Group_1__1__Impl_in_rule__Folge__Group_1__12930 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Folge__NthAtomAssignment_1_1_in_rule__Folge__Group_1__1__Impl2957 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProgram_in_rule__PrologDsl__ProgramAssignment_02996 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExquery_in_rule__PrologDsl__ExqueryAssignment_13027 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleClause_in_rule__Program__ClauseAssignment3058 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQuery_in_rule__Exquery__QueryAssignment_13089 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePredicate_in_rule__Query__PredicateAssignment_03120 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePredicate_in_rule__Query__NthPredicateAssignment_1_13151 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFact_in_rule__Clause__FactAssignment_03182 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRule_in_rule__Clause__RuleAssignment_13213 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePredicate_in_rule__Fact__PredicateAssignment_03244 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePredicate_in_rule__Rule__PredicateAssignment_03275 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQuery_in_rule__Rule__QueryAssignment_23306 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFunctor_in_rule__Predicate__FunctorAssignment_03337 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerm_in_rule__Predicate__TermAssignment_23368 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerm_in_rule__Predicate__NthTermAssignment_3_13399 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Term__TermAlternatives_0_in_rule__Term__TermAssignment3430 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Atom__AtomAlternatives_0_in_rule__Atom__AtomAssignment3463 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__List__ListAssignment_03501 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFolge_in_rule__NotEmptyList__FolgeAssignment_13540 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAtom_in_rule__Folge__AtomAssignment_03571 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAtom_in_rule__Folge__NthAtomAssignment_1_13602 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Term__AtomAssignment_0_in_rule__Term__Alternatives1036 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Term__ListAssignment_1_in_rule__Term__Alternatives1054 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_IDENT_in_rule__Atom__AtomAlternatives_01087 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_VARIABLE_in_rule__Atom__AtomAlternatives_01104 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNumber_in_rule__Atom__AtomAlternatives_01121 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__List__EmptyListAssignment_0_in_rule__List__Alternatives1153 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__List__ListAssignment_1_in_rule__List__Alternatives1171 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrologDsl__Group__0__Impl_in_rule__PrologDsl__Group__01202 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_rule__PrologDsl__Group__1_in_rule__PrologDsl__Group__01205 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrologDsl__ProgramAssignment_0_in_rule__PrologDsl__Group__0__Impl1232 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrologDsl__Group__1__Impl_in_rule__PrologDsl__Group__11262 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__PrologDsl__ExqueryAssignment_1_in_rule__PrologDsl__Group__1__Impl1289 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exquery__Group__0__Impl_in_rule__Exquery__Group__01323 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Exquery__Group__1_in_rule__Exquery__Group__01326 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Exquery__Group__0__Impl1354 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exquery__Group__1__Impl_in_rule__Exquery__Group__11385 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_rule__Exquery__Group__2_in_rule__Exquery__Group__11388 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exquery__QueryAssignment_1_in_rule__Exquery__Group__1__Impl1415 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Exquery__Group__2__Impl_in_rule__Exquery__Group__21445 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__Exquery__Group__2__Impl1473 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Query__Group__0__Impl_in_rule__Query__Group__01510 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__Query__Group__1_in_rule__Query__Group__01513 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Query__PredicateAssignment_0_in_rule__Query__Group__0__Impl1540 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Query__Group__1__Impl_in_rule__Query__Group__11570 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Query__Group_1__0_in_rule__Query__Group__1__Impl1597 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_rule__Query__Group_1__0__Impl_in_rule__Query__Group_1__01632 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Query__Group_1__1_in_rule__Query__Group_1__01635 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Query__Group_1__0__Impl1663 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Query__Group_1__1__Impl_in_rule__Query__Group_1__11694 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Query__NthPredicateAssignment_1_1_in_rule__Query__Group_1__1__Impl1721 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fact__Group__0__Impl_in_rule__Fact__Group__01755 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_rule__Fact__Group__1_in_rule__Fact__Group__01758 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fact__PredicateAssignment_0_in_rule__Fact__Group__0__Impl1785 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Fact__Group__1__Impl_in_rule__Fact__Group__11815 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__Fact__Group__1__Impl1843 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group__0__Impl_in_rule__Rule__Group__01878 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_rule__Rule__Group__1_in_rule__Rule__Group__01881 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__PredicateAssignment_0_in_rule__Rule__Group__0__Impl1908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group__1__Impl_in_rule__Rule__Group__11938 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Rule__Group__2_in_rule__Rule__Group__11941 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Rule__Group__1__Impl1969 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group__2__Impl_in_rule__Rule__Group__22000 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_rule__Rule__Group__3_in_rule__Rule__Group__22003 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__QueryAssignment_2_in_rule__Rule__Group__2__Impl2030 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Rule__Group__3__Impl_in_rule__Rule__Group__32060 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__Rule__Group__3__Impl2088 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Predicate__Group__0__Impl_in_rule__Predicate__Group__02127 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_rule__Predicate__Group__1_in_rule__Predicate__Group__02130 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Predicate__FunctorAssignment_0_in_rule__Predicate__Group__0__Impl2157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Predicate__Group__1__Impl_in_rule__Predicate__Group__12187 = new BitSet(new long[]{0x0000000000280070L});
+    public static final BitSet FOLLOW_rule__Predicate__Group__2_in_rule__Predicate__Group__12190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__Predicate__Group__1__Impl2218 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Predicate__Group__2__Impl_in_rule__Predicate__Group__22249 = new BitSet(new long[]{0x0000000000048000L});
+    public static final BitSet FOLLOW_rule__Predicate__Group__3_in_rule__Predicate__Group__22252 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Predicate__TermAssignment_2_in_rule__Predicate__Group__2__Impl2279 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Predicate__Group__3__Impl_in_rule__Predicate__Group__32309 = new BitSet(new long[]{0x0000000000048000L});
+    public static final BitSet FOLLOW_rule__Predicate__Group__4_in_rule__Predicate__Group__32312 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Predicate__Group_3__0_in_rule__Predicate__Group__3__Impl2339 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_rule__Predicate__Group__4__Impl_in_rule__Predicate__Group__42370 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__Predicate__Group__4__Impl2398 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Predicate__Group_3__0__Impl_in_rule__Predicate__Group_3__02439 = new BitSet(new long[]{0x0000000000280070L});
+    public static final BitSet FOLLOW_rule__Predicate__Group_3__1_in_rule__Predicate__Group_3__02442 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Predicate__Group_3__0__Impl2470 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Predicate__Group_3__1__Impl_in_rule__Predicate__Group_3__12501 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Predicate__NthTermAssignment_3_1_in_rule__Predicate__Group_3__1__Impl2528 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NotEmptyList__Group__0__Impl_in_rule__NotEmptyList__Group__02562 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_rule__NotEmptyList__Group__1_in_rule__NotEmptyList__Group__02565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__NotEmptyList__Group__0__Impl2593 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NotEmptyList__Group__1__Impl_in_rule__NotEmptyList__Group__12624 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_rule__NotEmptyList__Group__2_in_rule__NotEmptyList__Group__12627 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NotEmptyList__FolgeAssignment_1_in_rule__NotEmptyList__Group__1__Impl2654 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__NotEmptyList__Group__2__Impl_in_rule__NotEmptyList__Group__22684 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__NotEmptyList__Group__2__Impl2712 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Folge__Group__0__Impl_in_rule__Folge__Group__02749 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_rule__Folge__Group__1_in_rule__Folge__Group__02752 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Folge__AtomAssignment_0_in_rule__Folge__Group__0__Impl2779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Folge__Group__1__Impl_in_rule__Folge__Group__12809 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Folge__Group_1__0_in_rule__Folge__Group__1__Impl2836 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_rule__Folge__Group_1__0__Impl_in_rule__Folge__Group_1__02871 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_rule__Folge__Group_1__1_in_rule__Folge__Group_1__02874 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Folge__Group_1__0__Impl2902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Folge__Group_1__1__Impl_in_rule__Folge__Group_1__12933 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Folge__NthAtomAssignment_1_1_in_rule__Folge__Group_1__1__Impl2960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProgram_in_rule__PrologDsl__ProgramAssignment_02999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExquery_in_rule__PrologDsl__ExqueryAssignment_13030 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleClause_in_rule__Program__ClauseAssignment3061 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQuery_in_rule__Exquery__QueryAssignment_13092 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePredicate_in_rule__Query__PredicateAssignment_03123 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePredicate_in_rule__Query__NthPredicateAssignment_1_13154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFact_in_rule__Clause__FactAssignment_03185 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRule_in_rule__Clause__RuleAssignment_13216 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePredicate_in_rule__Fact__PredicateAssignment_03247 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePredicate_in_rule__Rule__PredicateAssignment_03278 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQuery_in_rule__Rule__QueryAssignment_23309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFunctor_in_rule__Predicate__FunctorAssignment_03340 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTerm_in_rule__Predicate__TermAssignment_23371 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTerm_in_rule__Predicate__NthTermAssignment_3_13402 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtom_in_rule__Term__AtomAssignment_03433 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleList_in_rule__Term__ListAssignment_13464 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Atom__AtomAlternatives_0_in_rule__Atom__AtomAssignment3495 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__List__EmptyListAssignment_03533 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNotEmptyList_in_rule__List__ListAssignment_13572 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFolge_in_rule__NotEmptyList__FolgeAssignment_13603 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtom_in_rule__Folge__AtomAssignment_03634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAtom_in_rule__Folge__NthAtomAssignment_1_13665 = new BitSet(new long[]{0x0000000000000002L});
 
 }

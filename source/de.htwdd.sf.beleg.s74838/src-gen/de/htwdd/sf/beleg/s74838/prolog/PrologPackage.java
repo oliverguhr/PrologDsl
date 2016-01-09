@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package de.htwdd.sf.beleg.s74838.prolog;
 
@@ -348,13 +345,22 @@ public interface PrologPackage extends EPackage
   int TERM = 8;
 
   /**
-   * The feature id for the '<em><b>Term</b></em>' containment reference.
+   * The feature id for the '<em><b>Atom</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TERM__TERM = 0;
+  int TERM__ATOM = 0;
+
+  /**
+   * The feature id for the '<em><b>List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TERM__LIST = 1;
 
   /**
    * The number of structural features of the '<em>Term</em>' class.
@@ -363,7 +369,7 @@ public interface PrologPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TERM_FEATURE_COUNT = 1;
+  int TERM_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link de.htwdd.sf.beleg.s74838.prolog.impl.AtomImpl <em>Atom</em>}' class.
@@ -404,13 +410,22 @@ public interface PrologPackage extends EPackage
   int LIST = 10;
 
   /**
-   * The feature id for the '<em><b>List</b></em>' attribute.
+   * The feature id for the '<em><b>Empty List</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LIST__LIST = 0;
+  int LIST__EMPTY_LIST = 0;
+
+  /**
+   * The feature id for the '<em><b>List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST__LIST = 1;
 
   /**
    * The number of structural features of the '<em>List</em>' class.
@@ -419,7 +434,7 @@ public interface PrologPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIST_FEATURE_COUNT = 1;
+  int LIST_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link de.htwdd.sf.beleg.s74838.prolog.impl.NotEmptyListImpl <em>Not Empty List</em>}' class.
@@ -432,22 +447,13 @@ public interface PrologPackage extends EPackage
   int NOT_EMPTY_LIST = 11;
 
   /**
-   * The feature id for the '<em><b>List</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NOT_EMPTY_LIST__LIST = LIST__LIST;
-
-  /**
    * The feature id for the '<em><b>Folge</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NOT_EMPTY_LIST__FOLGE = LIST_FEATURE_COUNT + 0;
+  int NOT_EMPTY_LIST__FOLGE = 0;
 
   /**
    * The number of structural features of the '<em>Not Empty List</em>' class.
@@ -456,7 +462,7 @@ public interface PrologPackage extends EPackage
    * @generated
    * @ordered
    */
-  int NOT_EMPTY_LIST_FEATURE_COUNT = LIST_FEATURE_COUNT + 1;
+  int NOT_EMPTY_LIST_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link de.htwdd.sf.beleg.s74838.prolog.impl.FolgeImpl <em>Folge</em>}' class.
@@ -741,15 +747,26 @@ public interface PrologPackage extends EPackage
   EClass getTerm();
 
   /**
-   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s74838.prolog.Term#getTerm <em>Term</em>}'.
+   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s74838.prolog.Term#getAtom <em>Atom</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Term</em>'.
-   * @see de.htwdd.sf.beleg.s74838.prolog.Term#getTerm()
+   * @return the meta object for the containment reference '<em>Atom</em>'.
+   * @see de.htwdd.sf.beleg.s74838.prolog.Term#getAtom()
    * @see #getTerm()
    * @generated
    */
-  EReference getTerm_Term();
+  EReference getTerm_Atom();
+
+  /**
+   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s74838.prolog.Term#getList <em>List</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>List</em>'.
+   * @see de.htwdd.sf.beleg.s74838.prolog.Term#getList()
+   * @see #getTerm()
+   * @generated
+   */
+  EReference getTerm_List();
 
   /**
    * Returns the meta object for class '{@link de.htwdd.sf.beleg.s74838.prolog.Atom <em>Atom</em>}'.
@@ -783,15 +800,26 @@ public interface PrologPackage extends EPackage
   EClass getList();
 
   /**
-   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s74838.prolog.List#getList <em>List</em>}'.
+   * Returns the meta object for the attribute '{@link de.htwdd.sf.beleg.s74838.prolog.List#getEmptyList <em>Empty List</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>List</em>'.
+   * @return the meta object for the attribute '<em>Empty List</em>'.
+   * @see de.htwdd.sf.beleg.s74838.prolog.List#getEmptyList()
+   * @see #getList()
+   * @generated
+   */
+  EAttribute getList_EmptyList();
+
+  /**
+   * Returns the meta object for the containment reference '{@link de.htwdd.sf.beleg.s74838.prolog.List#getList <em>List</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>List</em>'.
    * @see de.htwdd.sf.beleg.s74838.prolog.List#getList()
    * @see #getList()
    * @generated
    */
-  EAttribute getList_List();
+  EReference getList_List();
 
   /**
    * Returns the meta object for class '{@link de.htwdd.sf.beleg.s74838.prolog.NotEmptyList <em>Not Empty List</em>}'.
@@ -1072,12 +1100,20 @@ public interface PrologPackage extends EPackage
     EClass TERM = eINSTANCE.getTerm();
 
     /**
-     * The meta object literal for the '<em><b>Term</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Atom</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TERM__TERM = eINSTANCE.getTerm_Term();
+    EReference TERM__ATOM = eINSTANCE.getTerm_Atom();
+
+    /**
+     * The meta object literal for the '<em><b>List</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TERM__LIST = eINSTANCE.getTerm_List();
 
     /**
      * The meta object literal for the '{@link de.htwdd.sf.beleg.s74838.prolog.impl.AtomImpl <em>Atom</em>}' class.
@@ -1108,12 +1144,20 @@ public interface PrologPackage extends EPackage
     EClass LIST = eINSTANCE.getList();
 
     /**
-     * The meta object literal for the '<em><b>List</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Empty List</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute LIST__LIST = eINSTANCE.getList_List();
+    EAttribute LIST__EMPTY_LIST = eINSTANCE.getList_EmptyList();
+
+    /**
+     * The meta object literal for the '<em><b>List</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LIST__LIST = eINSTANCE.getList_List();
 
     /**
      * The meta object literal for the '{@link de.htwdd.sf.beleg.s74838.prolog.impl.NotEmptyListImpl <em>Not Empty List</em>}' class.

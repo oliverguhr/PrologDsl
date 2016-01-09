@@ -8,6 +8,8 @@ import org.osgi.framework.Bundle;
 
 import com.google.inject.Injector;
 
+import de.htwdd.sf.beleg.s74838.ui.internal.PrologActivator;
+
 /**
  * This class was generated. Customizations should only happen in a newly
  * introduced subclass. 
@@ -16,12 +18,12 @@ public class PrologExecutableExtensionFactory extends AbstractGuiceAwareExecutab
 
 	@Override
 	protected Bundle getBundle() {
-		return de.htwdd.sf.beleg.s74838.ui.internal.PrologActivator.getInstance().getBundle();
+		return PrologActivator.getInstance().getBundle();
 	}
 	
 	@Override
 	protected Injector getInjector() {
-		return de.htwdd.sf.beleg.s74838.ui.internal.PrologActivator.getInstance().getInjector("de.htwdd.sf.beleg.s74838.Prolog");
+		return PrologActivator.getInstance().getInjector(PrologActivator.DE_HTWDD_SF_BELEG_S74838_PROLOG);
 	}
 	
 }

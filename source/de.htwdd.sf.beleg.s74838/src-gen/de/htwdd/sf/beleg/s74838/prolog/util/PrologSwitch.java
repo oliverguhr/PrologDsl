@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package de.htwdd.sf.beleg.s74838.prolog.util;
 
@@ -156,7 +153,6 @@ public class PrologSwitch<T> extends Switch<T>
       {
         NotEmptyList notEmptyList = (NotEmptyList)theEObject;
         T result = caseNotEmptyList(notEmptyList);
-        if (result == null) result = caseList(notEmptyList);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

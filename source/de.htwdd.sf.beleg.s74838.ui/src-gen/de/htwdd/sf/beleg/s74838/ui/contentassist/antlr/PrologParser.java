@@ -38,7 +38,7 @@ public class PrologParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getClauseAccess().getAlternatives(), "rule__Clause__Alternatives");
-					put(grammarAccess.getTermAccess().getTermAlternatives_0(), "rule__Term__TermAlternatives_0");
+					put(grammarAccess.getTermAccess().getAlternatives(), "rule__Term__Alternatives");
 					put(grammarAccess.getAtomAccess().getAtomAlternatives_0(), "rule__Atom__AtomAlternatives_0");
 					put(grammarAccess.getListAccess().getAlternatives(), "rule__List__Alternatives");
 					put(grammarAccess.getPrologDslAccess().getGroup(), "rule__PrologDsl__Group__0");
@@ -66,9 +66,11 @@ public class PrologParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPredicateAccess().getFunctorAssignment_0(), "rule__Predicate__FunctorAssignment_0");
 					put(grammarAccess.getPredicateAccess().getTermAssignment_2(), "rule__Predicate__TermAssignment_2");
 					put(grammarAccess.getPredicateAccess().getNthTermAssignment_3_1(), "rule__Predicate__NthTermAssignment_3_1");
-					put(grammarAccess.getTermAccess().getTermAssignment(), "rule__Term__TermAssignment");
+					put(grammarAccess.getTermAccess().getAtomAssignment_0(), "rule__Term__AtomAssignment_0");
+					put(grammarAccess.getTermAccess().getListAssignment_1(), "rule__Term__ListAssignment_1");
 					put(grammarAccess.getAtomAccess().getAtomAssignment(), "rule__Atom__AtomAssignment");
-					put(grammarAccess.getListAccess().getListAssignment_0(), "rule__List__ListAssignment_0");
+					put(grammarAccess.getListAccess().getEmptyListAssignment_0(), "rule__List__EmptyListAssignment_0");
+					put(grammarAccess.getListAccess().getListAssignment_1(), "rule__List__ListAssignment_1");
 					put(grammarAccess.getNotEmptyListAccess().getFolgeAssignment_1(), "rule__NotEmptyList__FolgeAssignment_1");
 					put(grammarAccess.getFolgeAccess().getAtomAssignment_0(), "rule__Folge__AtomAssignment_0");
 					put(grammarAccess.getFolgeAccess().getNthAtomAssignment_1_1(), "rule__Folge__NthAtomAssignment_1_1");

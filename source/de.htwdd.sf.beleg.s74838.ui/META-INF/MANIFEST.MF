@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: de.htwdd.sf.beleg.s74838.ui
 Bundle-Vendor: My Company
-Bundle-Version: 1.0.0
+Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: de.htwdd.sf.beleg.s74838.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: de.htwdd.sf.beleg.s74838;visibility:=reexport,
@@ -12,13 +12,15 @@ Require-Bundle: de.htwdd.sf.beleg.s74838;visibility:=reexport,
  org.eclipse.xtext.ui.shared,
  org.eclipse.ui,
  org.eclipse.xtext.builder,
+ org.eclipse.xtext.xbase.lib,
  org.antlr.runtime,
  org.eclipse.xtext.common.types.ui,
  org.eclipse.xtext.ui.codetemplates.ui,
  org.eclipse.compare
-Import-Package: org.apache.log4j,
- org.apache.commons.logging
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: de.htwdd.sf.beleg.s74838.ui.contentassist.antlr,
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: de.htwdd.sf.beleg.s74838.ui.quickfix,
+ de.htwdd.sf.beleg.s74838.ui.contentassist,
+ de.htwdd.sf.beleg.s74838.ui.contentassist.antlr,
  de.htwdd.sf.beleg.s74838.ui.internal
 Bundle-Activator: de.htwdd.sf.beleg.s74838.ui.internal.PrologActivator

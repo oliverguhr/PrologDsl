@@ -534,12 +534,12 @@ ruleFunctor returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-    this_ident_0=RULE_IDENT    {
-		$current.merge(this_ident_0);
+    this_IDENT_0=RULE_IDENT    {
+		$current.merge(this_IDENT_0);
     }
 
     { 
-    newLeafNode(this_ident_0, grammarAccess.getFunctorAccess().getIdentTerminalRuleCall()); 
+    newLeafNode(this_IDENT_0, grammarAccess.getFunctorAccess().getIDENTTerminalRuleCall()); 
     }
 
     ;
@@ -562,43 +562,44 @@ ruleTerm returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(
-(
+((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTermAccess().getTermAtomParserRuleCall_0_0()); 
+	        newCompositeNode(grammarAccess.getTermAccess().getAtomAtomParserRuleCall_0_0()); 
 	    }
-		lv_term_0_1=ruleAtom		{
+		lv_atom_0_0=ruleAtom		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTermRule());
 	        }
        		set(
        			$current, 
-       			"term",
-        		lv_term_0_1, 
+       			"atom",
+        		lv_atom_0_0, 
         		"Atom");
 	        afterParserOrEnumRuleCall();
 	    }
 
-    |		{ 
-	        newCompositeNode(grammarAccess.getTermAccess().getTermListParserRuleCall_0_1()); 
+)
+)
+    |(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getTermAccess().getListListParserRuleCall_1_0()); 
 	    }
-		lv_term_0_2=ruleList		{
+		lv_list_1_0=ruleList		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTermRule());
 	        }
        		set(
        			$current, 
-       			"term",
-        		lv_term_0_2, 
+       			"list",
+        		lv_list_1_0, 
         		"List");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-
-)
-)
+))
 ;
 
 
@@ -624,7 +625,7 @@ ruleAtom returns [EObject current=null]
 (
 		lv_atom_0_1=RULE_IDENT
 		{
-			newLeafNode(lv_atom_0_1, grammarAccess.getAtomAccess().getAtomIdentTerminalRuleCall_0_0()); 
+			newLeafNode(lv_atom_0_1, grammarAccess.getAtomAccess().getAtomIDENTTerminalRuleCall_0_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -634,12 +635,12 @@ ruleAtom returns [EObject current=null]
        			$current, 
        			"atom",
         		lv_atom_0_1, 
-        		"ident");
+        		"IDENT");
 	    }
 
     |		lv_atom_0_2=RULE_VARIABLE
 		{
-			newLeafNode(lv_atom_0_2, grammarAccess.getAtomAccess().getAtomVariableTerminalRuleCall_0_1()); 
+			newLeafNode(lv_atom_0_2, grammarAccess.getAtomAccess().getAtomVARIABLETerminalRuleCall_0_1()); 
 		}
 		{
 	        if ($current==null) {
@@ -649,7 +650,7 @@ ruleAtom returns [EObject current=null]
        			$current, 
        			"atom",
         		lv_atom_0_2, 
-        		"variable");
+        		"VARIABLE");
 	    }
 
     |		{ 
@@ -693,30 +694,39 @@ ruleList returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		lv_list_0_0=	'[]' 
+		lv_emptyList_0_0=	'[]' 
     {
-        newLeafNode(lv_list_0_0, grammarAccess.getListAccess().getListLeftSquareBracketRightSquareBracketKeyword_0_0());
+        newLeafNode(lv_emptyList_0_0, grammarAccess.getListAccess().getEmptyListLeftSquareBracketRightSquareBracketKeyword_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getListRule());
 	        }
-       		setWithLastConsumed($current, "list", lv_list_0_0, "[]");
+       		setWithLastConsumed($current, "emptyList", lv_emptyList_0_0, "[]");
 	    }
 
 )
 )
-    |
-    { 
-        newCompositeNode(grammarAccess.getListAccess().getNotEmptyListParserRuleCall_1()); 
-    }
-    this_NotEmptyList_1=ruleNotEmptyList
-    { 
-        $current = $this_NotEmptyList_1.current; 
-        afterParserOrEnumRuleCall();
-    }
+    |(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getListAccess().getListNotEmptyListParserRuleCall_1_0()); 
+	    }
+		lv_list_1_0=ruleNotEmptyList		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getListRule());
+	        }
+       		set(
+       			$current, 
+       			"list",
+        		lv_list_1_0, 
+        		"NotEmptyList");
+	        afterParserOrEnumRuleCall();
+	    }
+
 )
+))
 ;
 
 
@@ -867,7 +877,7 @@ RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
 RULE_INT : ('0'..'9')+;
 
-RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
+RULE_STRING : ('"' ('\\' .|~(('\\'|'"')))* '"'|'\'' ('\\' .|~(('\\'|'\'')))* '\'');
 
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 
