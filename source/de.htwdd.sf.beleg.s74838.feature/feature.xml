@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="de.htwdd.sf.beleg.s74838.sdk"
-      label="Prolog SDK Feature "
-      version="1.0.0.qualifier">
+      id="de.htwdd.sf.beleg.s74838.feature"
+      label="Prolog DSL Feature"
+      version="1.0.0.qualifier"
+      provider-name="s74838">
+
+   <description url="http://www2.htw-dresden.de/~s74838/sf/beleg">
+      Beleg von s74838.
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
 
    <requires>
       <import plugin="org.eclipse.xtext"/>

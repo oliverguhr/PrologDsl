@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/de.htwdd.sf.beleg.s74838.feature_1.0.0.201601121207.jar" id="de.htwdd.sf.beleg.s74838.feature" version="1.0.0.201601121207">
+      <category name="de.htwdd.sf"/>
+   </feature>
+   <category-def name="de.htwdd.sf" label="Prolog Editor"/>
+</site>
